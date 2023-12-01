@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>cnc.png</file>
+    <file>exit.png</file>
+    <file>gear.png</file>
+    <file>icon.png</file>
+    <file>question.png</file>
+  </qresource>
+</RCC>
