@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'flat_millqAcYFA.ui'
+## Form generated from reading UI file 'flat_milllbACvl.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QToolButton, QWidget)
 import resources_rc
 
 class Ui_frm_flat_mill(object):
@@ -2427,7 +2433,7 @@ class Ui_frm_flat_mill(object):
 #if QT_CONFIG(statustip)
         self.tbx_tcm.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_tcm.setText(QCoreApplication.translate("frm_flat_mill", u"0", None))
+        self.tbx_tcm.setText(QCoreApplication.translate("frm_flat_mill", u"0.0", None))
         self.tbx_tcm.setPlaceholderText("")
         self.lbl_tcm.setText(QCoreApplication.translate("frm_flat_mill", u"Compensaci\u00f3n transversal", None))
 #if QT_CONFIG(tooltip)
@@ -2436,7 +2442,7 @@ class Ui_frm_flat_mill(object):
 #if QT_CONFIG(statustip)
         self.tbx_lcm.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_lcm.setText(QCoreApplication.translate("frm_flat_mill", u"0", None))
+        self.tbx_lcm.setText(QCoreApplication.translate("frm_flat_mill", u"0.0", None))
         self.tbx_lcm.setPlaceholderText("")
         self.lbl_lcm.setText(QCoreApplication.translate("frm_flat_mill", u"Compensaci\u00f3n longitudinal", None))
         self.btn_help.setText("")

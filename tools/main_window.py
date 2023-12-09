@@ -1,7 +1,6 @@
 import contextlib
 import os
 import json
-import tools
 
 from PySide6.QtWidgets import QMainWindow, QFileDialog
 from PySide6.QtCore import QEvent
@@ -203,7 +202,6 @@ def close_action(window: QMainWindow):
 
     Args:
         window (QMainWindow): Ventana principal
-        event (QEvent): Evento de cierre de ventana
     """
 
     window.close()
@@ -445,8 +443,8 @@ def go_to_position(window: QMainWindow, line: list):
 
     window.current_selection = [line]
     window.config_widget.setCurrentCell(line, 0)
-    update_tape1_widget_selection(window)
-    update_tape2_widget_selection(window)
+    update_tape_widget_selection(window, "tape1")
+    update_tape_widget_selection(window, "tape2")
 
 
 def block_lines(window: QMainWindow):
@@ -477,8 +475,8 @@ def update_data(window: QMainWindow):
     update_tape_widget(window.tape1_widget, window.tape1_list)
     update_tape_widget(window.tape2_widget, window.tape2_list)
     update_config_widget_selection(window)
-    update_tape1_widget_selection(window)
-    update_tape2_widget_selection(window)
+    update_tape_widget_selection(window, "tape1")
+    update_tape_widget_selection(window, "tape2")
 
     window.modified_task = False
 
@@ -569,6 +567,7 @@ def create_subroutine(window: QMainWindow):
     description = ""
     window.config_list = [prefab_sub_header(window, description)]
     window.config_list.append(prefab_comment(window.subroutine_comment, "$1"))
+    collect_data(window, "End"),
     window.save_required = True
     update_after_subroutine(window)
 
@@ -622,6 +621,6 @@ def find_subroutine(window: QMainWindow, subroutine: str):
             while line[1]["Sub"] == subroutine:
                 window.current_selection = [num]
                 update_config_widget_selection(window)
-                update_tape1_widget_selection(window)
-                update_tape2_widget_selection(window)
+                update_tape_widget_selection(window, "tape1")
+                update_tape_widget_selection(window, "tape2")
                 break

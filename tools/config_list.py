@@ -67,7 +67,6 @@ def update_modified_data(window: QMainWindow, data_pack: list):
     data = data_pack[0][1]
     index = window.current_selection[0]
     window.config_list[index] = [task, data]
-    tools.main_window.update_data(window)
 
 
 def append_new_data(window: QMainWindow, data_pack: list):

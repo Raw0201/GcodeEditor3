@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'tool_callXujiMc.ui'
+## Form generated from reading UI file 'tool_callSpwXda.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -2412,7 +2412,7 @@ class Ui_frm_tool_call(object):
 #if QT_CONFIG(statustip)
         self.tbx_dia.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_dia.setText(QCoreApplication.translate("frm_tool_call", u"0", None))
+        self.tbx_dia.setText(QCoreApplication.translate("frm_tool_call", u"0.0", None))
         self.tbx_dia.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.cbx_typ.setToolTip(QCoreApplication.translate("frm_tool_call", u"Seleccione el tipo de herramienta a utilizar", None))
@@ -2427,7 +2427,7 @@ class Ui_frm_tool_call(object):
 #if QT_CONFIG(statustip)
         self.tbx_xin.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_xin.setText(QCoreApplication.translate("frm_tool_call", u"0", None))
+        self.tbx_xin.setText(QCoreApplication.translate("frm_tool_call", u"0.0", None))
         self.tbx_xin.setPlaceholderText("")
         self.lbl_xin.setText(QCoreApplication.translate("frm_tool_call", u"Posici\u00f3n inicio X", None))
         self.lbl_yin.setText(QCoreApplication.translate("frm_tool_call", u"Posici\u00f3n inicio Y", None))
@@ -2437,7 +2437,7 @@ class Ui_frm_tool_call(object):
 #if QT_CONFIG(statustip)
         self.tbx_yin.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_yin.setText(QCoreApplication.translate("frm_tool_call", u"0", None))
+        self.tbx_yin.setText(QCoreApplication.translate("frm_tool_call", u"0.0", None))
         self.tbx_yin.setPlaceholderText("")
         self.lbl_zin.setText(QCoreApplication.translate("frm_tool_call", u"Posici\u00f3n inicio Z", None))
 #if QT_CONFIG(tooltip)
@@ -2446,7 +2446,7 @@ class Ui_frm_tool_call(object):
 #if QT_CONFIG(statustip)
         self.tbx_zin.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_zin.setText(QCoreApplication.translate("frm_tool_call", u"0", None))
+        self.tbx_zin.setText(QCoreApplication.translate("frm_tool_call", u"0.0", None))
         self.tbx_zin.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.cbx_mcd.setToolTip(QCoreApplication.translate("frm_tool_call", u"Seleccione un c\u00f3digo M adicional a utilizar con la herramienta", None))

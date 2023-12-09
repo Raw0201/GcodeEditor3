@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'platter_dataMYOdRK.ui'
+## Form generated from reading UI file 'platter_dataysbgJH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -2470,7 +2470,7 @@ class Ui_frm_platter_data(object):
 #if QT_CONFIG(statustip)
         self.tbx_x_com.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_x_com.setText(QCoreApplication.translate("frm_platter_data", u"0", None))
+        self.tbx_x_com.setText(QCoreApplication.translate("frm_platter_data", u"0.0", None))
         self.tbx_x_com.setPlaceholderText("")
         self.lbl_x_com.setText(QCoreApplication.translate("frm_platter_data", u"Compensaci\u00f3n X", None))
 #if QT_CONFIG(tooltip)
@@ -2479,7 +2479,7 @@ class Ui_frm_platter_data(object):
 #if QT_CONFIG(statustip)
         self.tbx_y_com.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_y_com.setText(QCoreApplication.translate("frm_platter_data", u"0", None))
+        self.tbx_y_com.setText(QCoreApplication.translate("frm_platter_data", u"0.0", None))
         self.tbx_y_com.setPlaceholderText("")
         self.lbl_y_com.setText(QCoreApplication.translate("frm_platter_data", u"Compensaci\u00f3n Y", None))
         self.btn_help.setText("")

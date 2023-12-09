@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'tappingRFRMoD.ui'
+## Form generated from reading UI file 'tappingkAFwhP.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QToolButton, QWidget)
 import resources_rc
 
 class Ui_frm_tapping(object):
@@ -2381,7 +2387,7 @@ class Ui_frm_tapping(object):
 #if QT_CONFIG(statustip)
         self.tbx_xin.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_xin.setText(QCoreApplication.translate("frm_tapping", u"0", None))
+        self.tbx_xin.setText(QCoreApplication.translate("frm_tapping", u"0.0", None))
         self.tbx_xin.setPlaceholderText("")
         self.lbl_xin.setText(QCoreApplication.translate("frm_tapping", u"Posici\u00f3n inicio X", None))
         self.lbl_yin.setText(QCoreApplication.translate("frm_tapping", u"Posici\u00f3n inicio Y", None))
@@ -2391,7 +2397,7 @@ class Ui_frm_tapping(object):
 #if QT_CONFIG(statustip)
         self.tbx_yin.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_yin.setText(QCoreApplication.translate("frm_tapping", u"0", None))
+        self.tbx_yin.setText(QCoreApplication.translate("frm_tapping", u"0.0", None))
         self.tbx_yin.setPlaceholderText("")
         self.lbl_zin.setText(QCoreApplication.translate("frm_tapping", u"Posici\u00f3n inicio Z", None))
 #if QT_CONFIG(tooltip)
@@ -2400,7 +2406,7 @@ class Ui_frm_tapping(object):
 #if QT_CONFIG(statustip)
         self.tbx_zin.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_zin.setText(QCoreApplication.translate("frm_tapping", u"0", None))
+        self.tbx_zin.setText(QCoreApplication.translate("frm_tapping", u"0.0", None))
         self.tbx_zin.setPlaceholderText("")
 #if QT_CONFIG(tooltip)
         self.cbx_sys.setToolTip(QCoreApplication.translate("frm_tapping", u"Seleccione el sistema de coordenadas a utilizar", None))
@@ -2416,7 +2422,7 @@ class Ui_frm_tapping(object):
 #if QT_CONFIG(statustip)
         self.tbx_rtr.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_rtr.setText(QCoreApplication.translate("frm_tapping", u"0", None))
+        self.tbx_rtr.setText(QCoreApplication.translate("frm_tapping", u"0.0", None))
         self.tbx_rtr.setPlaceholderText("")
         self.lbl_rtr.setText(QCoreApplication.translate("frm_tapping", u"Punto de retracci\u00f3n", None))
 #if QT_CONFIG(tooltip)

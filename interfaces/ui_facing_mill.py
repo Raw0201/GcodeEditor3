@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'facing_millxdpNhD.ui'
+## Form generated from reading UI file 'facing_millxkGFBo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -2396,7 +2396,7 @@ class Ui_frm_facing_mill(object):
 #if QT_CONFIG(statustip)
         self.tbx_lcm.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_lcm.setText(QCoreApplication.translate("frm_facing_mill", u"0", None))
+        self.tbx_lcm.setText(QCoreApplication.translate("frm_facing_mill", u"0.0", None))
         self.tbx_lcm.setPlaceholderText("")
         self.lbl_lcm.setText(QCoreApplication.translate("frm_facing_mill", u"Compensaci\u00f3n longitudinal", None))
 #if QT_CONFIG(tooltip)
@@ -2405,7 +2405,7 @@ class Ui_frm_facing_mill(object):
 #if QT_CONFIG(statustip)
         self.tbx_tcm.setStatusTip("")
 #endif // QT_CONFIG(statustip)
-        self.tbx_tcm.setText(QCoreApplication.translate("frm_facing_mill", u"0", None))
+        self.tbx_tcm.setText(QCoreApplication.translate("frm_facing_mill", u"0.0", None))
         self.tbx_tcm.setPlaceholderText("")
         self.lbl_tcm.setText(QCoreApplication.translate("frm_facing_mill", u"Compensaci\u00f3n trasversal", None))
         self.btn_help.setText("")

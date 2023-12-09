@@ -88,6 +88,7 @@ class Flatten_sub(QMainWindow):
         """
 
         data["Tol"] = self.current_tool
+        data["Dia"] = self.current_tool_diameter
 
         return flatten_sub_gen(machine, data)
 

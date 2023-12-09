@@ -2599,7 +2599,7 @@ PlotWidget {
       <string/>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>0.0</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -2655,7 +2655,7 @@ PlotWidget {
       <string/>
      </property>
      <property name="text">
-      <string>0</string>
+      <string>0.0</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

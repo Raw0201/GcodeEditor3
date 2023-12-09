@@ -109,6 +109,7 @@ class Mill_ini(QMainWindow):
         """
 
         window.save_required = True
+        window.current_side = "$3"
 
     def switcher(self, window: QMainWindow, data: dict):
         """Cambia el estado de los botones según los datos de configuración

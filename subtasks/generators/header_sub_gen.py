@@ -30,6 +30,7 @@ def header_sub_gen(machine: str, data: list) -> list:
         return gen_mazak(data)
 
 
+
 def gen_b12(data: list) -> list:
     """Genera los códigos para torno suizo B12
 
@@ -192,7 +193,7 @@ def gen_mazak(data: list) -> list:
 
     num = ftape(mch, prg)
     dia = fdia(dia)
-    spc = "" if spc == "-" else " {spc}"
+    spc = "" if spc == "-" else f" {spc}"
 
     lines1 = [
         "%",

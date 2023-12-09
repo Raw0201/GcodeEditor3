@@ -112,7 +112,8 @@ class Call_flatten(Subtask, Ui_frm_call_flatten):
         Returns:
             list: Lista de líneas de tape
         """
-
+        
+        data["Dia"] = self.current_tool_diameter
         return call_flatten_gen(machine, data)
 
     def modifier(self, data: dict):

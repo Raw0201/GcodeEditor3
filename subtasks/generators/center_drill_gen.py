@@ -52,7 +52,7 @@ def gen_b12(data: list) -> list:
     fed = "" if fed == "" else f"F{ffed(fed)}"
     xin = "" if xin == "" else f"X{fnum3(xin)}"
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
-    dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
     apx = "" if (xin == "" and zin == "") else f"{blk}G00{xin}{zin}"
 
     lines1 = [apx, f"{blk}G01{dpt}{fed}", dwl]
@@ -90,7 +90,7 @@ def gen_a16(data: list) -> list:
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     axs = "X" if sde == "$3" else "Z"
 
-    dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
     apx = (
         ""
         if (xin == "" and yin == "" and zin == "")
@@ -129,7 +129,7 @@ def gen_k16(data: list) -> list:
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     axs = "X" if sde == "$3" else "Z"
 
-    dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
     apx = (
         ""
         if (xin == "" and yin == "" and zin == "")
@@ -168,7 +168,7 @@ def gen_e16(data: list) -> list:
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     axs = "X" if sde == "$3" else "Z"
 
-    dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
     apx = (
         ""
         if (xin == "" and yin == "" and zin == "")
@@ -209,7 +209,7 @@ def gen_omni(data: list) -> list:
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     axs = "X" if sde == "$3" else "Z"
 
-    dwl = "" if dwl == "" else f"{blk}G04F{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04F{ffed(dwl)}"
     apx = "" if xin == "" and zin == "" else f"{blk}{xin}{zin}"
 
     lines1 = [apx, f"{blk}{axs}{dpt}{fed}", dwl]
@@ -246,7 +246,7 @@ def gen_romi(data: list) -> list:
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     axs = "X" if sde == "$3" else "Z"
 
-    dwl = "" if dwl == "" else f"{blk}G04F{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04F{ffed(dwl)}"
     apx = "" if xin == "" and zin == "" else f"{blk}G00{xin}{zin}"
 
     lines1 = [apx, f"{blk}{axs}{dpt}{fed}", dwl]
@@ -283,7 +283,7 @@ def gen_hardinge(data: list) -> list:
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     axs = "X" if sde == "$3" else "Z"
 
-    dwl = "" if dwl == "" else f"{blk}G04F{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04F{ffed(dwl)}"
     apx = "" if xin == "" and zin == "" else f"{blk}G00{xin}{zin}"
 
     lines1 = [apx, f"{blk}{axs}{dpt}{fed}", dwl]
@@ -321,7 +321,7 @@ def gen_mazak(data: list) -> list:
     zin = "" if zin == "" else f"Z{fnum3(zin)}"
     rtr = "" if rtr == "" else f"R{fnum3(rtr)}"
 
-    dwl = "" if dwl == "" else f"{blk}G04U{ffed(dwl)}"
+    dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
     sys = mill_g_codes[f"SISTEMA {sys}"]
     znd = mill_g_codes[znd]
     apx = (

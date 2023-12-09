@@ -24,7 +24,6 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         self.window = main_window
         self.task = sub_tasks.tasks_list["Tool_call"]["Description"]
         self.image = "tool.png"
-
         self.cbx_typ.addItems(tool_list)
         self.cbx_sde.addItems(tape_sides_list)
         self.cbx_sde.setCurrentText(self.window.current_side)
@@ -173,7 +172,6 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         window.current_tool_type = data["Typ"]
         window.current_tool_diameter = data["Dia"]
         window.current_tool_specification = data["Spc"]
-        window.current_side = data["Sde"]
 
         window.first_tool_number = (
             data["Tol"]

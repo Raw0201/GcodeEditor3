@@ -41,10 +41,17 @@ def load_main_widgets_connections(window: QMainWindow):
         lambda: config_selected(window)
     )
     window.tape1_widget.itemSelectionChanged.connect(
-        lambda: tape1_selected(window)
+        lambda: tape_selected(window, "tape1")
     )
     window.tape2_widget.itemSelectionChanged.connect(
-        lambda: tape2_selected(window)
+        lambda: tape_selected(window, "tape2")
+    )
+
+    window.tape1_widget.verticalScrollBar().valueChanged.connect(
+        lambda: widget_scroll(window, window.tape1_widget.verticalScrollBar().value(), "tape1")
+    )
+    window.tape2_widget.verticalScrollBar().valueChanged.connect(
+        lambda: widget_scroll(window, window.tape2_widget.verticalScrollBar().value(), "tape2")
     )
 
 
@@ -92,51 +99,31 @@ def update_config_widget_selection(window: QMainWindow):
 
     items_selector(all_items, items, window.config_widget)
 
-
-def update_tape1_widget_selection(window: QMainWindow):
+def update_tape_widget_selection(window: QMainWindow, widget: str):
     """Actualiza la selección de items en el widget de tape1
 
     Args:
         window (QMainWindow): Ventana principal
+        widget (str): Widget del item seleccionado
     """
 
+    list = window.tape1_list if widget == "tape1" else window.tape2_list
+    widget_obj = window.tape1_widget if widget == "tape1" else window.tape2_widget
+
     all_items = [
-        window.tape1_widget.item(index_number, 0)
-        for index_number in range(len(window.tape1_list))
+        widget_obj.item(index_number, 0)
+        for index_number in range(len(list))
     ]
 
     config_indexes = window.current_selection
     indexes = [
         num
-        for num, index in enumerate(window.tape1_list)
+        for num, index in enumerate(list)
         if index[0] in config_indexes
     ]
-    items = [window.tape1_widget.item(index, 0) for index in indexes]
+    items = [widget_obj.item(index, 0) for index in indexes]
 
-    items_selector(all_items, items, window.tape1_widget)
-
-
-def update_tape2_widget_selection(window: QMainWindow):
-    """Actualiza la selección de items en el widget de tape2
-
-    Args:
-        window (QMainWindow): Ventana principal
-    """
-
-    all_items = [
-        window.tape2_widget.item(index_number, 0)
-        for index_number in range(len(window.tape2_list))
-    ]
-
-    config_indexes = window.current_selection
-    indexes = [
-        num
-        for num, index in enumerate(window.tape2_list)
-        if index[0] in config_indexes
-    ]
-    items = [window.tape2_widget.item(index, 0) for index in indexes]
-
-    items_selector(all_items, items, window.tape2_widget)
+    items_selector(all_items, items, widget_obj)
 
 
 def items_selector(all_items: list, items: list, widget: QWidget):
@@ -154,7 +141,7 @@ def items_selector(all_items: list, items: list, widget: QWidget):
         for item in items:
             item.setSelected(True)
         view = QAbstractItemView
-        widget.scrollToItem(items[-1], view.PositionAtCenter)
+        widget.scrollToItem(items[-1], view.EnsureVisible)
 
 
 def widget_clicked(window: QMainWindow, widget: str):
@@ -169,10 +156,8 @@ def widget_clicked(window: QMainWindow, widget: str):
 
     if widget == "conf":
         config_selected(window)
-    elif widget == "tape1":
-        tape1_selected(window)
-    elif widget == "tape2":
-        tape2_selected(window)
+    else:
+        tape_selected(window, widget)
 
 
 def config_selected(window: QMainWindow):
@@ -190,31 +175,22 @@ def config_selected(window: QMainWindow):
             )
             window.current_selection = sorted(list(set(config_lines)))
 
-            update_tape1_widget_selection(window)
-            update_tape2_widget_selection(window)
+            update_tape_widget_selection(window, "tape1")
+            update_tape_widget_selection(window, "tape2")
 
 
-def tape1_selected(window: QMainWindow):
+def tape_selected(window: QMainWindow, widget: str):
     """Actualiza la lista de índices seleccionados en el tape1
 
     Args:
         window (QMainWindow): Ventana principal
+        widget (str): Widget del item seleccionado
     """
 
-    if window.current_widget == "tape1":
-        if selected_items := window.tape1_widget.selectedItems():
-            items_selection(window, selected_items)
+    widget_obj = window.tape1_widget if widget == "tape1" else window.tape2_widget
 
-
-def tape2_selected(window: QMainWindow):
-    """Actualiza la lista de índices seleccionados en el tape2
-
-    Args:
-        window (QMainWindow): Ventana principal
-    """
-
-    if window.current_widget == "tape2":
-        if selected_items := window.tape2_widget.selectedItems():
+    if window.current_widget == widget:
+        if selected_items := widget_obj.selectedItems():
             items_selection(window, selected_items)
 
 
@@ -234,12 +210,10 @@ def items_selection(window: QMainWindow, selected_items: list):
     config_lines = [window.tape1_list[line][0] for line in selected_list]
     window.current_selection = sorted(list(set(config_lines)))
 
-    if window.current_widget == "tape1":
-        update_config_widget_selection(window)
-        update_tape2_widget_selection(window)
-    elif window.current_widget == "tape2":
-        update_config_widget_selection(window)
-        update_tape1_widget_selection(window)
+    widget = "tape2" if window.current_widget == "tape1" else "tape1"
+
+    update_config_widget_selection(window)
+    update_tape_widget_selection(window, widget)
 
 
 def item_modifier(window: QMainWindow):
@@ -270,5 +244,18 @@ def update_data_widgets(window: QMainWindow):
     update_tape_widget(window.tape2_widget, window.tape2_list)
 
     update_config_widget_selection(window)
-    update_tape1_widget_selection(window)
-    update_tape2_widget_selection(window)
+    update_tape_widget_selection(window, "tape1")
+    update_tape_widget_selection(window, "tape2")
+
+
+def widget_scroll(window: QMainWindow, index: int, widget: str):
+    """Recibe la señal de desplazamiento de la barra vertical
+
+    Args:
+        window (QMainWindow): Ventana principal
+        index (int): Posición de la barra de desplazamiento
+        widget (str): Widget del item seleccionado
+    """
+    
+    widget_obj = window.tape2_widget if widget == "tape1" else window.tape1_widget
+    widget_obj.verticalScrollBar().setValue(index)

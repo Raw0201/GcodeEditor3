@@ -78,7 +78,9 @@ def swiss_to_kswiss(tool: int, side: str) -> int:
     tools2 = {16: 11, 17: 12, 18: 13}
 
     if side == "$1" and tool in tools1:
+        print(tool)
         tool = tools1[tool]
+        print(tool)
     elif side == "$3" and tool in tools2:
         tool = tools2[tool]
 

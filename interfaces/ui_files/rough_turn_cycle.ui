@@ -2298,6 +2298,9 @@ PlotWidget {
      <property name="statusTip">
       <string/>
      </property>
+     <property name="text">
+      <string>0.005</string>
+     </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
@@ -2350,6 +2353,9 @@ PlotWidget {
      </property>
      <property name="statusTip">
       <string/>
+     </property>
+     <property name="text">
+      <string>0.01</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

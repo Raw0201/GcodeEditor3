@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'rough_turn_cyclehkSfMg.ui'
+## Form generated from reading UI file 'rough_turn_cyclerFQjIE.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QToolButton,
+    QWidget)
 import resources_rc
 
 class Ui_frm_rough_turn_cycle(object):
@@ -2310,6 +2316,7 @@ class Ui_frm_rough_turn_cycle(object):
 #if QT_CONFIG(statustip)
         self.tbx_ovr.setStatusTip("")
 #endif // QT_CONFIG(statustip)
+        self.tbx_ovr.setText(QCoreApplication.translate("frm_rough_turn_cycle", u"0.005", None))
         self.tbx_ovr.setPlaceholderText("")
         self.lbl_ovr.setText(QCoreApplication.translate("frm_rough_turn_cycle", u"Material para acabado", None))
 #if QT_CONFIG(tooltip)
@@ -2318,6 +2325,7 @@ class Ui_frm_rough_turn_cycle(object):
 #if QT_CONFIG(statustip)
         self.tbx_fed.setStatusTip("")
 #endif // QT_CONFIG(statustip)
+        self.tbx_fed.setText(QCoreApplication.translate("frm_rough_turn_cycle", u"0.01", None))
         self.tbx_fed.setPlaceholderText("")
         self.lbl_fed.setText(QCoreApplication.translate("frm_rough_turn_cycle", u"Avance de corte", None))
 #if QT_CONFIG(tooltip)
