@@ -24,7 +24,6 @@ def generate_tape_lines(window: QMainWindow, data_list: list):
         task_class = tools.sub_tasks.get_task_class(task)
         task_class.processor(window, window, data)
         task_class.switcher(window, window, data)
-
         parameters = get_parameters(window)
         machine = window.current_machine
         tape_lines = task_class.generator(window, machine, data)

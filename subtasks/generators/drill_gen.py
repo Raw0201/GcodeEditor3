@@ -417,7 +417,7 @@ def drilling_cycle_s1r(data: dict, mod: int) -> list:
     dwl2 = f"{blk}G01Z-{fnum3(final_depth)}{fed}" if dwl > 0 else ""
     dwl3 = f"{blk}G04U{ffed(dwl)}" if dwl > 0 else ""
 
-    first_depth = (zin + point + 0.02) * mod
+    first_depth = zin + (point + 0.02 * mod)
     fct = f"Z{fnum3(first_depth)}"
     rfc = f"R{fnum3(first_depth)}"
     xin = f"X{fnum3(xin)}"
@@ -482,7 +482,7 @@ def drilling_cycle_s1h(data: dict, mod: int) -> list:
     dwl2 = f"{blk}G01Z-{fnum3(final_depth)}{fed}" if dwl > 0 else ""
     dwl3 = f"{blk}G04U{ffed(dwl)}" if dwl > 0 else ""
 
-    first_depth = (zin + point + 0.02) * mod
+    first_depth = zin + (point + 0.02 * mod)
     fct = f"Z{fnum3(first_depth)}"
     xin = f"X{fnum3(xin)}"
     zin = f"Z{fnum3(zin - (0.02 * mod))}"
@@ -558,7 +558,6 @@ def drilling_cycle_s1m(data: dict, mod: int) -> list:
     znd = mill_g_codes[znd]
 
     lines1 = [
-        f"{blk}G00{xin}{yin}{zin}",
         f"{blk}{sys}{znd}G83{dpt}{cut}{rtr}{fed}",
     ]
     lines2 = [blank_space for _ in lines1]

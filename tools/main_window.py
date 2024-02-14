@@ -50,6 +50,10 @@ def new_tape(window: QMainWindow):
 
     dialog = new_tape_question(window)
     if dialog == QMessageBox.Yes:
+        load_default_data_lists(window)
+        load_default_variables(window)
+        load_default_tape_conditions(window)
+        load_default_machining_data(window)
         create_new_tape(window)
 
 
@@ -60,10 +64,6 @@ def create_new_tape(window: QMainWindow):
         window (QMainWindow): Ventana principal
     """
 
-    load_default_data_lists(window)
-    load_default_variables(window)
-    load_default_tape_conditions(window)
-    load_default_machining_data(window)
     load_default_buttons_status(window)
     load_main_title(window)
 
@@ -469,7 +469,6 @@ def update_data(window: QMainWindow):
         window (QMainWindow): Ventana principal
     """
 
-    load_default_machining_data(window)
     generate_tape_lines(window, window.config_list)
     update_config_widget(window)
     update_tape_widget(window.tape1_widget, window.tape1_list)
@@ -490,6 +489,8 @@ def subroutine_prep(window: QMainWindow):
 
     index_list = window.current_selection
     index = index_list[0] if index_list else 0
+    window.last_config_name = window.config_file_name
+
     with contextlib.suppress(KeyError, IndexError):
         if window.config_list[index][1]["Sub"]:
             save_config(window)
@@ -510,14 +511,28 @@ def load_subroutine_data(window: QMainWindow, index: int):
     window.subroutine_machine = window.current_machine
     window.subroutine_folder = window.current_folder
 
-    for line in window.tape1_list:
-        window.subroutine_tool = line[2]
-        window.subroutine_tool_type = line[3]
-        window.subroutine_tool_diameter = line[4]
-        window.subroutine_tool_specification = line[5]
-        window.subroutine_comment = line[6]
-        while line[0] == index:
+    current_index = index
+
+    while current_index > 0:
+        if window.config_list[current_index][0] == "    Llamar herramienta":
             break
+        else: current_index -= 1 
+
+    tool_data = window.config_list[current_index][1]
+    window.subroutine_tool = tool_data["Tol"]
+    window.subroutine_tool_type = tool_data["Typ"]
+    window.subroutine_tool_diameter = tool_data["Dia"]
+    window.subroutine_tool_specification = tool_data["Spc"]
+
+    current_index = index
+
+    while current_index > 0:
+        if window.config_list[current_index][0] == "        Comentario":
+            break
+        else: current_index -= 1
+
+    comment_data = window.config_list[current_index][1]
+    window.subroutine_comment = comment_data["Com"]
 
 
 def search_subroutine(window: QMainWindow):
@@ -551,6 +566,7 @@ def load_subroutine(window: QMainWindow, file: str):
     create_new_tape(window)
     window.config_list = json.load(file)
     description = window.config_list[0][1]["Dsc"]
+    window.current_part_length = window.config_list[0][1]['Lgt']
     window.config_list[0] = prefab_sub_header(window, description)
     window.save_required = False
     update_after_subroutine(window)
@@ -564,7 +580,8 @@ def create_subroutine(window: QMainWindow):
     """
 
     create_new_tape(window)
-    description = ""
+    description = "-"
+    window.main_tape_active = False
     window.config_list = [prefab_sub_header(window, description)]
     window.config_list.append(prefab_comment(window.subroutine_comment, "$1"))
     collect_data(window, "End"),
@@ -596,16 +613,21 @@ def return_to(window: QMainWindow):
     with contextlib.suppress(KeyError):
         previous_program = window.config_list[0][1]["Mnp"]
         program = f"{previous_program}.json"
+        last_config = f"{window.last_config_name}.json"
 
         try:
-            previous_program = window.config_list[0][1]["Mnp"]
-            program = f"{previous_program}.json"
             with open(program) as file:
                 window.config_list = json.load(file)
                 update_after_subroutine(window)
                 find_subroutine(window, subroutine)
         except FileNotFoundError:
-            file_open_error(window)
+            if last_config != ".json":
+                with open(last_config) as file:
+                    window.config_list = json.load(file)
+                    update_after_subroutine(window)
+                    find_subroutine(window, subroutine)
+            else:
+                file_open_error(window)
 
 
 def find_subroutine(window: QMainWindow, subroutine: str):

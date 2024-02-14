@@ -1,31 +1,37 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'subroutinevKAyLG.ui'
+## Form generated from reading UI file 'subroutineUJwQAn.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QToolButton,
+    QWidget)
 import resources_rc
 
 class Ui_frm_subroutine(object):
     def setupUi(self, frm_subroutine):
         if not frm_subroutine.objectName():
             frm_subroutine.setObjectName(u"frm_subroutine")
-        frm_subroutine.resize(210, 180)
+        frm_subroutine.resize(210, 230)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(frm_subroutine.sizePolicy().hasHeightForWidth())
         frm_subroutine.setSizePolicy(sizePolicy)
-        frm_subroutine.setMinimumSize(QSize(210, 180))
-        frm_subroutine.setMaximumSize(QSize(210, 180))
+        frm_subroutine.setMinimumSize(QSize(210, 230))
+        frm_subroutine.setMaximumSize(QSize(210, 230))
         icon = QIcon()
         icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
         frm_subroutine.setWindowIcon(icon)
@@ -2199,14 +2205,14 @@ class Ui_frm_subroutine(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(10, 10, 190, 160))
+        self.frame.setGeometry(QRect(10, 10, 190, 210))
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
         self.frame.setSizePolicy(sizePolicy1)
-        self.frame.setMinimumSize(QSize(190, 160))
-        self.frame.setMaximumSize(QSize(190, 160))
+        self.frame.setMinimumSize(QSize(190, 210))
+        self.frame.setMaximumSize(QSize(190, 210))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.tbx_sub = QLineEdit(self.frame)
@@ -2225,7 +2231,7 @@ class Ui_frm_subroutine(object):
         self.lbl_rep.setGeometry(QRect(15, 60, 142, 26))
         self.btn_save = QPushButton(self.frame)
         self.btn_save.setObjectName(u"btn_save")
-        self.btn_save.setGeometry(QRect(10, 130, 171, 24))
+        self.btn_save.setGeometry(QRect(10, 180, 171, 24))
         sizePolicy.setHeightForWidth(self.btn_save.sizePolicy().hasHeightForWidth())
         self.btn_save.setSizePolicy(sizePolicy)
         self.btn_save.setMinimumSize(QSize(88, 0))
@@ -2236,11 +2242,23 @@ class Ui_frm_subroutine(object):
         self.tbx_rep.setMinimumSize(QSize(170, 0))
         self.tbx_rep.setMaximumSize(QSize(170, 16777215))
         self.tbx_rep.setAlignment(Qt.AlignCenter)
+        self.lbl_com = QLabel(self.frame)
+        self.lbl_com.setObjectName(u"lbl_com")
+        self.lbl_com.setEnabled(True)
+        self.lbl_com.setGeometry(QRect(15, 110, 91, 26))
+        self.tbx_com = QLineEdit(self.frame)
+        self.tbx_com.setObjectName(u"tbx_com")
+        self.tbx_com.setGeometry(QRect(13, 130, 170, 26))
+        self.tbx_com.setMinimumSize(QSize(170, 0))
+        self.tbx_com.setMaximumSize(QSize(170, 16777215))
+        self.tbx_com.setAlignment(Qt.AlignCenter)
         self.tbx_sub.raise_()
         self.lbl_sub.raise_()
         self.btn_save.raise_()
         self.tbx_rep.raise_()
         self.lbl_rep.raise_()
+        self.tbx_com.raise_()
+        self.lbl_com.raise_()
         self.btn_help = QToolButton(self.centralwidget)
         self.btn_help.setObjectName(u"btn_help")
         self.btn_help.setGeometry(QRect(183, -2, 29, 29))
@@ -2256,9 +2274,11 @@ class Ui_frm_subroutine(object):
 #if QT_CONFIG(shortcut)
         self.lbl_sub.setBuddy(self.lbl_sub)
         self.lbl_rep.setBuddy(self.lbl_rep)
+        self.lbl_com.setBuddy(self.lbl_rep)
 #endif // QT_CONFIG(shortcut)
         QWidget.setTabOrder(self.tbx_sub, self.tbx_rep)
-        QWidget.setTabOrder(self.tbx_rep, self.btn_save)
+        QWidget.setTabOrder(self.tbx_rep, self.tbx_com)
+        QWidget.setTabOrder(self.tbx_com, self.btn_save)
         QWidget.setTabOrder(self.btn_save, self.btn_help)
 
         self.retranslateUi(frm_subroutine)
@@ -2295,6 +2315,15 @@ class Ui_frm_subroutine(object):
 #endif // QT_CONFIG(statustip)
         self.tbx_rep.setText(QCoreApplication.translate("frm_subroutine", u"0", None))
         self.tbx_rep.setPlaceholderText("")
+        self.lbl_com.setText(QCoreApplication.translate("frm_subroutine", u"Compensaci\u00f3n", None))
+#if QT_CONFIG(tooltip)
+        self.tbx_com.setToolTip(QCoreApplication.translate("frm_subroutine", u"Largo en subrutina menos largo pieza", None))
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(statustip)
+        self.tbx_com.setStatusTip("")
+#endif // QT_CONFIG(statustip)
+        self.tbx_com.setText(QCoreApplication.translate("frm_subroutine", u"0", None))
+        self.tbx_com.setPlaceholderText("")
         self.btn_help.setText("")
 #if QT_CONFIG(shortcut)
         self.btn_help.setShortcut(QCoreApplication.translate("frm_subroutine", u"F1", None))

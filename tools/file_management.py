@@ -40,7 +40,7 @@ def update_file_name(window) -> None:
         file_name = f"H{window.main_tape_number}"
     elif machine == "MAZAK":
         file_name = f"{window.main_tape_number}"
-        file_extension = ".CNC"
+        file_extension = ".EIA"
 
     window.config_file_name = file_name
     window.file_extension = file_extension

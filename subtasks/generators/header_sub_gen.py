@@ -30,7 +30,6 @@ def header_sub_gen(machine: str, data: list) -> list:
         return gen_mazak(data)
 
 
-
 def gen_b12(data: list) -> list:
     """Genera los códigos para torno suizo B12
 
@@ -41,12 +40,13 @@ def gen_b12(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)
+    dsc = "" if dsc == "-" else f" {dsc}"
 
-    lines1 = ["%", f"O{num}(SUB {dsc})"]
+    lines1 = ["%", f"O{num}(SUB{dsc})"]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -62,12 +62,13 @@ def gen_a16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)
+    dsc = "" if dsc == "-" else f" {dsc}"
 
-    lines1 = ["%", f"O{num}(SUB {dsc})"]
+    lines1 = ["%", f"O{num}(SUB{dsc})"]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -83,12 +84,13 @@ def gen_k16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)
+    dsc = "" if dsc == "-" else f" {dsc}"
 
-    lines1 = ["%", f"O{num}(SUB {dsc})"]
+    lines1 = ["%", f"O{num}(SUB{dsc})"]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -104,12 +106,13 @@ def gen_e16(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)
+    dsc = "" if dsc == "-" else f" {dsc}"
 
-    lines1 = ["%", f"O{num}(SUB {dsc})"]
+    lines1 = ["%", f"O{num}(SUB{dsc})"]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -125,12 +128,13 @@ def gen_omni(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)
+    dsc = "" if dsc == "-" else f" {dsc}"
 
-    lines1 = ["%", f"O{num}(SUB {dsc})"]
+    lines1 = [f"O{num}(SUB{dsc})"]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -146,12 +150,13 @@ def gen_romi(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)
+    dsc = "" if dsc == "-" else f" {dsc}"
 
-    lines1 = ["%", f"O{num}(SUB {dsc})"]
+    lines1 = ["%", f"O{num}(SUB{dsc})"]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -167,12 +172,13 @@ def gen_hardinge(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)
+    dsc = "" if dsc == "-" else f" {dsc}"
 
-    lines1 = ["%", f"O{num}(SUB {dsc})"]
+    lines1 = ["%", f"O{num}(SUB{dsc})"]
     lines2 = [blank_space for _ in lines1]
 
     return [lines1, lines2]
@@ -188,7 +194,7 @@ def gen_mazak(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    prg, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+    prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
     blank_space = fspace()
 
     num = ftape(mch, prg)

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'call_squareJHxVDa.ui'
+## Form generated from reading UI file 'call_squareGODGJM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -2328,7 +2328,7 @@ class Ui_frm_call_square(object):
     def retranslateUi(self, frm_call_square):
         frm_call_square.setWindowTitle(QCoreApplication.translate("frm_call_square", u"GCode Editor", None))
 #if QT_CONFIG(tooltip)
-        self.tbx_sub.setToolTip(QCoreApplication.translate("frm_call_square", u"Digite el texto del comentario", None))
+        self.tbx_sub.setToolTip(QCoreApplication.translate("frm_call_square", u"Indique el n\u00famero de subrutina", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.tbx_sub.setStatusTip("")
@@ -2337,7 +2337,7 @@ class Ui_frm_call_square(object):
         self.lbl_sub.setText(QCoreApplication.translate("frm_call_square", u"N\u00famero de subrutina", None))
         self.lbl_sec.setText(QCoreApplication.translate("frm_call_square", u"Retorno a Z seguridad", None))
 #if QT_CONFIG(tooltip)
-        self.cbx_sec.setToolTip(QCoreApplication.translate("frm_call_square", u"Seleccione el husillo de trabajo a utilizar", None))
+        self.cbx_sec.setToolTip(QCoreApplication.translate("frm_call_square", u"Seleccione si requiere retorno en Z despu\u00e9s de la subrutina", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(tooltip)
         self.btn_save.setToolTip(QCoreApplication.translate("frm_call_square", u"Agregar los datos al programa CNC", None))
@@ -2350,7 +2350,7 @@ class Ui_frm_call_square(object):
         self.btn_save.setShortcut(QCoreApplication.translate("frm_call_square", u"Ctrl+S", None))
 #endif // QT_CONFIG(shortcut)
 #if QT_CONFIG(tooltip)
-        self.tbx_dpt.setToolTip(QCoreApplication.translate("frm_call_square", u"Digite el texto del comentario", None))
+        self.tbx_dpt.setToolTip(QCoreApplication.translate("frm_call_square", u"Indique la profundidad a maquinar o la posici\u00f3n de inicio en el eje Z", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.tbx_dpt.setStatusTip("")
@@ -2358,7 +2358,7 @@ class Ui_frm_call_square(object):
         self.tbx_dpt.setPlaceholderText("")
         self.lbl_dpt.setText(QCoreApplication.translate("frm_call_square", u"Profundidad / Posici\u00f3n Z", None))
 #if QT_CONFIG(tooltip)
-        self.tbx_cut.setToolTip(QCoreApplication.translate("frm_call_square", u"Digite el texto del comentario", None))
+        self.tbx_cut.setToolTip(QCoreApplication.translate("frm_call_square", u"Indique la profundidad por corte", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.tbx_cut.setStatusTip("")
@@ -2366,7 +2366,7 @@ class Ui_frm_call_square(object):
         self.tbx_cut.setPlaceholderText("")
         self.lbl_cut.setText(QCoreApplication.translate("frm_call_square", u"Profundidad por corte", None))
 #if QT_CONFIG(tooltip)
-        self.tbx_unblk.setToolTip(QCoreApplication.translate("frm_call_square", u"Digite el texto del comentario", None))
+        self.tbx_unblk.setToolTip(QCoreApplication.translate("frm_call_square", u"Indique la cantidad de piezas desbloqueadas", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(statustip)
         self.tbx_unblk.setStatusTip("")
@@ -2375,7 +2375,7 @@ class Ui_frm_call_square(object):
         self.tbx_unblk.setPlaceholderText("")
         self.lbl_unblk.setText(QCoreApplication.translate("frm_call_square", u"Piezas desbloqueadas", None))
 #if QT_CONFIG(tooltip)
-        self.cbx_dir.setToolTip(QCoreApplication.translate("frm_call_square", u"Seleccione el husillo de trabajo a utilizar", None))
+        self.cbx_dir.setToolTip(QCoreApplication.translate("frm_call_square", u"Seleccione la direcci\u00f3n de maquinado", None))
 #endif // QT_CONFIG(tooltip)
         self.lbl_dir.setText(QCoreApplication.translate("frm_call_square", u"Direcci\u00f3n de maquinado", None))
         self.btn_help.setText("")

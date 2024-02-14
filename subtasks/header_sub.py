@@ -25,6 +25,8 @@ class Header_sub(Subtask, Ui_frm_header_sub):
         self.task = sub_tasks.tasks_list["Header_sub"]["Description"]
         self.image = "header.png"
 
+        self.cbx_mch.addItems(machines_list)
+
     def collector(self):
         """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
@@ -37,8 +39,10 @@ class Header_sub(Subtask, Ui_frm_header_sub):
             "Typ": self.window.subroutine_tool_type,
             "Dia": self.window.subroutine_tool_diameter,
             "Spc": self.window.subroutine_tool_specification,
-            "Mch": self.window.subroutine_machine,
+            "Mch": self.cbx_mch.currentText(),
+            "Lgt": self.tbx_lgt.text(),
         }
+
         self.validator(data)
 
     def validator(self, data: dict):
@@ -64,7 +68,7 @@ class Header_sub(Subtask, Ui_frm_header_sub):
             data["Pgr"] = ftext(data["Pgr"]) if data["Pgr"] != "" else ""
             data["Mnp"] = ftext(data["Mnp"]) if data["Mnp"] != "" else ""
             data["Dsc"] = ftext(data["Dsc"]) if data["Dsc"] != "" else ""
-
+            data["Lgt"] = foper(data["Lgt"])
         except ValueError:
             data_type_error(self)
             return
@@ -110,12 +114,14 @@ class Header_sub(Subtask, Ui_frm_header_sub):
         """
 
         self.modification = True
-        pgr, mnp, dsc, plt, tol, typ, dia, spc, mch = data.values()
+        pgr, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
 
         self.tbx_pgr.setText(str(pgr))
         self.tbx_pgr.setSelection(0, 100)
         self.tbx_mnp.setText(str(mnp))
-        self.tbx_dsc.setText(str(dsc))
+        self.tbx_dsc.setText("-") if dsc == "" else self.tbx_dsc.setText(str(dsc))
+        self.cbx_mch.setCurrentText(str(mch))
+        self.tbx_lgt.setText(str(lgt))
         self.btn_save.setText("Actualizar")
         self.show()
 
@@ -128,9 +134,10 @@ class Header_sub(Subtask, Ui_frm_header_sub):
         """
 
         window.save_required = True
+        window.current_machine = data["Mch"]
+        # update_file_dir(window)
 
         window.main_tape_active = False
-
         window.current_machine = data["Mch"]
         window.part_name = data["Pgr"]
         window.main_tape_number = data["Pgr"]
@@ -183,6 +190,7 @@ class Header_sub(Subtask, Ui_frm_header_sub):
         window.btn_header.setEnabled(False)
         window.btn_tool_close.setEnabled(False)
         window.btn_collect.setEnabled(False)
+        window.btn_rough_turn_cycle_end.setEnabled(False)
 
         end_enabled = not window.main_tape_active
         window.btn_end.setEnabled(end_enabled)

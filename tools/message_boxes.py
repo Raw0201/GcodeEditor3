@@ -131,3 +131,16 @@ def file_open_error(self) -> QMessageBox:
         "Error al abrir archivo",
         "No se puede cargar el programa seleccionado",
     )
+
+def machine_error_information(self) -> QMessageBox:
+    """Mensaje de error en selección de máquina
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
+    return QMessageBox.information(
+        self,
+        "Error en selección de máquina",
+        "Seleccione un tipo de máquina para mostrar los comandos",
+    )

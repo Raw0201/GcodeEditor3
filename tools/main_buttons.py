@@ -43,6 +43,7 @@ def load_main_buttons(window: QMainWindow):
         window.btn_mill_end,
         window.btn_lineal_mill,
         window.btn_radial_mill,
+        window.btn_sub_matrix
     )
 
     window.milling_cycle_buttons_list = (
@@ -162,6 +163,9 @@ def load_main_buttons_connections(window: QMainWindow):
     )
     window.btn_radial_mill.clicked.connect(
         lambda: collect_data(window, "Radial_mill"),
+    )
+    window.btn_sub_matrix.clicked.connect(
+        lambda: collect_data(window, "Sub_matrix"),
     )
     window.btn_drill_ini.clicked.connect(
         lambda: collect_data(window, "Drill_ini"),

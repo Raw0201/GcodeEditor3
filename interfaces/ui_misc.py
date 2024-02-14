@@ -1,31 +1,37 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'miscskPPIx.ui'
+## Form generated from reading UI file 'miscoiDhSW.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.1
+## Created by: Qt User Interface Compiler version 6.3.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import *  # type: ignore
-from PySide6.QtGui import *  # type: ignore
-from PySide6.QtWidgets import *  # type: ignore
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QLabel,
+    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
+    QToolButton, QWidget)
 import resources_rc
 
 class Ui_frm_misc(object):
     def setupUi(self, frm_misc):
         if not frm_misc.objectName():
             frm_misc.setObjectName(u"frm_misc")
-        frm_misc.resize(210, 330)
+        frm_misc.resize(210, 380)
         sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(frm_misc.sizePolicy().hasHeightForWidth())
         frm_misc.setSizePolicy(sizePolicy)
-        frm_misc.setMinimumSize(QSize(210, 330))
-        frm_misc.setMaximumSize(QSize(210, 330))
+        frm_misc.setMinimumSize(QSize(210, 380))
+        frm_misc.setMaximumSize(QSize(210, 380))
         icon = QIcon()
         icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
         frm_misc.setWindowIcon(icon)
@@ -2199,14 +2205,14 @@ class Ui_frm_misc(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(10, 10, 190, 310))
+        self.frame.setGeometry(QRect(10, 10, 190, 360))
         sizePolicy1 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
         self.frame.setSizePolicy(sizePolicy1)
-        self.frame.setMinimumSize(QSize(190, 310))
-        self.frame.setMaximumSize(QSize(190, 310))
+        self.frame.setMinimumSize(QSize(190, 360))
+        self.frame.setMaximumSize(QSize(190, 360))
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.tbx_com = QLineEdit(self.frame)
@@ -2230,7 +2236,7 @@ class Ui_frm_misc(object):
         self.cbx_chk.setMaximumSize(QSize(170, 16777215))
         self.btn_save = QPushButton(self.frame)
         self.btn_save.setObjectName(u"btn_save")
-        self.btn_save.setGeometry(QRect(10, 280, 171, 24))
+        self.btn_save.setGeometry(QRect(10, 330, 171, 24))
         sizePolicy.setHeightForWidth(self.btn_save.sizePolicy().hasHeightForWidth())
         self.btn_save.setSizePolicy(sizePolicy)
         self.btn_save.setMinimumSize(QSize(88, 0))
@@ -2262,6 +2268,15 @@ class Ui_frm_misc(object):
         self.lbl_sde.setObjectName(u"lbl_sde")
         self.lbl_sde.setEnabled(True)
         self.lbl_sde.setGeometry(QRect(15, 210, 103, 26))
+        self.cbx_pln = QComboBox(self.frame)
+        self.cbx_pln.setObjectName(u"cbx_pln")
+        self.cbx_pln.setGeometry(QRect(10, 280, 170, 26))
+        self.cbx_pln.setMinimumSize(QSize(170, 26))
+        self.cbx_pln.setMaximumSize(QSize(170, 16777215))
+        self.lbl_pln = QLabel(self.frame)
+        self.lbl_pln.setObjectName(u"lbl_pln")
+        self.lbl_pln.setEnabled(True)
+        self.lbl_pln.setGeometry(QRect(15, 260, 103, 26))
         self.tbx_com.raise_()
         self.lbl_com.raise_()
         self.cbx_chk.raise_()
@@ -2273,6 +2288,8 @@ class Ui_frm_misc(object):
         self.lbl_col.raise_()
         self.cbx_sde.raise_()
         self.lbl_sde.raise_()
+        self.cbx_pln.raise_()
+        self.lbl_pln.raise_()
         self.btn_help = QToolButton(self.centralwidget)
         self.btn_help.setObjectName(u"btn_help")
         self.btn_help.setGeometry(QRect(183, -2, 29, 29))
@@ -2291,12 +2308,14 @@ class Ui_frm_misc(object):
         self.lbl_stp.setBuddy(self.lbl_chk)
         self.lbl_col.setBuddy(self.lbl_chk)
         self.lbl_sde.setBuddy(self.lbl_sde)
+        self.lbl_pln.setBuddy(self.lbl_sde)
 #endif // QT_CONFIG(shortcut)
         QWidget.setTabOrder(self.tbx_com, self.cbx_stp)
         QWidget.setTabOrder(self.cbx_stp, self.cbx_chk)
         QWidget.setTabOrder(self.cbx_chk, self.cbx_col)
         QWidget.setTabOrder(self.cbx_col, self.cbx_sde)
-        QWidget.setTabOrder(self.cbx_sde, self.btn_save)
+        QWidget.setTabOrder(self.cbx_sde, self.cbx_pln)
+        QWidget.setTabOrder(self.cbx_pln, self.btn_save)
         QWidget.setTabOrder(self.btn_save, self.btn_help)
 
         self.retranslateUi(frm_misc)
@@ -2340,6 +2359,10 @@ class Ui_frm_misc(object):
         self.cbx_sde.setToolTip(QCoreApplication.translate("frm_misc", u"Seleccione el husillo de trabajo a utilizar", None))
 #endif // QT_CONFIG(tooltip)
         self.lbl_sde.setText(QCoreApplication.translate("frm_misc", u"Husillo de trabajo", None))
+#if QT_CONFIG(tooltip)
+        self.cbx_pln.setToolTip(QCoreApplication.translate("frm_misc", u"Seleccione el plano de trabajo a utilizar", None))
+#endif // QT_CONFIG(tooltip)
+        self.lbl_pln.setText(QCoreApplication.translate("frm_misc", u"Plano de trabajo", None))
         self.btn_help.setText("")
 #if QT_CONFIG(shortcut)
         self.btn_help.setShortcut(QCoreApplication.translate("frm_misc", u"F1", None))

@@ -1,5 +1,5 @@
 from operator import sub
-from subtasks import version, graph
+from subtasks import version, graph, gcodes, mcodes, drill_data, mill_data, thread_data
 
 from tools.main_window import *
 
@@ -24,6 +24,11 @@ def load_menu_actions(window):
 
     window.actionGraph.triggered.connect(lambda: graph_window(window))
     window.actionVersion.triggered.connect(lambda: version_window(window))
+    window.actionGCodes.triggered.connect(lambda: gcodes_window(window))
+    window.actionMCodes.triggered.connect(lambda: mcodes_window(window))
+    window.actionDrillTable.triggered.connect(lambda: drill_window(window))
+    window.actionMillTable.triggered.connect(lambda: mill_window(window))
+    window.actionThreadTable.triggered.connect(lambda: thread_window(window))
 
     window.actionGo_to.triggered.connect(lambda: subroutine_prep(window))
     window.actionReturn_to.triggered.connect(lambda: return_to(window))
@@ -151,4 +156,53 @@ def version_window(window: QMainWindow):
     """
 
     window.sub_window = version.Version()
+    window.sub_window.show()
+
+def gcodes_window(window: QMainWindow):
+    """Crea la ventana de códigos G
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    window.sub_window = gcodes.Gcodes(window)
+    window.sub_window.show()
+
+def mcodes_window(window: QMainWindow):
+    """Crea la ventana de códigos M
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    window.sub_window = mcodes.Mcodes(window)
+    window.sub_window.show()
+
+def drill_window(window: QMainWindow):
+    """Crea la ventana de datos de brocas
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    window.sub_window = drill_data.Drill_data(window)
+    window.sub_window.show()
+
+def mill_window(window: QMainWindow):
+    """Crea la ventana de datos de fresas
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    window.sub_window = mill_data.Mill_data(window)
+    window.sub_window.show()
+
+def thread_window(window: QMainWindow):
+    """Crea la ventana de datos de brocas
+
+    Args:
+        window (QMainWindow): Ventana principal
+    """
+
+    window.sub_window = thread_data.Thread_data(window)
     window.sub_window.show()

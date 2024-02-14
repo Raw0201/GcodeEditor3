@@ -1,5 +1,4 @@
 from PySide6.QtWidgets import QMainWindow
-
 from interfaces.ui_helper import Ui_frm_helper
 
 

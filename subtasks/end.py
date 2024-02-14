@@ -40,6 +40,7 @@ class End(QMainWindow):
             "Yps": self.window.first_yps,
             "Zps": self.window.first_zps,
         }
+
         self.packer(data)
 
     def validator(self, data: dict):
@@ -89,18 +90,30 @@ class End(QMainWindow):
             list: Lista de líneas de tape
         """
 
-        data["Mta"] = self.main_tape_active
-        data["Bar"] = self.current_bar_diameter
-        data["Lgt"] = self.current_part_length
-        data["Chk"] = self.current_chuck_position
-        data["Cof"] = self.current_cutoff_tool
-        data["Tol"] = self.first_tool_number
-        data["Typ"] = self.first_tool_type
-        data["Dia"] = self.first_tool_diameter
-        data["Spc"] = self.first_tool_spec
-        data["Xps"] = self.first_xps
-        data["Yps"] = self.first_yps
-        data["Zps"] = self.first_zps
+        current_index = 0
+       
+        try:
+            while True:
+                if self.config_list[current_index][0] == "    Llamar herramienta":
+                    break
+                else: current_index += 1
+
+            tool_data = self.config_list[current_index][1]
+
+            data["Mta"] = self.main_tape_active
+            data["Bar"] = self.current_bar_diameter
+            data["Lgt"] = self.current_part_length
+            data["Chk"] = self.current_chuck_position
+            data["Cof"] = self.current_cutoff_tool
+            data["Tol"] = tool_data["Tol"]
+            data["Typ"] = tool_data["Typ"]
+            data["Dia"] = tool_data["Dia"]
+            data["Spc"] = tool_data["Spc"]
+            data["Xps"] = tool_data["Xin"]
+            data["Yps"] = tool_data["Yin"]
+            data["Zps"] = tool_data["Zin"]
+        except:
+            pass
 
         return end_gen(machine, data)
 

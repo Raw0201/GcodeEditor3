@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>330</height>
+    <height>380</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>330</height>
+    <height>380</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>330</height>
+    <height>380</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2155,7 +2155,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>310</height>
+      <height>360</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2167,13 +2167,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>310</height>
+      <height>360</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>310</height>
+      <height>360</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2283,7 +2283,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>280</y>
+       <y>330</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2448,6 +2448,50 @@ PlotWidget {
       <cstring>lbl_sde</cstring>
      </property>
     </widget>
+    <widget class="QComboBox" name="cbx_pln">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Seleccione el plano de trabajo a utilizar</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_pln">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>260</y>
+       <width>103</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plano de trabajo</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_sde</cstring>
+     </property>
+    </widget>
     <zorder>tbx_com</zorder>
     <zorder>lbl_com</zorder>
     <zorder>cbx_chk</zorder>
@@ -2459,6 +2503,8 @@ PlotWidget {
     <zorder>lbl_col</zorder>
     <zorder>cbx_sde</zorder>
     <zorder>lbl_sde</zorder>
+    <zorder>cbx_pln</zorder>
+    <zorder>lbl_pln</zorder>
    </widget>
    <widget class="QToolButton" name="btn_help">
     <property name="geometry">
@@ -2500,6 +2546,7 @@ PlotWidget {
   <tabstop>cbx_chk</tabstop>
   <tabstop>cbx_col</tabstop>
   <tabstop>cbx_sde</tabstop>
+  <tabstop>cbx_pln</tabstop>
   <tabstop>btn_save</tabstop>
   <tabstop>btn_help</tabstop>
  </tabstops>

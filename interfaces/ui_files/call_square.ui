@@ -2204,7 +2204,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el texto del comentario</string>
+      <string>Indique el número de subrutina</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2276,7 +2276,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Seleccione el husillo de trabajo a utilizar</string>
+      <string>Seleccione si requiere retorno en Z después de la subrutina</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btn_save">
@@ -2338,7 +2338,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el texto del comentario</string>
+      <string>Indique la profundidad a maquinar o la posición de inicio en el eje Z</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2391,7 +2391,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el texto del comentario</string>
+      <string>Indique la profundidad por corte</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2444,7 +2444,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Digite el texto del comentario</string>
+      <string>Indique la cantidad de piezas desbloqueadas</string>
      </property>
      <property name="statusTip">
       <string/>
@@ -2500,7 +2500,7 @@ PlotWidget {
       </size>
      </property>
      <property name="toolTip">
-      <string>Seleccione el husillo de trabajo a utilizar</string>
+      <string>Seleccione la dirección de maquinado</string>
      </property>
     </widget>
     <widget class="QLabel" name="lbl_dir">

@@ -23,7 +23,7 @@ class Subroutine(Subtask, Ui_frm_subroutine):
         super().__init__()
         self.window = main_window
         self.task = sub_tasks.tasks_list["Subroutine"]["Description"]
-        self.image = "subroutine.png"
+        self.image = "comment.png"
 
         self.tbx_sub.setText(str(self.window.last_subroutine_number + 1))
         self.tbx_sub.setSelection(0, 100)
@@ -34,6 +34,7 @@ class Subroutine(Subtask, Ui_frm_subroutine):
         data = {
             "Sub": self.tbx_sub.text(),
             "Rep": self.tbx_rep.text(),
+            "Com": self.tbx_com.text(),
             "Blk": False,
         }
 
@@ -50,7 +51,8 @@ class Subroutine(Subtask, Ui_frm_subroutine):
             required_data_error(self)
             return
         self.converter(data)
-        tools.main_window.subroutine_prep(self.window)
+
+        # tools.main_window.subroutine_prep(self.window)    
 
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
@@ -62,6 +64,7 @@ class Subroutine(Subtask, Ui_frm_subroutine):
         try:
             data["Sub"] = int(data["Sub"]) if data["Sub"] != "" else ""
             data["Rep"] = foper(data["Rep"])
+            data["Com"] = foper(data["Com"])
         except ValueError:
             data_type_error(self)
             return
@@ -107,11 +110,12 @@ class Subroutine(Subtask, Ui_frm_subroutine):
         """
 
         self.modification = True
-        sub, rep, blk = data.values()
+        sub, rep, com, blk = data.values()
 
         self.tbx_sub.setText(str(sub))
         self.tbx_sub.setSelection(0, 100)
         self.tbx_rep.setText(str(rep))
+        self.tbx_com.setText(str(com))
         self.btn_save.setText("Actualizar")
         self.show()
 

@@ -173,37 +173,6 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         window.current_tool_diameter = data["Dia"]
         window.current_tool_specification = data["Spc"]
 
-        window.first_tool_number = (
-            data["Tol"]
-            if window.first_tool_number is None
-            else window.first_tool_number
-        )
-        window.first_tool_type = (
-            data["Typ"]
-            if window.first_tool_type is None
-            else window.first_tool_type
-        )
-
-        window.first_tool_diameter = (
-            data["Dia"]
-            if window.first_tool_diameter is None
-            else window.first_tool_diameter
-        )
-        window.first_tool_spec = (
-            data["Spc"]
-            if window.first_tool_spec is None
-            else window.first_tool_spec
-        )
-        window.first_xps = (
-            data["Xin"] if window.first_xps is None else window.first_xps
-        )
-        window.first_yps = (
-            data["Yin"] if window.first_yps is None else window.first_yps
-        )
-        window.first_zps = (
-            data["Zin"] if window.first_zps is None else window.first_zps
-        )
-
     def switcher(self, window: QMainWindow, data: dict):
         """Cambia el estado de los botones según los datos de configuración
 

@@ -21,6 +21,7 @@ from interfaces.ui_header import Ui_frm_header
 class Header(Subtask, Ui_frm_header):
     def __init__(self, main_window):
         super().__init__()
+
         self.window = main_window
         self.task = sub_tasks.tasks_list["Header"]["Description"]
         self.image = "header.png"

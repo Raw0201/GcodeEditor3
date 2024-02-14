@@ -288,7 +288,7 @@ def gen_romi(data: list) -> list:
     if mta:
         tol = f"0{tol}" if tol < 10 else f"{tol}"
         dia = "" if dia == 0 else f" {fdia(dia)}"
-        spc = "" if spc == "0" else f" {spc}"
+        spc = "" if spc == "-" else f" {spc}"
         xin = f"X{fnum3(xps)}"
         zin = f"Z{fnum3(zps)}"
 
@@ -327,7 +327,7 @@ def gen_hardinge(data: list) -> list:
     if mta:
         tol = f"0{tol}" if tol < 10 else f"{tol}"
         dia = "" if dia == 0 else f" {fdia(dia)}"
-        spc = "" if spc == "0" else f" {spc}"
+        spc = "" if spc == "-" else f" {spc}"
         xin = f"X{fnum3(xps)}"
         zin = f"Z{fnum3(zps)}"
 

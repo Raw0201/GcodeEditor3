@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>210</width>
-    <height>230</height>
+    <height>330</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -19,13 +19,13 @@
   <property name="minimumSize">
    <size>
     <width>210</width>
-    <height>230</height>
+    <height>330</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>210</width>
-    <height>230</height>
+    <height>330</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -2221,7 +2221,7 @@ PlotWidget {
       <x>10</x>
       <y>10</y>
       <width>190</width>
-      <height>210</height>
+      <height>310</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -2233,13 +2233,13 @@ PlotWidget {
     <property name="minimumSize">
      <size>
       <width>190</width>
-      <height>210</height>
+      <height>310</height>
      </size>
     </property>
     <property name="maximumSize">
      <size>
       <width>190</width>
-      <height>210</height>
+      <height>310</height>
      </size>
     </property>
     <property name="frameShape">
@@ -2352,7 +2352,7 @@ PlotWidget {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>180</y>
+       <y>280</y>
        <width>171</width>
        <height>24</height>
       </rect>
@@ -2432,6 +2432,108 @@ PlotWidget {
       <string>Descripción</string>
      </property>
     </widget>
+    <widget class="QLabel" name="lbl_mch">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>160</y>
+       <width>100</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tipo de máquina</string>
+     </property>
+     <property name="buddy">
+      <cstring>lbl_mch</cstring>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cbx_mch">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>26</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Seleccione el tipo de máquina CNC</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lbl_lgt">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>210</y>
+       <width>141</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Longitud de la subrutina</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="tbx_lgt">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>170</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>170</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>170</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Digite la longitud total de la subrutina (Torno suizo)</string>
+     </property>
+     <property name="toolTipDuration">
+      <number>-1</number>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>tbx_pgr</zorder>
+    <zorder>lbl_pgr</zorder>
+    <zorder>tbx_mnp</zorder>
+    <zorder>lbl_mnp</zorder>
+    <zorder>btn_save</zorder>
+    <zorder>tbx_dsc</zorder>
+    <zorder>lbl_dsc</zorder>
+    <zorder>cbx_mch</zorder>
+    <zorder>tbx_lgt</zorder>
+    <zorder>lbl_lgt</zorder>
+    <zorder>lbl_mch</zorder>
    </widget>
    <widget class="QToolButton" name="btn_help">
     <property name="geometry">
@@ -2471,6 +2573,8 @@ PlotWidget {
   <tabstop>tbx_pgr</tabstop>
   <tabstop>tbx_mnp</tabstop>
   <tabstop>tbx_dsc</tabstop>
+  <tabstop>cbx_mch</tabstop>
+  <tabstop>tbx_lgt</tabstop>
   <tabstop>btn_save</tabstop>
   <tabstop>btn_help</tabstop>
  </tabstops>

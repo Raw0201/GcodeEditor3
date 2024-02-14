@@ -27,6 +27,7 @@ work_offset_list = (
     "G55 (PRENSA PRECISION)",
     "G56 (PRENSA PRECISION)",
     "G57 (APARATO DIVISOR)",
+    "G58 (APARATO DIVISOR)",
     "G59 (BASE RACKS)",
 )
 
@@ -70,9 +71,10 @@ coolant_operations_list = (
 )
 
 work_planes_list = (
-    "G17(- PLANO X-Y -)",
-    "G18(- PLANO X-Z -)",
-    "G19(- PLANO Y-Z -)",
+    "",
+    "G17 (PLANO X-Y)",
+    "G18 (PLANO X-Z)",
+    "G19 (PLANO Y-Z)",
 )
 
 collect_modes = (
@@ -143,4 +145,8 @@ directions_list = (
 plate_directions_list = (
     "X-Y",
     "Y-X",
+)
+axis_list = (
+    "COLUMNAS",
+    "FILAS"
 )

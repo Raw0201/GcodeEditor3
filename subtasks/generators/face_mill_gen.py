@@ -271,8 +271,8 @@ def face_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     tst = tin - (tds)
     lines1 = [
-        f"{blk}G00{tdn}{fnum3(tst * tmd)}{ldn}{fnum3(lsc)}",
-        f"{blk}G01{ldn}{fnum3(lin)}F{ffed(fed)}",
+        f"{blk}G00{tdn}{fnum3(tst * tmd + tcm)}{ldn}{fnum3(lsc + lcm)}",
+        f"{blk}G01{ldn}{fnum3(lin + lcm)}F{ffed(fed)}",
     ]
 
     cyls = int(cuts / 2)
@@ -281,17 +281,17 @@ def face_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     for cyl in range(cyls):
         tin -= tds
-        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin * tmd)}"
+        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin * tmd + tcm)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
         lnd += lds * lmd
-        crl = f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn}{fnum3(lnd)}"
+        crl = f"{blk}{tdn}{fnum3(tnd * tmd + tcm)}{ldn}{fnum3(lnd + lcm)}"
         lines1.append(crl)
         lnd += lds * lmd
-        crl = f"{blk}{ldn}{fnum3(lnd)}"
+        crl = f"{blk}{ldn}{fnum3(lnd + lcm)}"
         lines1.append(crl)
         tin -= tds
-        crl = f"{blk}{tdn}{fnum3(tin * tmd)}{ldn}{fnum3(lin)}{cfd}"
+        crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}{ldn}{fnum3(lin + lcm)}{cfd}"
         lines1.append(crl)
 
     lines2 = [blank_space for _ in lines1]
@@ -327,8 +327,8 @@ def face_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     tst = tin - (tds)
     lines1 = [
-        f"{blk}G00{tdn}{fnum3(tst * tmd)}{ldn}{fnum3(lsc)}",
-        f"{blk}G01{ldn}{fnum3(lin)}F{ffed(fed)}",
+        f"{blk}G00{tdn}{fnum3(tst * tmd + tcm)}{ldn}{fnum3(lsc + lcm)}",
+        f"{blk}G01{ldn}{fnum3(lin + lcm)}F{ffed(fed)}",
     ]
 
     cyls = cuts
@@ -337,15 +337,15 @@ def face_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     for cyl in range(cyls):
         tin -= tds
-        tcr = "" if cyl == 0 else f"{blk}G01{tdn}{fnum3(tin * tmd)}"
+        tcr = "" if cyl == 0 else f"{blk}G01{tdn}{fnum3(tin * tmd + tcm)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
         lnd += lds * lmd
-        crl = f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn}{fnum3(lnd)}{cfd}"
+        crl = f"{blk}{tdn}{fnum3(tnd * tmd + tcm)}{ldn}{fnum3(lnd + lcm)}{cfd}"
         lines1.append(crl)
-        crl = f"{blk}G00{ldn}{fnum3(lin)}"
+        crl = f"{blk}G00{ldn}{fnum3(lin + lcm)}"
         lines1.append(crl)
-        crl = f"{blk}{tdn}{fnum3(tin * tmd)}"
+        crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}"
         lines1.append(crl) if cyl != cuts - 1 else ""
 
     lines2 = [blank_space for _ in lines1]
@@ -385,20 +385,20 @@ def face_mill_out(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     lnd += lds * lmd
 
     lines1 = [
-        f"{blk}G00{tdn}{fnum3(tnd * tmd)}{ldn}{fnum3(lsc)}",
-        f"{blk}G01{ldn}{fnum3(lnd)}F{ffed(fed)}",
+        f"{blk}G00{tdn}{fnum3(tnd * tmd + tcm)}{ldn}{fnum3(lsc + lcm)}",
+        f"{blk}G01{ldn}{fnum3(lnd + lcm)}F{ffed(fed)}",
     ]
 
     for cyl in range(cyls):
         tin -= tds
-        tcr = "" if cyl == 0 else f"{blk}G01{ldn}{fnum3(lnd)}"
+        tcr = "" if cyl == 0 else f"{blk}G01{ldn}{fnum3(lnd + lcm)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
-        crl = f"{blk}{tdn}{fnum3(tin * tmd)}{ldn}{fnum3(lin)}{cfd}"
+        crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}{ldn}{fnum3(lin + lcm)}{cfd}"
         lines1.append(crl)
-        crl = f"{blk}G00{tdn}{fnum3(tnd * tmd)}"
+        crl = f"{blk}G00{tdn}{fnum3(tnd * tmd + tcm)}"
         lines1.append(crl) if cyl != cuts - 1 else ""
-        crl = f"{blk}{ldn}{fnum3(lnd)}"
+        crl = f"{blk}{ldn}{fnum3(lnd + lcm)}"
         lines1.append(crl) if cyl != cuts - 1 else ""
         lnd += lds * lmd
 
@@ -435,8 +435,8 @@ def face_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     tst = tin - (tds)
     lines1 = [
-        f"{blk}{tdn}{fnum3(tst * tmd)}{ldn}{fnum3(lsc)}",
-        f"{blk}{ldn}{fnum3(lin)}F{ffed(fed)}",
+        f"{blk}{tdn}{fnum3(tst * tmd + tcm)}{ldn}{fnum3(lsc + lcm)}",
+        f"{blk}{ldn}{fnum3(lin + lcm)}F{ffed(fed)}",
     ]
 
     cyls = int(cuts / 2)
@@ -445,17 +445,17 @@ def face_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     for cyl in range(cyls):
         tin -= tds
-        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin * tmd)}"
+        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin * tmd + tcm)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
         lnd += lds * lmd
-        crl = f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn}{fnum3(lnd)}"
+        crl = f"{blk}{tdn}{fnum3(tnd * tmd + tcm)}{ldn}{fnum3(lnd + lcm)}"
         lines1.append(crl)
         lnd += lds * lmd
-        crl = f"{blk}{ldn}{fnum3(lnd)}"
+        crl = f"{blk}{ldn}{fnum3(lnd + lcm)}"
         lines1.append(crl)
         tin -= tds
-        crl = f"{blk}{tdn}{fnum3(tin * tmd)}{ldn}{fnum3(lin)}{cfd}"
+        crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}{ldn}{fnum3(lin + lcm)}{cfd}"
         lines1.append(crl)
 
     lines2 = [blank_space for _ in lines1]
@@ -491,8 +491,8 @@ def face_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     tst = tin - (tds * tmd)
     lines1 = [
-        f"{blk}{tdn}{fnum3(tst * tmd)}{ldn}{fnum3(lsc)}",
-        f"{blk}{ldn}{fnum3(lin)}F{ffed(fed)}",
+        f"{blk}{tdn}{fnum3(tst * tmd + tcm)}{ldn}{fnum3(lsc + lcm)}",
+        f"{blk}{ldn}{fnum3(lin + lcm)}F{ffed(fed)}",
     ]
 
     cyls = cuts
@@ -501,15 +501,15 @@ def face_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     for cyl in range(cyls):
         tin -= tds * tmd
-        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin * tmd)}F{ffed(fed)}"
+        tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin * tmd + tcm)}F{ffed(fed)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
         lnd += lds * lmd
-        crl = f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn}{fnum3(lnd)}{cfd}"
+        crl = f"{blk}{tdn}{fnum3(tnd * tmd + tcm)}{ldn}{fnum3(lnd + lcm)}{cfd}"
         lines1.append(crl)
-        crl = f"{blk}{ldn}{fnum3(lin)}F300"
+        crl = f"{blk}{ldn}{fnum3(lin + lcm)}F300"
         lines1.append(crl)
-        crl = f"{blk}{tdn}{fnum3(tin * tmd)}"
+        crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}"
         lines1.append(crl) if cyl != cuts - 1 else ""
 
     lines2 = [blank_space for _ in lines1]
@@ -549,20 +549,20 @@ def face_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     lnd += lds * lmd
 
     lines1 = [
-        f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn}{fnum3(lsc)}",
-        f"{blk}{ldn}{fnum3(lnd)}F{ffed(fed)}",
+        f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn + lcm}{fnum3(lsc)}",
+        f"{blk}{ldn}{fnum3(lnd + lcm)}F{ffed(fed)}",
     ]
 
     for cyl in range(cyls):
         tin -= tds * tmd
-        tcr = "" if cyl == 0 else f"{blk}{ldn}{fnum3(lnd)}F{ffed(fed)}"
+        tcr = "" if cyl == 0 else f"{blk}{ldn}{fnum3(lnd + lcm)}F{ffed(fed)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
-        crl = f"{blk}{tdn}{fnum3(tin * tmd)}{ldn}{fnum3(lin)}{cfd}"
+        crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}{ldn}{fnum3(lin + lcm)}{cfd}"
         lines1.append(crl)
-        crl = f"{blk}{tdn}{fnum3(tnd * tmd)}F300"
+        crl = f"{blk}{tdn}{fnum3(tnd * tmd + tcm)}F300"
         lines1.append(crl) if cyl != cuts - 1 else ""
-        crl = f"{blk}{ldn}{fnum3(lnd)}"
+        crl = f"{blk}{ldn}{fnum3(lnd + lcm)}"
         lines1.append(crl) if cyl != cuts - 1 else ""
         lnd += lds * lmd
 
@@ -599,7 +599,7 @@ def face_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     tst = tin - (tds)
     lines1 = [
-        f"{blk}G00{ldn}{fnum3(lsc)}{tdn}{fnum3(tst * tmd)}",
+        f"{blk}G90G00{ldn}{fnum3(lsc + lcm)}{tdn}{fnum3(tst * tmd + tcm)}",
         f"{blk}G91G01{ldn}{fnum3((lsc - lin)*-1)}F{ffed(fed)}",
     ]
 
@@ -665,7 +665,7 @@ def face_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     tst = tin - (tds)
     lines1 = [
-        f"{blk}G00{ldn}{fnum3(lsc)}{tdn}{fnum3(tst * tmd)}",
+        f"{blk}G90G00{ldn}{fnum3(lsc + lcm)}{tdn}{fnum3(tst * tmd + tcm)}",
         f"{blk}G91G01{ldn}{fnum3((lsc - lin)*-1)}F{ffed(fed)}",
     ]
 
@@ -729,7 +729,7 @@ def face_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     lps = (lsc - lnd) * -1
 
     lines1 = [
-        f"{blk}G00{ldn}{fnum3(lsc)}{tdn}{fnum3(tnd * tmd)}",
+        f"{blk}G90G00{ldn}{fnum3(lsc + lcm)}{tdn}{fnum3(tnd * tmd + tcm)}",
         f"{blk}G91G01{ldn}{fnum3(lps)}F{ffed(fed)}",
     ]
 

@@ -61,11 +61,12 @@ def load_default_machining_data(window: QMainWindow):
         window (QMainWindow): Ventana principal
     """
 
-    window.current_comment = ""
+    # window.current_comment = ""
     window.current_side = ""
     window.current_work_offset = ""
     window.part_name = ""
     window.main_tape_number = ""
+    window.last_config_name = ""
     window.tape_description = ""
 
     window.current_sequence_number = 0
@@ -128,6 +129,8 @@ def load_default_plate_data(window: QMainWindow):
     window.lineal_matrix_y = []
     window.square_matrix_xy = []
     window.square_matrix_yx = []
+    window.sub_matrix_x = []
+    window.sub_matrix_y = []
     window.plate_matrix_xy = PLATE_XY
     window.plate_matrix_yx = PLATE_YX
 

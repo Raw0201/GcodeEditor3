@@ -12,12 +12,14 @@ def subroutine_gen(machine: str, data: list) -> list:
         list: Lista de líneas de tape
     """
 
-    sub, rep, blk = data.values()
+    sub, rep, com, blk = data.values()
     blank_space = fspace()
 
     blk = "/" if blk else ""
     rep = f"L{int(rep)}" if rep > 0 else ""
+    com1 = f"G50W{fnum3(com)}" if com  != 0 else ""
+    com2 = f"G50W{fnum3(com * -1)}" if com  != 0 else ""
 
-    lines1 = [f"{blk}M98P{sub}{rep}"]
-    lines2 = [blank_space]
+    lines1 = [com1, f"{blk}M98P{sub}{rep}", com2]
+    lines2 = [blank_space for _ in lines1] if com != 0 else [blank_space]
     return [lines1, lines2]

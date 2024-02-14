@@ -29,6 +29,7 @@ class Misc(Subtask, Ui_frm_misc):
         self.cbx_chk.addItems(collet_operations_list)
         self.cbx_col.addItems(coolant_operations_list)
         self.cbx_sde.addItems(tape_sides_list)
+        self.cbx_pln.addItems(work_planes_list)
         self.cbx_sde.setCurrentText(self.window.current_side)
 
     def collector(self):
@@ -40,6 +41,7 @@ class Misc(Subtask, Ui_frm_misc):
             "Chk": self.cbx_chk.currentText(),
             "Col": self.cbx_col.currentText(),
             "Sde": self.cbx_sde.currentText(),
+            "Pln": self.cbx_pln.currentText(),
             "Blk": False,
         }
 
@@ -113,7 +115,7 @@ class Misc(Subtask, Ui_frm_misc):
         """
 
         self.modification = True
-        com, stp, chk, col, sde, blk = data.values()
+        com, stp, chk, col, sde, pln, blk = data.values()
 
         self.tbx_com.setText(str(com))
         self.tbx_com.setSelection(0, 100)
@@ -121,6 +123,7 @@ class Misc(Subtask, Ui_frm_misc):
         self.cbx_chk.setCurrentText(str(chk))
         self.cbx_col.setCurrentText(str(col))
         self.cbx_sde.setCurrentText(str(sde))
+        self.cbx_pln.setCurrentText(str(pln))
         self.btn_save.setText("Actualizar")
         self.show()
 

@@ -22,6 +22,7 @@ from subtasks import (
     mill_end,
     lineal_mill,
     radial_mill,
+    sub_matrix,
     drill_ini,
     drill_end,
     center_drill,
@@ -138,6 +139,10 @@ tasks_list = {
     "Radial_mill": {
         "Name": radial_mill.Radial_mill,
         "Description": f"{oper_space}Fresado radial",
+    },
+    "Sub_matrix": {
+        "Name": sub_matrix.Sub_matrix,
+        "Description": f"{oper_space}Línea subrutinas",
     },
     "Drill_ini": {
         "Name": drill_ini.Drill_ini,

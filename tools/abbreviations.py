@@ -6,6 +6,7 @@ abbreviations_dict = {
     "cfr": "Dimensión del chaflán (bisel)",
     "chk": "Posición de sujeción del husillo",
     "clt": "Método de recolección de parte",
+    "cnt": "Contador acumulativo",
     "cof": "Herramienta de tronzado",
     "col": "Acciones de la boquilla",
     "com": "Comentario",

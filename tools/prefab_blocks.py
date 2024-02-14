@@ -301,6 +301,7 @@ def prefab_sub_header(window: QMainWindow, description: str) -> list:
             "Dia": window.subroutine_tool_diameter,
             "Spc": window.subroutine_tool_specification,
             "Mch": window.subroutine_machine,
+            "Lgt": window.current_part_length,
         },
     ]
 
