@@ -299,9 +299,7 @@ def tapping_cycle_s1m(data: list, mod: str) -> list:
     znd = mill_g_codes[znd]
 
     lines1 = [
-        f"{blk}(-- ROSCA {thd} --)",
-        f"{blk}G00{xin}{yin}{zin}",
-        f"{blk}{sys}{znd}G84{dpt}{pch}{rtr}",
+        f"{blk}{sys}{znd}G84{dpt}{rtr}{pch}",
     ]
     lines2 = [blank_space for _ in lines1]
 

@@ -66,6 +66,9 @@ class Drill(Subtask, Ui_frm_drill):
             return
         self.converter(data)
 
+        if data["Fed"] < 1 and self.window.current_machine == "OMNITURN":
+            low_feed_information(self)
+
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
 
@@ -96,14 +99,26 @@ class Drill(Subtask, Ui_frm_drill):
             data (dict): Diccionario de datos recopilados
         """
 
+        if data["Sde"] == "$1":
+            tol = 22
+        elif data["Sde"] == "$2":
+            tol = 32
+        else:
+            tol = 17
+        
         data1 = (self.task, data)
-        data2 = prefab_space()
-        data3 = prefab_drill_tool_call(22, 0, 0, -0.05, data["Sde"])
-        data4 = prefab_comment(
+        data2 = prefab_space(data["Sde"])
+        data3 = prefab_drill_tool_call(tol, 0, 0, -0.05, data["Sde"])
+        data4 = prefab_spindle(
+            3000,
+            "NORMAL",
+            data["Sde"],
+        )
+        data5 = prefab_comment(
             "AGUJERO",
             data["Sde"],
         )
-        data5 = prefab_tool_close(
+        data6 = prefab_tool_close(
             self.window.current_tool,
             data["Sde"],
             self.window.current_bar_diameter,
@@ -112,7 +127,7 @@ class Drill(Subtask, Ui_frm_drill):
         if self.modification:
             self.data_pack = [data1]
         else:
-            self.data_pack = [data2, data3, data4, data1, data5]
+            self.data_pack = [data2, data3, data4, data5, data1, data6]
 
         store_config_data(
             self.window,

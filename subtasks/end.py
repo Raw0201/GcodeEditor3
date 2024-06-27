@@ -68,8 +68,9 @@ class End(QMainWindow):
             data (dict): Diccionario de datos recopilados
         """
 
-        data1 = (self.task, data)
-        self.data_pack = [data1]
+        data1 = prefab_space("$1")
+        data2 = (self.task, data)
+        self.data_pack = [data1, data2]
         store_config_data(
             self.window,
             self.data_pack,

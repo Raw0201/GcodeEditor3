@@ -59,7 +59,8 @@ def gen_a16(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    cmd = "M18C" if rot == "DETENER" else "M28S"
+    cmd = "M28S"
+    # cmd = "M18C" if rot == "DETENER" else "M28S"
 
     lines1 = [f"{blk}{cmd}{grd}(- HUSILLO A {grd}GRD -)"]
     lines2 = [blank_space]
@@ -81,9 +82,9 @@ def gen_k16(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    cmd = "M18C" if rot == "DETENER" else "M28S"
+    cmd = "M18C"
 
-    lines1 = [f"{blk}{cmd}{grd}(- HUSILLO A {grd}GRD -)"]
+    lines1 = [f"{blk}{cmd}{grd}.(- HUSILLO A {grd}GRD -)"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -103,9 +104,9 @@ def gen_e16(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    cmd = "M18C" if rot == "DETENER" else "M28S"
+    cmd = "M18C"
 
-    lines1 = [f"{blk}{cmd}{grd}(- HUSILLO A {grd}GRD -)"]
+    lines1 = [f"{blk}{cmd}{grd}.(- HUSILLO A {grd}GRD -)"]
     lines2 = [blank_space]
 
     return [lines1, lines2]

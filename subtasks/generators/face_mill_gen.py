@@ -549,7 +549,7 @@ def face_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     lnd += lds * lmd
 
     lines1 = [
-        f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn + lcm}{fnum3(lsc)}",
+        f"{blk}{tdn}{fnum3(tnd * tmd)}{ldn}{fnum3(lsc)}",
         f"{blk}{ldn}{fnum3(lnd + lcm)}F{ffed(fed)}",
     ]
 

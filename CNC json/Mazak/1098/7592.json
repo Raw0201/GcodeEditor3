@@ -1,0 +1,77 @@
+[
+    [
+        "Inicio subrutina",
+        {
+            "Num": 7592,
+            "Pgr": 1098,
+            "Tol": 5
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Blk": false,
+            "Com": "ACAB. ASIENTO PIEZAS"
+        }
+    ],
+    [
+        "            Movimiento lineal",
+        {
+            "Blk": false,
+            "Sys": "INCREMENTAL",
+            "Mov": "CORTE",
+            "Xnd": "",
+            "Ynd": "",
+            "Znd": -0.01,
+            "Fed": 0.02,
+            "Rep": "",
+            "Com": ""
+        }
+    ],
+    [
+        "            Movimiento lineal",
+        {
+            "Blk": false,
+            "Sys": "",
+            "Mov": "",
+            "Xnd": "",
+            "Ynd": -1.2,
+            "Znd": "",
+            "Fed": 0.002,
+            "Rep": "",
+            "Com": ""
+        }
+    ],
+    [
+        "            Movimiento lineal",
+        {
+            "Blk": false,
+            "Sys": "",
+            "Mov": "",
+            "Xnd": "",
+            "Ynd": "",
+            "Znd": -0.01,
+            "Fed": "",
+            "Rep": "",
+            "Com": ""
+        }
+    ],
+    [
+        "            Movimiento lineal",
+        {
+            "Blk": false,
+            "Sys": "",
+            "Mov": "",
+            "Xnd": "",
+            "Ynd": 1.2,
+            "Znd": "",
+            "Fed": "",
+            "Rep": "",
+            "Com": ""
+        }
+    ],
+    [
+        "Fin",
+        {}
+    ]
+]

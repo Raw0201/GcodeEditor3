@@ -144,3 +144,16 @@ def machine_error_information(self) -> QMessageBox:
         "Error en selección de máquina",
         "Seleccione un tipo de máquina para mostrar los comandos",
     )
+
+def low_feed_information(self) -> QMessageBox:
+    """Mensaje de advertencia en avance de corte
+
+    Returns:
+        QMessageBox: Caja de texto
+    """
+
+    return QMessageBox.information(
+        self,
+        "Avance de corte muy bajo",
+        "Verifique que el dato del avance de corte sea correcto",
+    )

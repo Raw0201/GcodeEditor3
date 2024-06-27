@@ -67,7 +67,7 @@ class Collect(Subtask, Ui_frm_collect):
         """
 
         data1 = (self.task, data)
-        data2 = prefab_space()
+        data2 = prefab_space(data["Sde"])
         self.data_pack = [data2, data1]
         store_config_data(
             self.window,

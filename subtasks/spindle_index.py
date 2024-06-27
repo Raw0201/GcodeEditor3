@@ -122,7 +122,7 @@ class Spindle_index(Subtask, Ui_frm_spindle_index):
         """
 
         window.save_required = True
-        window.current_side = "PRINCIPAL"
+        window.current_side = "$1"
 
     def switcher(self, window: QMainWindow, data: dict):
         """Cambia el estado de los botones según los datos de configuración

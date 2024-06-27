@@ -557,6 +557,10 @@ omni_g_codes = [
         "G74 = Ciclo de desbaste en caja\n\nX = Diámetro a tornear\nZ = Longitud a tornear\nI = Profundidad por corte\nU = Sobrematerial para acabado\nF = Avance de corte",
     ],
     [
+        "G75InUnFnPn",
+        "G74 = Ciclo de desbaste en caja\n\nI = Profundidad por corte\nU = Sobrematerial para acabado\nF = Avance de corte\nP = Subrutina (opcional)",
+    ],
+    [
         "G76",
         "G76 = Revoluciones mínimas con G96 activado",
     ],

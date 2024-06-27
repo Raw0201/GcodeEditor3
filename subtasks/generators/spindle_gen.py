@@ -45,7 +45,7 @@ def gen_b12(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde == "$2":
+    if sde in ("$2", "$3"):
         return [[blank_space], [blank_space]]
 
     if spd == 0 and rot != "DETENER":
@@ -106,8 +106,9 @@ def gen_k16(data: list) -> list:
 
     if spd == 0 and rot != "DETENER":
         return [[f"{blk}G98"], [blank_space]]
-
-    spd = f"S{spd}" if rot in ("NORMAL", "REVERSA") else ""
+    
+    num = sde[-1]
+    spd = f"S{num}={spd}" if rot in ("NORMAL", "REVERSA") else ""
     rot = f"{rot} {sde}"
     rot = swiss_k_m_codes[f"GIRO {rot}"]
 
@@ -199,7 +200,7 @@ def gen_romi(data: list) -> list:
 
     rot = romi_m_codes[f"GIRO {rot}"]
 
-    lines1 = [f"{blk}{rot}{spd}"]
+    lines1 = [f"{blk}G97{rot}{spd}"]
     lines2 = [blank_space]
 
     return [lines1, lines2]
@@ -229,7 +230,7 @@ def gen_hardinge(data: list) -> list:
 
     rot = hardinge_m_codes[f"GIRO {rot}"]
 
-    lines1 = [f"{blk}{rot}{spd}"]
+    lines1 = [f"{blk}G97{rot}{spd}"]
     lines2 = [blank_space]
 
     return [lines1, lines2]

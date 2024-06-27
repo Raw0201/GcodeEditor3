@@ -46,8 +46,8 @@ def gen_b12(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde == "$2":
-        return [[blank_space], [blank_space]]
+    if sde != "$1":
+        return ["", ""]
 
     tol = kswiss_to_swiss(tol, sde)
     data["Tol"] = tol
@@ -339,10 +339,10 @@ def gen_mazak(data: list) -> list:
         return [[blank_space], [blank_space]]
 
     tol = f"T0{tol}" if tol < 10 else f"T{tol}"
-    dia = "" if dia == 0 else f" {fdia(dia)}"
+    dia = "" if dia == 0 else f" {fnum4(dia)}"
     spc = "" if spc == "-" else f" {spc}"
-    xin = f"X{fnum3(xin)}"
-    yin = f"Y{fnum3(yin)}"
+    xin = f"X{fnum4(xin)}"
+    yin = f"Y{fnum4(yin)}"
     zin = f"Z{fnum3(zin)}"
     com = "" if com == "-" else f"(- {com} -)"
     mcd = mcd if mcd == "NO" else mazak_m_codes[mcd]
@@ -351,7 +351,7 @@ def gen_mazak(data: list) -> list:
     lines1 = [
         f"{blk}{tol}T00M06({typ}{dia}{spc})",
         mcd,
-        f"{blk}G90G00{xin}{yin}{zin}",
+        f"{blk}G90G00{xin}{yin}{zin}M08",
     ]
     lines2 = [blank_space for _ in lines1]
     if not mcd:

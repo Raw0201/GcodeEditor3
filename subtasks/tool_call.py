@@ -89,7 +89,7 @@ class Tool_call(Subtask, Ui_frm_tool_call):
         """
 
         data1 = (self.task, data)
-        data2 = prefab_space()
+        data2 = prefab_space(data["Sde"])
         data3 = prefab_spindle(
             3000,
             "NORMAL",

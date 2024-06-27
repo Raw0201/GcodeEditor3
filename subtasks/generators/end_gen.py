@@ -117,23 +117,23 @@ def gen_k16(data: list) -> list:
         bar_dia = fparam(bar)
         mch_lgt = fparam(lgt + 0.2)
         rem_mat = fparam(lgt - chk) if chk > 0 else fparam(0)
-        bck_typ = fparam(143) if chk > 0 else fparam(141)
+        bck_typ = fparam(141) if chk > 0 else fparam(143)
 
         lines1 = [
             "M08",
             "M08",
-            "/M109Q8999",
+            "/M98P8999",
             "M09",
             "  ",
             f"G00X-.1{zin}T00",
             "  ",
-            "G600",
             "G999",
             "N999",
             "M56",
             "M02",
             "M99",
             "  ",
+            blank_space,
             blank_space,
             blank_space,
             blank_space,
@@ -192,18 +192,18 @@ def gen_e16(data: list) -> list:
         lines1 = [
             "M08",
             "M08",
-            "/M109Q8999",
+            "/M98P8999",
             "M09",
             "  ",
             f"G00X-.1{zin}T00",
             "  ",
-            "G600",
             "G999",
             "N999",
             "M56",
             "M02",
             "M99",
             "  ",
+            blank_space,
             blank_space,
             blank_space,
             blank_space,

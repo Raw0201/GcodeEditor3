@@ -58,7 +58,7 @@ class Drill_ini(QMainWindow):
         """
 
         data1 = (self.task, data)
-        data2 = prefab_space()
+        data2 = prefab_space(data["Sde"])
         data3 = prefab_center_drill_tool_call(21, 0.0, 0.0, -0.05, "$1")
         data4 = prefab_comment("AGUJERO CENTRO", "$1")
         data5 = prefab_center_drill(0.05, 0.003)

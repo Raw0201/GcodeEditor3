@@ -90,7 +90,7 @@ def gen_k16(data: list) -> list:
         "  ",
         f"{blk}G00Z0M05",
         f"{blk}G04U.5",
-        f"{blk}M28S0",
+        f"{blk}M18C0.",
         f"{blk}G98",
         f"{blk}M80S6000",
     ]
@@ -117,7 +117,7 @@ def gen_e16(data: list) -> list:
         "  ",
         f"{blk}G00Z0M05",
         f"{blk}G04U.5",
-        f"{blk}M28S0",
+        f"{blk}M18C0.",
         f"{blk}G98",
         f"{blk}M80S3=6000",
     ]
@@ -157,7 +157,7 @@ def gen_romi(data: list) -> list:
 
     lines1 = [
         "  ",
-        f"{blk}M05",
+        f"{blk}G98M05",
         f"{blk}M19(HUSILLO A 0 GRD)",
         f"{blk}M22",
     ]
@@ -182,7 +182,7 @@ def gen_hardinge(data: list) -> list:
 
     lines1 = [
         "  ",
-        f"{blk}M05",
+        f"{blk}G98M05",
         f"{blk}B0(HUSILLO A 0 GRD)",
     ]
     lines2 = [blank_space for _ in lines1]

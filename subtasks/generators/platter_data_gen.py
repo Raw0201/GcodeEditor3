@@ -148,7 +148,7 @@ def gen_mazak(data: list) -> list:
     cqt, csp, rqt, rsp, xsp, ysp, xdm, ydm, xcm, ycm, blk = data.values()
     blank_space = fspace()
 
-    lines1 = [f"(DIST CENTROS: X{csp} Y{rsp})"]
+    lines1 = [f"(DIST CENTROS: X{fnum3(csp)} Y{fnum3(rsp)})"]
     lines2 = [blank_space]
 
     return [lines1, lines2]

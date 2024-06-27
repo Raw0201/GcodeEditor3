@@ -61,7 +61,6 @@ def load_default_machining_data(window: QMainWindow):
         window (QMainWindow): Ventana principal
     """
 
-    # window.current_comment = ""
     window.current_side = ""
     window.current_work_offset = ""
     window.part_name = ""

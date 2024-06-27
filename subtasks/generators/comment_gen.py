@@ -45,8 +45,9 @@ def gen_b12(data: list) -> list:
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
-    if sde == "$2":
-        return [[blank_space], [blank_space]]
+    if sde != "$1":
+        lines1, lines2 = [""], [""]
+        return [lines1, lines2]
 
     lines1 = [f"{blk}(- {com} -)"]
     lines2 = [blank_space]

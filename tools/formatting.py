@@ -159,7 +159,7 @@ def fspace() -> str:
         str: Espacio en blanco
     """
 
-    return " "
+    return "  "
 
 
 def fcom(tool: int, compensations: list) -> float:

@@ -3,9 +3,12 @@ from PySide6.QtWidgets import QMainWindow
 from tools.formatting import fnum3
 
 
-def prefab_space() -> list:
+def prefab_space(side) -> list:
     """Bloque prefabricado de espacio
 
+    Args:
+        side (str): Lado del programa
+    
     Returns:
         list: Bloque prefabricado
     """
@@ -13,7 +16,8 @@ def prefab_space() -> list:
     return [
         " ",
         {
-            "Fre": " ",
+            "Fre": "  ",
+            "Sde": side,
         },
     ]
 
@@ -225,7 +229,7 @@ def prefab_csink_tool_call(
             "Tol": tool,
             "Typ": "SPOT",
             "Dia": 0.25,
-            "Spc": f"{fnum3(angle)} GRD",
+            "Spc": f"{int(angle)} GRD",
             "Sde": side,
             "Xin": xin,
             "Yin": yin,

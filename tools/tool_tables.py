@@ -543,7 +543,7 @@ thread_table = [
 ]
 
 mill_table = [
-    ["Fresa", "Long Corte", "Long Total"],
+    ["Fresa", "Largo Corte", "Largo Total"],
     ["0.0625", "-    ", "-    "],
     ["0.0781", "0.250", "-    "],
     ["0.0938", "0.325", "-    "],

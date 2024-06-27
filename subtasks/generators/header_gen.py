@@ -118,13 +118,13 @@ def gen_k16(data: list) -> list:
         f"G50{zin}({mch} - {version})",
         "M06",
         "M09",
-        "G99M03S7000",
+        "G99M03S1=7000",
         f"G00{xin}Z-.02M52",
         "G600",
     ]
     lines2 = [
         blank_space,
-        blank_space,
+        " ",
         "$2",
         "G50Z0",
         "M89",
@@ -161,13 +161,13 @@ def gen_e16(data: list) -> list:
         f"G50{zin}({mch} - {version})",
         "M06",
         "M09",
-        "G99M03S7000",
+        "G99M03S1=7000",
         f"G00{xin}Z-.02M52",
         "G600",
     ]
     lines2 = [
         blank_space,
-        blank_space,
+        " ",
         "$2",
         "G50Z0",
         "M89",
@@ -219,7 +219,7 @@ def gen_romi(data: list) -> list:
         "%",
         f"O{num}({prt})",
         f"({mch} - {dsc} - {version})",
-        "G20G40G90G95G97",
+        "G20G40G90G95",
     ]
     lines2 = [blank_space for _ in lines1]
 
@@ -246,7 +246,7 @@ def gen_hardinge(data: list) -> list:
         "%",
         f"O{num}({prt})",
         f"({mch} - {dsc} - {version})",
-        "G65P9150H1.5G97",
+        "G65P9150H1.5",
     ]
     lines2 = [blank_space for _ in lines1]
 

@@ -19,6 +19,7 @@ class Free(QMainWindow):
 
         data = {
             "Fre": "  ",
+            "Sde": self.window.current_side,
         }
 
         self.validator(data)
@@ -70,7 +71,6 @@ class Free(QMainWindow):
         Returns:
             list: Lista de líneas de tape
         """
-
         return free_gen(machine, data)
 
     def modifier(self, data: dict):

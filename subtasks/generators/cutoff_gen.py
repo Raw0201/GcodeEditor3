@@ -121,10 +121,10 @@ def gen_k16(data: list) -> list:
     dia, cfr, lgt, chk, cof, blk = data.values()
 
     if chk == 0:
-        lines1 = cutoff_ke16s1_basket(data)
-        lines2 = cutoff_ke16s2_basket(data)
+        lines1 = cutoff_k16s1_basket(data)
+        lines2 = cutoff_k16s2_basket(data)
     else:
-        lines1 = cutoff_ke16s1_spindle(data)
+        lines1 = cutoff_k16s1_spindle(data)
         lines2 = cutoff_k16s2_spindle(data)
 
     return [lines1, lines2]
@@ -143,10 +143,10 @@ def gen_e16(data: list) -> list:
     dia, cfr, lgt, chk, cof, blk = data.values()
 
     if chk == 0:
-        lines1 = cutoff_ke16s1_basket(data)
-        lines2 = cutoff_ke16s2_basket(data)
+        lines1 = cutoff_e16s1_basket(data)
+        lines2 = cutoff_e16s2_basket(data)
     else:
-        lines1 = cutoff_ke16s1_spindle(data)
+        lines1 = cutoff_e16s1_spindle(data)
         lines2 = cutoff_e16s2_spindle(data)
 
     return [lines1, lines2]
@@ -212,7 +212,7 @@ def gen_mazak(data: list) -> list:
     return [lines1, lines2]
 
 
-def cutoff_ke16s1_basket(data: list) -> list:
+def cutoff_k16s1_basket(data: list) -> list:
     """Tronzado en torno K16 $1 con canasta
 
     Args:
@@ -233,9 +233,10 @@ def cutoff_ke16s1_basket(data: list) -> list:
     znd = f"{fnum3(lgt)}"
 
     return [
+            f"{blk}G650",
+            "  ",
             f"{blk}T0100(TRONZADO)",
-            f"{blk}M320",
-            f"{blk}G50W-{com}",
+            f"{blk}G50W-{com}", 
             f"{blk}G00Z{zin}T01",
             f"{blk}X{xin}",
             f"{blk}G01X{xnd}Z{znd}F.002",
@@ -243,12 +244,22 @@ def cutoff_ke16s1_basket(data: list) -> list:
             f"{blk}X-.1F.005",
             f"{blk}M07",
             f"{blk}G50W{com}",
-            " ",
+            "  ",
             f"{blk}!2L1",
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space
         ]
 
 
-def cutoff_ke16s2_basket(data: list) -> list:
+def cutoff_k16s2_basket(data: list) -> list:
     """Tronzado en torno K16 $2 con canasta
 
     Args:
@@ -263,22 +274,33 @@ def cutoff_ke16s2_basket(data: list) -> list:
     blk = "/" if blk else ""
 
     return [
-        " ",
+        f"{blk}#100=10",
+        f"{blk}GOTO100",
+        f"{blk}N10",
+        "  ",
+        f"{blk}G650",
+        f"{blk}M320",
+        "  ",
         f"{blk}!1L1",
-        " ",
-        f"{blk}M34",
-        " ",
-        f"{blk}G600",
+        "  ",
         f"{blk}G999",
+        f"{blk}#100=20",
+        f"{blk}GOTO100",
+        f"{blk}N20",
+        f"{blk}M53",
         f"{blk}N999",
         f"{blk}M02",
         f"{blk}M99",
-        " ",
-        blank_space,
+        "  ",
+        f"{blk}N100",
+        "  ",
+        f"{blk}M34H8000S8000",
+        f"{blk}T3000",
+        f"{blk}GOTO#100",
     ]
 
 
-def cutoff_ke16s1_spindle(data: list) -> list:
+def cutoff_k16s1_spindle(data: list) -> list:
     """Tronzado en torno K16 $1 con husillo
 
     Args:
@@ -384,6 +406,132 @@ def cutoff_k16s2_spindle(data: list) -> list:
         "  ",
         f"{blk}N100",
     ]
+
+
+def cutoff_e16s1_basket(data: list) -> list:
+    """Tronzado en torno E16 $1 con canasta
+
+    Args:
+        data (list): Lista de datos a procesar
+
+    Returns:
+        list: Lista de líneas de tape generadas
+    """
+
+    dia, cfr, lgt, chk, cof, blk = data.values()
+    blank_space = fspace()
+    blk = "/" if blk else ""
+
+    com = fnum3(0.500) if cof == "IZQUIERDA" else fnum3(0.06)
+    xin = f"{fnum3(dia + .01)}"
+    zin = F"{fnum3(lgt - cfr - .005)}"
+    xnd = f"{fnum3(dia - (cfr * 2))}"
+    znd = f"{fnum3(lgt)}"
+
+    return [
+            f"{blk}T0100(TRONZADO)",
+            f"{blk}M320",
+            f"{blk}G50W-{com}",
+            f"{blk}G00Z{zin}T01",
+            f"{blk}X{xin}",
+            f"{blk}G01X{xnd}Z{znd}F.002",
+            f"{blk}X0F.001",
+            f"{blk}X-.1F.005",
+            f"{blk}M07",
+            f"{blk}G50W{com}",
+            "  ",
+            f"{blk}!2L1",
+            f"{blk}G600",
+        ]
+
+
+def cutoff_e16s2_basket(data: list) -> list:
+    """Tronzado en torno E16 $2 con canasta
+
+    Args:
+        data (list): Lista de datos a procesar
+
+    Returns:
+        list: Lista de líneas de tape generadas
+    """
+
+    dia, cfr, lgt, chk, cof, blk = data.values()
+    blank_space = fspace()
+    blk = "/" if blk else ""
+
+    return [
+        " ",
+        f"{blk}!1L1",
+        " ",
+        f"{blk}M34",
+        " ",
+        f"{blk}G600",
+        f"{blk}G999",
+        f"{blk}N999",
+        f"{blk}M02",
+        f"{blk}M99",
+        " ",
+        blank_space,
+        blank_space,
+    ]
+
+
+def cutoff_e16s1_spindle(data: list) -> list:
+    """Tronzado en torno E16 $1 con husillo
+
+    Args:
+        data (list): Lista de datos a procesar
+
+    Returns:
+        list: Lista de líneas de tape generadas
+    """
+
+    dia, cfr, lgt, chk, cof, blk = data.values()
+    blank_space = fspace()
+    blk = "/" if blk else ""
+
+    com = 0.500 if cof == "IZQUIERDA" else 0.06
+    xin = f"{fnum3(dia + 0.01)}"
+    zin = f"{fnum3(lgt - cfr - 0.005)}"
+    xnd = f"{fnum3(dia - (cfr * 2))}"
+    znd = f"{fnum3(lgt)}"
+    sec = com + 0.06 if com > 0.06 else 0
+    zsc = f"{fnum3(float(znd) + sec)}"
+    com = fnum3(com)
+
+    return [
+            f"{blk}T0100(CUCHILLA TRONZAR)",
+            f"{blk}G00Z{zsc}T01",
+            "  ",
+            f"{blk}!2L1",
+            "  ",
+            f"{blk}S1=3000M03",
+            f"{blk}S2=3000M24",
+            "  ",
+            f"{blk}G814",
+            f"{blk}G650M1",
+            "  ",
+            f"{blk}!2L2",
+            "  ",
+            f"{blk}G50W-{com}",
+            f"{blk}G00Z{zin}",
+            f"{blk}X{xin}",
+            f"{blk}G01X{xnd}Z{znd}F.002",
+            f"{blk}X0F.001",
+            f"{blk}X-.1F.005",
+            "  ",
+            f"{blk}M7",
+            f"{blk}G50W{com}",
+            "  ",
+            f"{blk}G813",
+            f"{blk}G600",
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+            blank_space,
+        ]
 
 
 def cutoff_e16s2_spindle(data: list) -> list:

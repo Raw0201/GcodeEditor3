@@ -64,6 +64,9 @@ class Csink(Subtask, Ui_frm_csink):
             return
         self.converter(data)
 
+        if data["Fed"] < 1 and self.window.current_machine == "OMNITURN":
+            low_feed_information(self)
+
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
 
@@ -94,10 +97,17 @@ class Csink(Subtask, Ui_frm_csink):
             data (dict): Diccionario de datos recopilados
         """
 
+        if data["Sde"] == "$1":
+            tol = 23
+        elif data["Sde"] == "$2":
+            tol = 33
+        else:
+            tol = 18
+
         data1 = (self.task, data)
-        data2 = prefab_space()
+        data2 = prefab_space(data["Sde"])
         data3 = prefab_csink_tool_call(
-            23, data["Ang"], 0, 0, -0.05, data["Sde"]
+            tol, data["Ang"], 0, 0, -0.05, data["Sde"]
         )
         data4 = prefab_comment(
             "CSINK",

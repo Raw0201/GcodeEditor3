@@ -4,9 +4,8 @@ from tools.sub_windows import key_pressed
 from interfaces.ui_graph import Ui_frm_graph
 from tools.constants import *
 
-
 class Graph(QMainWindow, Ui_frm_graph):
-    def __init__(self):
+    def __init__(self, config_list):
         super().__init__()
         self.setupUi(self)
         self.setWindowTitle(f"{APP_NAME} - Gráfico")

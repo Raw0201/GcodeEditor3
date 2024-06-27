@@ -15,6 +15,7 @@ from tools.file_management import *
 
 from subtasks.sub_task import Subtask
 from subtasks.generators.lineal_turn_gen import lineal_turn_gen
+from subtasks.graphers.lineal_turn_graph import lineal_turn_graph
 from interfaces.ui_lineal_turn import Ui_frm_lineal_turn
 
 
@@ -60,6 +61,9 @@ class Lineal_turn(Subtask, Ui_frm_lineal_turn):
             return
 
         self.converter(data)
+
+        if data["Fed"] != "" and float(data["Fed"]) < 1 and self.window.current_machine == "OMNITURN":
+            low_feed_information(self)
 
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado

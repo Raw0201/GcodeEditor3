@@ -584,7 +584,7 @@ def create_subroutine(window: QMainWindow):
     window.main_tape_active = False
     window.config_list = [prefab_sub_header(window, description)]
     window.config_list.append(prefab_comment(window.subroutine_comment, "$1"))
-    collect_data(window, "End"),
+    # collect_data(window, "End"),
     window.save_required = True
     update_after_subroutine(window)
 

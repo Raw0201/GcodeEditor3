@@ -22,7 +22,7 @@ def load_menu_actions(window):
     window.actionMove_up.triggered.connect(lambda: movement(window, "up"))
     window.actionMove_down.triggered.connect(lambda: movement(window, "down"))
 
-    window.actionGraph.triggered.connect(lambda: graph_window(window))
+    window.actionGraph.triggered.connect(lambda: graph_window(window, window.config_list))
     window.actionVersion.triggered.connect(lambda: version_window(window))
     window.actionGCodes.triggered.connect(lambda: gcodes_window(window))
     window.actionMCodes.triggered.connect(lambda: mcodes_window(window))
@@ -137,14 +137,14 @@ def load_menu_actions(window):
     )
 
 
-def graph_window(window: QMainWindow):
+def graph_window(window: QMainWindow, config_list):
     """Crea la ventana de gráfico de tape
 
     Args:
         window (QMainWindow): Ventana principal
     """
 
-    window.sub_window = graph.Graph()
+    window.sub_window = graph.Graph(config_list)
     window.sub_window.show()
 
 

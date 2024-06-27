@@ -88,7 +88,7 @@ class Thread(Subtask, Ui_frm_thread):
         xin = xin / 2 if machine == "OMNITURN" else xin
 
         data1 = (self.task, data)
-        data2 = prefab_space()
+        data2 = prefab_space("$1")
         data3 = prefab_thread_tool_call(
             tool,
             xin,

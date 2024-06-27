@@ -44,8 +44,8 @@ def gen_b12(data: list) -> list:
     blank_space = fspace()
     blk = "/" if blk else ""
 
-    if sde == "$2":
-        return [[blank_space], [blank_space]]
+    if sde != "$3":
+        return ["", ""]
 
     xin = f"X{fnum3(dia + .02)}"
     sft = fcom(tol, swiss_compensations)

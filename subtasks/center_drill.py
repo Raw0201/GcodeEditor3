@@ -61,6 +61,9 @@ class Center_drill(Subtask, Ui_frm_center_drill):
             return
         self.converter(data)
 
+        if data["Fed"] < 1 and self.window.current_machine == "OMNITURN":
+            low_feed_information(self)
+
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
 
@@ -89,9 +92,16 @@ class Center_drill(Subtask, Ui_frm_center_drill):
             data (dict): Diccionario de datos recopilados
         """
 
+        if data["Sde"] == "$1":
+            tol = 21
+        elif data["Sde"] == "$2":
+            tol = 31
+        else:
+            tol = 16
+
         data1 = (self.task, data)
-        data2 = prefab_space()
-        data3 = prefab_center_drill_tool_call(21, 0, 0, -0.05, data["Sde"])
+        data2 = prefab_space(data["Sde"])
+        data3 = prefab_center_drill_tool_call(tol, 0, 0, -0.05, data["Sde"])
         data4 = prefab_comment(
             "AGUJERO CENTRO",
             data["Sde"],

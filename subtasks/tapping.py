@@ -88,9 +88,16 @@ class Tapping(Subtask, Ui_frm_tapping):
             data (dict): Diccionario de datos recopilados
         """
 
+        if data["Sde"] == "$1":
+            tol = 23
+        elif data["Sde"] == "$2":
+            tol = 33
+        else:
+            tol = 18        
+
         data1 = (self.task, data)
-        data2 = prefab_space()
-        data3 = prefab_tapping_tool_call(24, 0, 0, -0.05, data["Sde"])
+        data2 = prefab_space(data["Sde"])
+        data3 = prefab_tapping_tool_call(tol, 0, 0, -0.05, data["Sde"])
         data4 = prefab_spindle(
             800,
             "NORMAL",
