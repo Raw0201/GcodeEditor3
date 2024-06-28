@@ -1,0 +1,98 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8036,
+            "Mnp": "1233",
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.125,
+            "Spc": "-",
+            "Mch": "MAZAK",
+            "Lgt": 1.853
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE RANURA",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.02,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.429,
+            "Yin": "",
+            "Zin": "",
+            "Fed": 0.005,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.02,
+            "Fed": 0.002,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.429,
+            "Yin": "",
+            "Zin": "",
+            "Fed": 0.005,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0.414,
+            "Lgt": 1.853,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

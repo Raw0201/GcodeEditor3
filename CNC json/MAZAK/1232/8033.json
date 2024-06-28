@@ -1,0 +1,70 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8033,
+            "Mnp": 8032,
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Mch": "MAZAK",
+            "Lgt": 0.62
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESB VERTICAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.216,
+            "Zin": -0.015,
+            "Fed": 0.01,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": 0.216,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0.75,
+            "Lgt": 0.62,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

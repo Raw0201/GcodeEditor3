@@ -43,7 +43,7 @@ def gen_b12(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde != "$1":
@@ -68,7 +68,7 @@ def gen_b12(data: list) -> list:
         sft,
         f"{blk}G00{zin}{tol}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
     if not mcd:
@@ -88,11 +88,11 @@ def gen_a16(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     tol = kswiss_to_swiss(tol, sde)
     data["Tol"] = tol
@@ -114,7 +114,7 @@ def gen_a16(data: list) -> list:
         sft,
         f"{blk}G00{zin}{tol}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
     if not mcd:
@@ -134,7 +134,7 @@ def gen_k16(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     tol = swiss_to_kswiss(tol, sde)
@@ -156,7 +156,7 @@ def gen_k16(data: list) -> list:
         sft,
         f"{blk}G00{zin}{tol}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
     if not mcd:
@@ -176,7 +176,7 @@ def gen_e16(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     tol = swiss_to_kswiss(tol, sde)
@@ -198,7 +198,7 @@ def gen_e16(data: list) -> list:
         sft,
         f"{blk}G00{zin}{tol}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
     if not mcd:
@@ -218,11 +218,11 @@ def gen_omni(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     tol = f"T{tol}"
     dia = "" if dia == 0 else f" {fdia(dia)}"
@@ -238,7 +238,7 @@ def gen_omni(data: list) -> list:
         f"{blk}{xin}{zin}",
         mcd,
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not mcd:
         del lines2[-1]
 
@@ -256,11 +256,11 @@ def gen_romi(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     tol = f"0{tol}" if tol < 10 else f"{tol}"
     dia = "" if dia == 0 else f" {fdia(dia)}"
@@ -276,7 +276,7 @@ def gen_romi(data: list) -> list:
         mcd,
         f"{blk}G00{xin}{zin}M08",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not mcd:
         del lines2[-1]
 
@@ -294,11 +294,11 @@ def gen_hardinge(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     tol = f"0{tol}" if tol < 10 else f"{tol}"
     dia = "" if dia == 0 else f" {fdia(dia)}"
@@ -314,7 +314,7 @@ def gen_hardinge(data: list) -> list:
         mcd,
         f"{blk}G00{xin}{zin}M08",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not mcd:
         del lines2[-1]
 
@@ -332,11 +332,11 @@ def gen_mazak(data: list) -> list:
     """
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     tol = f"T0{tol}" if tol < 10 else f"T{tol}"
     dia = "" if dia == 0 else f" {fnum4(dia)}"
@@ -353,7 +353,7 @@ def gen_mazak(data: list) -> list:
         mcd,
         f"{blk}G90G00{xin}{yin}{zin}M08",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not mcd:
         del lines2[-1]
 

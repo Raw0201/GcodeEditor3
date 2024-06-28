@@ -57,7 +57,7 @@ def gen_a16(data: list) -> list:
     """
 
     xin, yin, zin, fed, xcn, ycn, zcn, mov, sys, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -76,7 +76,7 @@ def gen_a16(data: list) -> list:
         rad = f"{xcn}{ycn}{zcn}"
 
     lines1 = [f"{blk}{mov}{xin}{yin}{zin}{rad}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -92,7 +92,7 @@ def gen_k16(data: list) -> list:
     """
 
     xin, yin, zin, fed, xcn, ycn, zcn, mov, sys, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -111,7 +111,7 @@ def gen_k16(data: list) -> list:
         rad = f"{xcn}{ycn}{zcn}"
 
     lines1 = [f"{blk}{mov}{xin}{yin}{zin}{rad}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -127,7 +127,7 @@ def gen_e16(data: list) -> list:
     """
 
     xin, yin, zin, fed, xcn, ycn, zcn, mov, sys, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -146,7 +146,7 @@ def gen_e16(data: list) -> list:
         rad = f"{xcn}{ycn}{zcn}"
 
     lines1 = [f"{blk}{mov}{xin}{yin}{zin}{rad}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -162,7 +162,7 @@ def gen_omni(data: list) -> list:
     """
 
     xin, yin, zin, fed, xcn, ycn, zcn, mov, sys, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = yin if yin != "" else xin
@@ -181,7 +181,7 @@ def gen_omni(data: list) -> list:
         rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{mov}{xin}{zin}{rad}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -197,7 +197,7 @@ def gen_romi(data: list) -> list:
     """
 
     xin, yin, zin, fed, xcn, ycn, zcn, mov, sys, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = yin if yin != "" else xin
@@ -216,7 +216,7 @@ def gen_romi(data: list) -> list:
         rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{mov}{xin}{zin}{rad}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -232,7 +232,7 @@ def gen_hardinge(data: list) -> list:
     """
 
     xin, yin, zin, fed, xcn, ycn, zcn, mov, sys, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = yin if yin != "" else xin
@@ -251,7 +251,7 @@ def gen_hardinge(data: list) -> list:
         rad = f"{xcn}{zcn}"
 
     lines1 = [f"{blk}{mov}{xin}{zin}{rad}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -267,7 +267,7 @@ def gen_mazak(data: list) -> list:
     """
 
     xin, yin, zin, fed, xcn, ycn, zcn, mov, sys, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -286,6 +286,6 @@ def gen_mazak(data: list) -> list:
         rad = f"{xcn}{ycn}{zcn}"
 
     lines1 = [f"{blk}{sys}{mov}{xin}{yin}{zin}{rad}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]

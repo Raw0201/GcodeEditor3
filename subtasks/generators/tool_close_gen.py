@@ -41,7 +41,7 @@ def gen_b12(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde != "$3":
@@ -56,7 +56,7 @@ def gen_b12(data: list) -> list:
     else:
         lines1 = [f"{blk}G00{xin}T00", sft]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
     return [lines1, lines2]
@@ -73,11 +73,11 @@ def gen_a16(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     xin = f"X{fnum3(dia + .02)}"
     sft = fcom(tol, swiss_compensations)
@@ -88,7 +88,7 @@ def gen_a16(data: list) -> list:
     else:
         lines1 = [f"{blk}G00{xin}T00", sft]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
 
@@ -106,7 +106,7 @@ def gen_k16(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     blk = "/" if blk else ""
@@ -119,7 +119,7 @@ def gen_k16(data: list) -> list:
     else:
         lines1 = [f"{blk}G00{xin}T00", sft]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
 
@@ -137,7 +137,7 @@ def gen_e16(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     blk = "/" if blk else ""
@@ -150,7 +150,7 @@ def gen_e16(data: list) -> list:
     else:
         lines1 = [f"{blk}G00{xin}T00", sft]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not sft:
         del lines2[-1]
 
@@ -168,14 +168,14 @@ def gen_omni(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}Z.5F300."]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -191,14 +191,14 @@ def gen_romi(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}G00Z.5"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -214,14 +214,14 @@ def gen_hardinge(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}G00Z.5"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -237,13 +237,13 @@ def gen_mazak(data: list) -> list:
     """
 
     tol, sde, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}G90G00Z4.0M05M09"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

@@ -43,7 +43,7 @@ def gen_b12(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     com = fnum3(0.375) if cof == "IZQUIERDA" else fnum3(0.06)
@@ -65,7 +65,7 @@ def gen_b12(data: list) -> list:
             f"{blk}M7",
             f"{blk}G50W{com}",
         ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -81,7 +81,7 @@ def gen_a16(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     com = fnum3(0.375) if cof == "IZQUIERDA" else fnum3(0.06)
@@ -103,7 +103,7 @@ def gen_a16(data: list) -> list:
             f"{blk}M7",
             f"{blk}G50W{com}",
         ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -223,7 +223,8 @@ def cutoff_k16s1_basket(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     com = fnum3(0.500) if cof == "IZQUIERDA" else fnum3(0.06)
@@ -234,8 +235,8 @@ def cutoff_k16s1_basket(data: list) -> list:
 
     return [
             f"{blk}G650",
-            "  ",
-            f"{blk}T0100(TRONZADO)",
+            tape_space,
+            f"{blk}T0100(CUCHILLA TRONZAR)",
             f"{blk}G50W-{com}", 
             f"{blk}G00Z{zin}T01",
             f"{blk}X{xin}",
@@ -244,18 +245,18 @@ def cutoff_k16s1_basket(data: list) -> list:
             f"{blk}X-.1F.005",
             f"{blk}M07",
             f"{blk}G50W{com}",
-            "  ",
+            tape_space,
             f"{blk}!2L1",
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space
         ]
 
 
@@ -270,19 +271,20 @@ def cutoff_k16s2_basket(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     return [
         f"{blk}#100=10",
         f"{blk}GOTO100",
         f"{blk}N10",
-        "  ",
+        tape_space,
         f"{blk}G650",
         f"{blk}M320",
-        "  ",
+        tape_space,
         f"{blk}!1L1",
-        "  ",
+        tape_space,
         f"{blk}G999",
         f"{blk}#100=20",
         f"{blk}GOTO100",
@@ -291,9 +293,9 @@ def cutoff_k16s2_basket(data: list) -> list:
         f"{blk}N999",
         f"{blk}M02",
         f"{blk}M99",
-        "  ",
+        tape_space,
         f"{blk}N100",
-        "  ",
+        tape_space,
         f"{blk}M34H8000S8000",
         f"{blk}T3000",
         f"{blk}GOTO#100",
@@ -311,7 +313,8 @@ def cutoff_k16s1_spindle(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     com = 0.500 if cof == "IZQUIERDA" else 0.06
@@ -326,35 +329,35 @@ def cutoff_k16s1_spindle(data: list) -> list:
     return [
             f"{blk}T0100(CUCHILLA TRONZAR)",
             f"{blk}G00Z{zsc}T01",
-            "  ",
+            tape_space,
             f"{blk}!2L1",
-            "  ",
+            tape_space,
             f"{blk}S1=3000M03",
             f"{blk}S2=3000M24",
-            "  ",
+            tape_space,
             f"{blk}G814",
             f"{blk}G650M1",
-            "  ",
+            tape_space,
             f"{blk}!2L2",
-            "  ",
+            tape_space,
             f"{blk}G50W-{com}",
             f"{blk}G00Z{zin}",
             f"{blk}X{xin}",
             f"{blk}G01X{xnd}Z{znd}F.002",
             f"{blk}X0F.001",
             f"{blk}X-.1F.005",
-            "  ",
+            tape_space,
             f"{blk}M7",
             f"{blk}G50W{com}",
-            "  ",
+            tape_space,
             f"{blk}G813",
             f"{blk}G600",
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
         ]
 
 
@@ -369,7 +372,8 @@ def cutoff_k16s2_spindle(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
     chk = f"{fnum3(chk)}"
 
@@ -377,11 +381,11 @@ def cutoff_k16s2_spindle(data: list) -> list:
         f"{blk}#100=10",
         f"{blk}GOTO100",
         f"{blk}N10",
-        "  ",
+        tape_space,
         f"{blk}!1L1",
-        "  ",
+        tape_space,
         f"{blk}G650",
-        "  ",
+        tape_space,
         f"{blk}M16",
         f"{blk}M72",
         f"{blk}G00Z-.02",
@@ -390,20 +394,20 @@ def cutoff_k16s2_spindle(data: list) -> list:
         f"{blk}M15",
         f"{blk}M73",
         f"{blk}G99",
-        "  ",
+        tape_space,
         f"{blk}!1L2",
-        "  ",
+        tape_space,
         f"{blk}G600",
-        "  ",
+        tape_space,
         f"{blk}G999",
         f"{blk}#100=20",
         f"{blk}GOTO100",
-        "  ",
+        tape_space,
         f"{blk}N20",
         f"{blk}N999",
         f"{blk}M02",
         f"{blk}M99",
-        "  ",
+        tape_space,
         f"{blk}N100",
     ]
 
@@ -419,7 +423,8 @@ def cutoff_e16s1_basket(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     com = fnum3(0.500) if cof == "IZQUIERDA" else fnum3(0.06)
@@ -439,7 +444,7 @@ def cutoff_e16s1_basket(data: list) -> list:
             f"{blk}X-.1F.005",
             f"{blk}M07",
             f"{blk}G50W{com}",
-            "  ",
+            tape_space,
             f"{blk}!2L1",
             f"{blk}G600",
         ]
@@ -456,23 +461,24 @@ def cutoff_e16s2_basket(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     return [
-        " ",
+        tape_space,
         f"{blk}!1L1",
-        " ",
+        tape_space,
         f"{blk}M34",
-        " ",
+        tape_space,
         f"{blk}G600",
         f"{blk}G999",
         f"{blk}N999",
         f"{blk}M02",
         f"{blk}M99",
-        " ",
-        blank_space,
-        blank_space,
+        tape_space,
+        iu_space,
+        iu_space,
     ]
 
 
@@ -487,7 +493,8 @@ def cutoff_e16s1_spindle(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     com = 0.500 if cof == "IZQUIERDA" else 0.06
@@ -502,35 +509,35 @@ def cutoff_e16s1_spindle(data: list) -> list:
     return [
             f"{blk}T0100(CUCHILLA TRONZAR)",
             f"{blk}G00Z{zsc}T01",
-            "  ",
+            tape_space,
             f"{blk}!2L1",
-            "  ",
+            tape_space,
             f"{blk}S1=3000M03",
             f"{blk}S2=3000M24",
-            "  ",
+            tape_space,
             f"{blk}G814",
             f"{blk}G650M1",
-            "  ",
+            tape_space,
             f"{blk}!2L2",
-            "  ",
+            tape_space,
             f"{blk}G50W-{com}",
             f"{blk}G00Z{zin}",
             f"{blk}X{xin}",
             f"{blk}G01X{xnd}Z{znd}F.002",
             f"{blk}X0F.001",
             f"{blk}X-.1F.005",
-            "  ",
+            tape_space,
             f"{blk}M7",
             f"{blk}G50W{com}",
-            "  ",
+            tape_space,
             f"{blk}G813",
             f"{blk}G600",
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
         ]
 
 
@@ -545,16 +552,17 @@ def cutoff_e16s2_spindle(data: list) -> list:
     """
 
     dia, cfr, lgt, chk, cof, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
     chk = f"{fnum3(chk)}"
 
     return [
         f"{blk}M98H1",
         f"{blk}!1L1",
-        "  ",
+        tape_space,
         f"{blk}G650",
-        "  ",
+        tape_space,
         f"{blk}M16",
         f"{blk}M72",
         f"{blk}G00Z-.02",
@@ -563,22 +571,22 @@ def cutoff_e16s2_spindle(data: list) -> list:
         f"{blk}M15",
         f"{blk}M73",
         f"{blk}G99",
-        "  ",
+        tape_space,
         f"{blk}!1L2",
-        "  ",
+        tape_space,
         f"{blk}G600",
-        " ",
+        tape_space,
         f"{blk}G999",
         f"{blk}M98H1",
-        "  ",
+        tape_space,
         f"{blk}N999",
         f"{blk}M02",
         f"{blk}M99",
-        "  ",
+        tape_space,
         f"{blk}N1",
-        blank_space,
-        blank_space,
-        blank_space,
-        blank_space,
-        blank_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
     ]

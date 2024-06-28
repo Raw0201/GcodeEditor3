@@ -259,7 +259,7 @@ def flat_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -289,7 +289,7 @@ def flat_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -310,7 +310,7 @@ def flat_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -337,7 +337,7 @@ def flat_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -358,7 +358,7 @@ def flat_mill_out(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -385,7 +385,7 @@ def flat_mill_out(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -406,7 +406,7 @@ def flat_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -436,7 +436,7 @@ def flat_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -457,7 +457,7 @@ def flat_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -483,7 +483,7 @@ def flat_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -504,7 +504,7 @@ def flat_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -531,7 +531,7 @@ def flat_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(lcr)
         tin = tin - (cut * tmd)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -552,7 +552,7 @@ def flat_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -583,7 +583,7 @@ def flat_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -604,7 +604,7 @@ def flat_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -633,7 +633,7 @@ def flat_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lcr = f"{blk}G00{ldn}{fnum3(lin)}"
         lines1.append(lcr)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -654,7 +654,7 @@ def flat_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cuts = math.ceil((mat - wdt) / 2 / cut)
@@ -685,7 +685,7 @@ def flat_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lcr = f"{blk}{ldn}{fnum3(lin)}F{ffed(cfd)}"
         lines1.append(lcr)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]

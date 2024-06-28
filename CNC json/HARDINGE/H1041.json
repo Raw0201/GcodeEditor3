@@ -1,0 +1,279 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "T18-D24",
+            "Pgr": "1041",
+            "Dsc": "CONO Y CARAS FE",
+            "Mch": "HARDINGE",
+            "Dia": 0.257,
+            "Lgt": 1.515,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G50 (TORNO)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "ACABADO",
+            "Sde": "$1",
+            "Xin": 2.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CONO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.09,
+            "Zin": 0.05,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.02,
+            "Fed": 0.02,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.202,
+            "Zin": -0.526,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.276,
+            "Zin": -0.568,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 1.5,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    * Iniciar fresados",
+        {
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CARA POS.",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado caras",
+        {
+            "Wdt": 0.02,
+            "Lgt": 0.197,
+            "Ang": 15.5,
+            "Mat": 0.04,
+            "Fed": 10.0,
+            "Cut": 0.01,
+            "Dyr": "ALTERNADOS",
+            "Pos": "POSITIVA",
+            "Tcm": 0.0,
+            "Lcm": 0.0,
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.1,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 3,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -0.1,
+            "Yin": 0.0,
+            "Zin": 0.125,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CARA NEG.",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado caras",
+        {
+            "Wdt": 0.02,
+            "Lgt": 0.197,
+            "Ang": 15.5,
+            "Mat": 0.04,
+            "Fed": 10.0,
+            "Cut": 0.01,
+            "Dyr": "ALTERNADOS",
+            "Pos": "NEGATIVA",
+            "Tcm": 0.0,
+            "Lcm": 0.0,
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 3,
+            "Sde": "$1",
+            "Dia": 0.257,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -4.0,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.257,
+            "Lgt": 1.515,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 2,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "ACABADO",
+            "Xps": 2.0,
+            "Yps": 0.0,
+            "Zps": 0.5
+        }
+    ]
+]

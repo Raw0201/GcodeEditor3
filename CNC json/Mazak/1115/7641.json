@@ -1,1 +1,0 @@
-[["Inicio subrutina", {"Num": 7641, "Pgr": 1115, "Tol": 1}], ["        Comentario", {"Blk": false, "Com": "DESBASTE ESPIGA 3"}], ["            Movimiento radial", {"Blk": false, "Sys": "INCREMENTAL", "Xnd": 0.0, "Ynd": 0.0, "Znd": -0.02, "Xcn": -0.3915, "Ycn": 0.0, "Zcn": "", "Fed": 0.015, "Rot": "A FAVOR"}], ["Fin", {}]]

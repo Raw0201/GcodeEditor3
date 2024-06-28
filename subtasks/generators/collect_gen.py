@@ -71,11 +71,11 @@ def gen_k16(data: list) -> list:
     """
 
     clt, chk, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if chk == 0:
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines2 = (
         [
@@ -100,7 +100,7 @@ def gen_k16(data: list) -> list:
         ]
     )
 
-    lines1 = [blank_space for _ in lines2]
+    lines1 = [iu_space for _ in lines2]
     return [lines1, lines2]
 
 
@@ -115,11 +115,11 @@ def gen_e16(data: list) -> list:
     """
 
     clt, chk, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if chk == 0:
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines2 = (
         [
@@ -144,7 +144,7 @@ def gen_e16(data: list) -> list:
         ]
     )
 
-    lines1 = [blank_space for _ in lines2]
+    lines1 = [iu_space for _ in lines2]
     return [lines1, lines2]
 
 

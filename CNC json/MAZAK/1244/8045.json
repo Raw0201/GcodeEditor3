@@ -1,0 +1,84 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8045,
+            "Mnp": "1244",
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 1,
+            "Typ": "SPOT",
+            "Dia": 0.25,
+            "Spc": "90 GRD",
+            "Mch": "MAZAK",
+            "Lgt": 36.0
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "AGUJEROS PIEZAS",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.6,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": 12.0,
+            "Mov": "",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -2.164,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.6,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": 12.0,
+            "Mov": "",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0.75,
+            "Lgt": 36.0,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

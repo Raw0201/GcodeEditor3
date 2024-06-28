@@ -43,13 +43,13 @@ def gen_b12(data: list) -> list:
     """
 
     sde = data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = 1
         lines = tapping_cycle_s1(data, mod_s1)
     elif sde in {"$2", "$3"}:
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
 
     lines1, lines2 = lines[0], lines[1]
 
@@ -67,13 +67,13 @@ def gen_a16(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = 1
         lines = tapping_cycle_s1(data, mod_s1)
     elif sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         mod_s3 = 1 if xin > 0 else -1
         lines = tapping_cycle_s3(data, mod_s3)
@@ -94,7 +94,7 @@ def gen_k16(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde in {"$1", "$2"}:
         mod_s1 = 1
@@ -119,7 +119,7 @@ def gen_e16(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde in {"$1", "$2"}:
         mod_s1 = 1
@@ -189,13 +189,13 @@ def gen_mazak(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde in {"$1", "$3"}:
         mod_s1 = -1
         lines = tapping_cycle_s1m(data, mod_s1)
     elif sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
 
     lines1, lines2 = lines[0], lines[1]
 
@@ -215,7 +215,7 @@ def tapping_cycle_s1(data: list, mod: str) -> list:
 
     dpt, thd, xin, yin, zin, rtr, sde, sys, znd, blk = data.values()
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     dpt = f"Z{fnum3(dpt)}"
     pch = f"F{ffed(thread_table[thd][2])}"
@@ -229,7 +229,7 @@ def tapping_cycle_s1(data: list, mod: str) -> list:
         f"{blk}G84{dpt}{pch}D1",
         f"{blk}G80",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -247,7 +247,7 @@ def tapping_cycle_s3(data: list, mod: str) -> list:
 
     dpt, thd, xin, yin, zin, rtr, sde, sys, znd, blk = data.values()
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     dpt = f"Z{fnum3(dpt)}"
     pch = f"F{ffed(thread_table[thd][2])}"
@@ -262,7 +262,7 @@ def tapping_cycle_s3(data: list, mod: str) -> list:
         f"{blk}G88{dpt}R.03{pch}D3S500",
         f"{blk}G80",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -280,7 +280,7 @@ def tapping_cycle_s1m(data: list, mod: str) -> list:
 
     dpt, thd, xin, yin, zin, rtr, sde, sys, znd, blk = data.values()
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     zin = zin - (0.03 * mod)
     dpt = (
@@ -301,6 +301,6 @@ def tapping_cycle_s1m(data: list, mod: str) -> list:
     lines1 = [
         f"{blk}{sys}{znd}G84{dpt}{rtr}{pch}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

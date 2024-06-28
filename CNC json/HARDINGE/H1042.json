@@ -1,0 +1,659 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "C470P142 PALA 20MM",
+            "Pgr": "1042",
+            "Dsc": "CONO CU",
+            "Mch": "HARDINGE",
+            "Dia": 1.013,
+            "Lgt": 1.236,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G50 (TORNO)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 1,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "IZQUIERDA",
+            "Sde": "$1",
+            "Xin": 2.0,
+            "Yin": 0.0,
+            "Zin": 3.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 1.5,
+            "Zin": 0.5,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.825,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.059,
+            "Fed": 0.003,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.845,
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.785,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.099,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.805,
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.745,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.137,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.765,
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.705,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.168,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.725,
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.665,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.193,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.685,
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.625,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.215,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.645,
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.585,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.234,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.605,
+            "Zin": -0.509,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.545,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.252,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.565,
+            "Zin": -0.587,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.505,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.273,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.525,
+            "Zin": -0.587,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.465,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.3,
+            "Fed": 0.003,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.485,
+            "Zin": -0.587,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.425,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.334,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.445,
+            "Zin": -0.547,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.385,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.385,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.5,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 1,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "IZQUIERDA",
+            "Sde": "$1",
+            "Xin": 0.45,
+            "Yin": 0.0,
+            "Zin": -0.6,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "ACABADO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.428,
+            "Zin": -0.624,
+            "Fed": 0.01,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.341,
+            "Zin": -0.549,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.49,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado radial",
+        {
+            "Xin": 0.563,
+            "Zin": -0.23,
+            "Fed": "",
+            "Xcn": 0.315,
+            "Zcn": "",
+            "Mov": "A FAVOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado radial",
+        {
+            "Xin": 0.825,
+            "Zin": 0.0,
+            "Fed": "",
+            "Xcn": 0.37,
+            "Zcn": "",
+            "Mov": "EN CONTRA",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.03,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 1,
+            "Sde": "$1",
+            "Dia": 1.013,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 1.013,
+            "Lgt": 1.236,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 1,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "IZQUIERDA",
+            "Xps": 2.0,
+            "Yps": 0.0,
+            "Zps": 3.0
+        }
+    ]
+]

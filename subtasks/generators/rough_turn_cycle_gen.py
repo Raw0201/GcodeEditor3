@@ -42,7 +42,7 @@ def gen_b12(data: list) -> list:
     """
 
     seq, cut, ovr, fed, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cut = f"U{fnum3(cut)}"
@@ -54,7 +54,7 @@ def gen_b12(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -70,7 +70,7 @@ def gen_a16(data: list) -> list:
     """
 
     seq, cut, ovr, fed, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cut = f"U{fnum3(cut)}"
@@ -82,7 +82,7 @@ def gen_a16(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -98,7 +98,7 @@ def gen_k16(data: list) -> list:
     """
 
     seq, cut, ovr, fed, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cut = f"U{fnum3(cut)}"
@@ -110,7 +110,7 @@ def gen_k16(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -126,7 +126,7 @@ def gen_e16(data: list) -> list:
     """
 
     seq, cut, ovr, fed, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cut = f"U{fnum3(cut)}"
@@ -138,7 +138,7 @@ def gen_e16(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -154,7 +154,7 @@ def gen_omni(data: list) -> list:
     """
 
     seq, cut, ovr, fed, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cut = f"U{fnum3(cut)}"
@@ -162,7 +162,7 @@ def gen_omni(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G75{cut}{ovx}{fed}"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -178,7 +178,7 @@ def gen_romi(data: list) -> list:
     """
 
     seq, cut, ovr, fed, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cut = f"U{fnum3(cut)}"
@@ -190,7 +190,7 @@ def gen_romi(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -206,7 +206,7 @@ def gen_hardinge(data: list) -> list:
     """
 
     seq, cut, ovr, fed, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cut = f"U{fnum3(cut)}"
@@ -218,7 +218,7 @@ def gen_hardinge(data: list) -> list:
     fed = f"F{ffed(fed)}"
 
     lines1 = [f"{blk}G71{cut}{rtr}", f"{blk}G71{sqi}{sqf}{ovx}{ovz}{fed}"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 

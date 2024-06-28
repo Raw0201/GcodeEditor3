@@ -41,7 +41,7 @@ def gen_b12(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
@@ -50,7 +50,7 @@ def gen_b12(data: list) -> list:
         return [lines1, lines2]
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -66,15 +66,15 @@ def gen_a16(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -90,12 +90,12 @@ def gen_k16(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
 
@@ -111,12 +111,12 @@ def gen_e16(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
 
@@ -132,15 +132,15 @@ def gen_omni(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -156,15 +156,15 @@ def gen_romi(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -180,15 +180,15 @@ def gen_hardinge(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -204,14 +204,14 @@ def gen_mazak(data: list) -> list:
     """
 
     com, sde, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     com = " " if com == "" else com
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     lines1 = [f"{blk}(- {com} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]

@@ -1,0 +1,301 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "R470P053",
+            "Pgr": "1057",
+            "Dsc": "CILINDRO Y PLANO",
+            "Mch": "HARDINGE",
+            "Dia": 0.457,
+            "Lgt": 1.989,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G50 (TORNO)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "DERECHA",
+            "Sde": "$1",
+            "Xin": -4.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CILINDRO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.65,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": -0.457,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.689,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": -0.378,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.784,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": -0.409,
+            "Zin": -0.811,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -1.455,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": -1.0,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.5,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    * Iniciar fresados",
+        {
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 5,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -1.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "PLANO ANILLO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.66,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.64,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.78,
+            "Fed": 5.0,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.64,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 3.0,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "    * Finalizar fresados",
+        {
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.457,
+            "Lgt": 1.989,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 2,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "DERECHA",
+            "Xps": -4.0,
+            "Yps": 0.0,
+            "Zps": 0.5
+        }
+    ]
+]

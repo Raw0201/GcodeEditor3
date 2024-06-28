@@ -148,7 +148,7 @@ def gen_mazak(data: list) -> list:
 
     gen = flatten_gen(data)
     fed, xin, xnd, cut, res, cts, yin, cys, yct, yru, yrb = gen
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     lines1 = [f"G91G01Z-{fnum3(cut)}F.002"]
     for cyc in range(int(cys)):
@@ -174,7 +174,7 @@ def gen_mazak(data: list) -> list:
     lines1.append(f"/G00Y-{fnum3(yrb)}")
     lines1.append(f"G00Y-{fnum3(yru)}")
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]

@@ -18,7 +18,7 @@ class Free(QMainWindow):
         """Recolecta los datos de la sub tarea ingresados por el usuario"""
 
         data = {
-            "Fre": "  ",
+            "Fre": " ",
             "Sde": self.window.current_side,
         }
 

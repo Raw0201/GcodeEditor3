@@ -1,0 +1,820 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "R470P048",
+            "Pgr": "1044",
+            "Dsc": "PUNTA Y CILINDRO",
+            "Mch": "ROMI",
+            "Dia": 0.433,
+            "Lgt": 2.536,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G50 (TORNO)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 1,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "DERECHA",
+            "Sde": "$1",
+            "Xin": 16.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CONO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.08,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.05,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.03,
+            "Fed": 0.02,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.354,
+            "Zin": -1.172,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -1.236,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.433,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -1.335,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 2.0,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "IZQUIERDA",
+            "Sde": "$1",
+            "Xin": 0.5,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CILINDRO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -1.31,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.46,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.443,
+            "Zin": "",
+            "Fed": 0.01,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.427,
+            "Zin": -1.315,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.378,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -1.331,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.409,
+            "Zin": -1.358,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -2.005,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 3.0,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    * Iniciar fresados",
+        {
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 5,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CARA NEG",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado caras",
+        {
+            "Wdt": 0.031,
+            "Lgt": 0.182,
+            "Ang": 15.0,
+            "Mat": 0.051,
+            "Fed": 20.0,
+            "Cut": 0.015,
+            "Dyr": "ALTERNADOS",
+            "Pos": "NEGATIVA",
+            "Tcm": 0.0,
+            "Lcm": 0.0,
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "BISEL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado caras",
+        {
+            "Wdt": 0.0,
+            "Lgt": 0.035,
+            "Ang": 75.0,
+            "Mat": 0.088,
+            "Fed": 20.0,
+            "Cut": 0.015,
+            "Dyr": "ALTERNADOS",
+            "Pos": "NEGATIVA",
+            "Tcm": 0.016,
+            "Lcm": 0.0,
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.1,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CARA POS",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado caras",
+        {
+            "Wdt": 0.031,
+            "Lgt": 0.182,
+            "Ang": 15.0,
+            "Mat": 0.051,
+            "Fed": 20.0,
+            "Cut": 0.015,
+            "Dyr": "ALTERNADOS",
+            "Pos": "POSITIVA",
+            "Tcm": 0.0,
+            "Lcm": 0.0,
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.5,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "PLANO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.66,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -1.155,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -1.185,
+            "Fed": 20.0,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -1.335,
+            "Fed": 10.0,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -1.185,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.5,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 6,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "ESPECIAL",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "VACIADO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.194,
+            "Yin": "",
+            "Zin": 0.15,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.125,
+            "Fed": 20.0,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.284,
+            "Yin": "",
+            "Zin": -0.04,
+            "Fed": 10.0,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.3,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.5,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Orientar husillo",
+        {
+            "Grd": 180,
+            "Rot": "NORMAL",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 7,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "PLANO CONO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.0,
+            "Yin": "",
+            "Zin": 0.15,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.45,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.475,
+            "Fed": 20.0,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -1.111,
+            "Fed": 10.0,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.225,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.25,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 3.0,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "    * Finalizar fresados",
+        {
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.433,
+            "Lgt": 2.536,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 1,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "DERECHA",
+            "Xps": 16.0,
+            "Yps": 0.0,
+            "Zps": 0.5
+        }
+    ]
+]

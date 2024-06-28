@@ -44,13 +44,13 @@ def gen_b12(data: list) -> list:
     """
 
     sde = data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = 1
         lines = csink_s1(data, mod_s1)
     elif sde in {"$2", "$3"}:
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
 
     lines1, lines2 = lines[0], lines[1]
 
@@ -68,13 +68,13 @@ def gen_a16(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = 1
         lines = csink_s1(data, mod_s1)
     elif sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         mod_s3 = 1 if xin > 0 else -1
         lines = csink_s3(data, mod_s3)
@@ -95,7 +95,7 @@ def gen_k16(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde in {"$1", "$2"}:
         mod_s1 = 1
@@ -120,7 +120,7 @@ def gen_e16(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde in {"$1", "$2"}:
         mod_s1 = 1
@@ -145,13 +145,13 @@ def gen_omni(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = -1
         lines = csink_s1o(data, mod_s1)
     elif sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         mod_s3 = 1 if xin > 0 else -1
         lines = csink_s3o(data, mod_s3)
@@ -172,13 +172,13 @@ def gen_romi(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = -1
         lines = csink_s1(data, mod_s1)
     elif sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         mod_s3 = 1 if xin > 0 else -1
         lines = csink_s3(data, mod_s3)
@@ -199,13 +199,13 @@ def gen_hardinge(data: list) -> list:
     """
 
     xin, sde = data["Xin"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = -1
         lines = csink_s1(data, mod_s1)
     elif sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         mod_s3 = 1 if xin > 0 else -1
         lines = csink_s3(data, mod_s3)
@@ -226,13 +226,13 @@ def gen_mazak(data: list) -> list:
     """
 
     sde = data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         mod_s1 = -1
         lines = csink_s1m(data, mod_s1)
     elif sde in {"$2", "$3"}:
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
 
     lines1, lines2 = lines[0], lines[1]
 
@@ -258,7 +258,7 @@ def csink_s1(data: list, mod: str) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     angle = math.radians(ang / 2)
     xan = lgt * math.tan(angle)
@@ -286,7 +286,7 @@ def csink_s1(data: list, mod: str) -> list:
         dwl,
         f"{blk}G00{zin}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not dwl:
         del lines2[-1]
 
@@ -312,7 +312,7 @@ def csink_s1m(data: list, mod: str) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     angle = math.radians(ang / 2)
     xan = lgt * math.tan(angle)
@@ -340,7 +340,7 @@ def csink_s1m(data: list, mod: str) -> list:
         f"{blk}G00{xin}{yin}{zin}",
         f"{blk}{sys}{znd}G82{zdp}{rtr}{dwl}{fed}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -364,7 +364,7 @@ def csink_s3(data: list, mod: str) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     angle = math.radians(ang / 2)
     xan = lgt * math.tan(angle)
@@ -387,7 +387,7 @@ def csink_s3(data: list, mod: str) -> list:
         dwl,
         f"{blk}G00{xin}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not dwl:
         del lines2[-1]
 
@@ -413,7 +413,7 @@ def csink_s1o(data: list, mod: str) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     angle = math.radians(ang / 2)
     xan = lgt * math.tan(angle)
@@ -440,7 +440,7 @@ def csink_s1o(data: list, mod: str) -> list:
         dwl,
         f"{blk}{zin}F300.",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not dwl:
         del lines2[-1]
 
@@ -466,7 +466,7 @@ def csink_s3o(data: list, mod: str) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     angle = math.radians(ang / 2)
     xan = lgt * math.tan(angle)
@@ -489,7 +489,7 @@ def csink_s3o(data: list, mod: str) -> list:
         dwl,
         f"{blk}{xin}F300.",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not dwl:
         del lines2[-1]
 

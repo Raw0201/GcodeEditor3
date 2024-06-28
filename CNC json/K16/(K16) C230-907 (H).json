@@ -1,0 +1,453 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "C230-907",
+            "Pgr": "3058",
+            "Dsc": "CONO, CARAS, CILINDRO Y AGUJERO",
+            "Mch": "K16",
+            "Dia": 0.187,
+            "Lgt": 0.603,
+            "Chk": 0.403,
+            "Cof": "IZQUIERDA",
+            "Wrk": "G50 (TORNO)"
+        }
+    ],
+    [
+        "    * Iniciar torneados",
+        {
+            "Trn": "G630",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 3,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": -0.02,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CONO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.063,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.117,
+            "Zin": 0.268,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.178,
+            "Zin": 0.324,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 3,
+            "Sde": "$1",
+            "Dia": 0.187,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.3,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CILINDRO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.168,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.61,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 2,
+            "Sde": "$1",
+            "Dia": 0.187,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Tronzado de pieza",
+        {
+            "Dia": 0.168,
+            "Cfr": 0.008,
+            "Lgt": 0.603,
+            "Chk": 0.403,
+            "Cof": "IZQUIERDA",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 7000,
+            "Rot": "NORMAL",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$2"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 32,
+            "Typ": "FRESA",
+            "Dia": 0.125,
+            "Spc": "-",
+            "Sde": "$2",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": -0.05,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "AGUJERO",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.0,
+            "Zin": -0.02,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.275,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.02,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.049,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.002,
+            "Zin": 0.004,
+            "Fed": 0.002,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.275,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.0,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.02,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 32,
+            "Sde": "$2",
+            "Dia": 0.187,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$2"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 31,
+            "Typ": "FRESA",
+            "Dia": 0.039,
+            "Spc": "-",
+            "Sde": "$2",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": -0.05,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "AGUJERO FONDO",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.0,
+            "Zin": -0.02,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.25,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 0.334,
+            "Fed": 0.001,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": -0.02,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "RAPIDO",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 31,
+            "Sde": "$2",
+            "Dia": 0.187,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$2"
+        }
+    ],
+    [
+        "        Recolectar pieza",
+        {
+            "Clt": "AUTOMATICO",
+            "Chk": 0.403,
+            "Blk": false
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.187,
+            "Lgt": 0.603,
+            "Chk": 0.403,
+            "Cof": "IZQUIERDA",
+            "Tol": 3,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "-",
+            "Xps": 0.0,
+            "Yps": 0.0,
+            "Zps": -0.02
+        }
+    ]
+]

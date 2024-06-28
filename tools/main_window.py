@@ -162,16 +162,23 @@ def make_tape(window: QMainWindow) -> list:
     """
 
     tape = []
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
 
     for line in window.tape1_list:
         data = line[1]
-        if data != blank_space:
-            tape.append(data)
+        if data != iu_space:
+            if data == tape_space:
+                tape.append("")
+            else:
+                tape.append(data)   
     for line in window.tape2_list:
         data = line[1]
-        if data != blank_space:
-            tape.append(data)
+        if data != iu_space:
+            if data == tape_space:
+                tape.append("")
+            else:
+                tape.append(data)  
     return tape
 
 

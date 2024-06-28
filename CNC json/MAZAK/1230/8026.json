@@ -1,0 +1,135 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8026,
+            "Mnp": "1230",
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 2,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "50GRD",
+            "Mch": "MAZAK",
+            "Lgt": 1.853
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "BISELES 50GRD",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.063,
+            "Zin": -0.015,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.429,
+            "Yin": "",
+            "Zin": "",
+            "Fed": 0.003,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": 0.063,
+            "Yin": 0.063,
+            "Zin": 0.068,
+            "Fed": "",
+            "Xcn": 0.0,
+            "Ycn": 0.063,
+            "Zcn": "",
+            "Mov": "EN CONTRA",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": -0.063,
+            "Yin": 0.063,
+            "Zin": -0.068,
+            "Fed": "",
+            "Xcn": -0.063,
+            "Ycn": 0.0,
+            "Zcn": "",
+            "Mov": "EN CONTRA",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.429,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.063,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0.414,
+            "Lgt": 1.853,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

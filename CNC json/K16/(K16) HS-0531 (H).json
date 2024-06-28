@@ -1,0 +1,409 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "HS-0531",
+            "Pgr": "0208",
+            "Dsc": "CONO, CILINDRO Y AGUJERO",
+            "Mch": "K16",
+            "Dia": 0.25,
+            "Lgt": 1.675,
+            "Chk": 1.125,
+            "Cof": "IZQUIERDA",
+            "Wrk": "G50 (TORNO)"
+        }
+    ],
+    [
+        "    * Iniciar torneados",
+        {
+            "Trn": "G630",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 3,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": -0.02,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CONO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.104,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.19,
+            "Zin": 0.668,
+            "Fed": 0.003,
+            "Seq": 0.0,
+            "Mov": "CORTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.26,
+            "Zin": 0.683,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 3,
+            "Sde": "$1",
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 1.57,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CILINDRO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.26,
+            "Zin": "",
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": "",
+            "Zin": 1.315,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Torneado lineal",
+        {
+            "Xin": 0.252,
+            "Zin": 1.52,
+            "Fed": "",
+            "Seq": 0.0,
+            "Mov": "",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 2,
+            "Sde": "$1",
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Tronzado de pieza",
+        {
+            "Dia": 0.225,
+            "Cfr": 0.002,
+            "Lgt": 1.675,
+            "Chk": 1.125,
+            "Cof": "IZQUIERDA",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 5000,
+            "Rot": "NORMAL",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$2"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 31,
+            "Typ": "SPOT",
+            "Dia": 0.25,
+            "Spc": "90 GRD",
+            "Sde": "$2",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": -0.05,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "AGUJERO CENTRO",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Agujero centro",
+        {
+            "Dpt": 0.05,
+            "Fed": 0.005,
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.0,
+            "Rtr": 0.0,
+            "Dwl": 0.0,
+            "Sde": "$2",
+            "Sys": "ABSOLUTO",
+            "Znd": "Z INICIAL",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 31,
+            "Sde": "$2",
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$2"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 32,
+            "Typ": "BROCA",
+            "Dia": 0.157,
+            "Spc": "-",
+            "Sde": "$2",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": -0.05,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "AGUJERO",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Perforado",
+        {
+            "Dpt": 0.916,
+            "Cut": 0.1,
+            "Ang": 118.0,
+            "Dia": 0.157,
+            "Fed": 0.005,
+            "Dwl": 0.0,
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.0,
+            "Rtr": 0.0,
+            "Sde": "$2",
+            "Sys": "ABSOLUTO",
+            "Znd": "Z INICIAL",
+            "Cyl": "CICLO DE PERFORADO",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 32,
+            "Sde": "$2",
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$2"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 31,
+            "Typ": "SPOT",
+            "Dia": 0.25,
+            "Spc": "90 GRD",
+            "Sde": "$2",
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": -0.05,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CSINK",
+            "Sde": "$2",
+            "Blk": false
+        }
+    ],
+    [
+        "        Avellanado",
+        {
+            "Lgt": 0.003,
+            "Dim": 0.157,
+            "Ang": 90.0,
+            "Dia": 0.25,
+            "Fed": 0.003,
+            "Dwl": 0.0,
+            "Xin": 0.0,
+            "Yin": 0.0,
+            "Zin": 0.0,
+            "Rtr": 0.0,
+            "Sde": "$2",
+            "Sys": "ABSOLUTO",
+            "Znd": "Z INICIAL",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 31,
+            "Sde": "$2",
+            "Dia": 0.25,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$2"
+        }
+    ],
+    [
+        "        Recolectar pieza",
+        {
+            "Clt": "AUTOMATICO",
+            "Chk": 1.125,
+            "Blk": false
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.25,
+            "Lgt": 1.675,
+            "Chk": 1.125,
+            "Cof": "IZQUIERDA",
+            "Tol": 3,
+            "Typ": "CUCHILLA",
+            "Dia": 0.0,
+            "Spc": "-",
+            "Xps": 0.0,
+            "Yps": 0.0,
+            "Zps": -0.02
+        }
+    ]
+]

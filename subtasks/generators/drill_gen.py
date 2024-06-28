@@ -44,11 +44,11 @@ def gen_b12(data: list) -> list:
     """
 
     cyl, sde = data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = 1
 
     if sde in {"$2", "$3"}:
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     if cyl == "CICLO DE PERFORADO":
         lines = drilling_cycle_s1(data, mod_s1)
     elif cyl == "CORTES INDIVIDUALES":
@@ -70,12 +70,12 @@ def gen_a16(data: list) -> list:
     """
 
     xin, cyl, sde = data["Xin"], data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = 1
     mod_s3 = 1 if xin > 0 else -1
 
     if sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         lines = drilling_cuts_s3(data, mod_s3)
     elif cyl == "CICLO DE PERFORADO":
@@ -99,7 +99,7 @@ def gen_k16(data: list) -> list:
     """
 
     xin, cyl, sde = data["Xin"], data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = 1
     mod_s3 = 1 if xin > 0 else -1
 
@@ -126,7 +126,7 @@ def gen_e16(data: list) -> list:
     """
 
     xin, cyl, sde = data["Xin"], data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = 1
     mod_s3 = 1 if xin > 0 else -1
 
@@ -153,12 +153,12 @@ def gen_omni(data: list) -> list:
     """
 
     xin, cyl, sde = data["Xin"], data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = -1
     mod_s3 = 1 if xin > 0 else -1
 
     if sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         lines = drilling_cuts_s3o(data, mod_s3)
     elif cyl == "CICLO DE PERFORADO":
@@ -182,12 +182,12 @@ def gen_romi(data: list) -> list:
     """
 
     xin, cyl, sde = data["Xin"], data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = -1
     mod_s3 = 1 if xin > 0 else -1
 
     if sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         lines = drilling_cuts_s3(data, mod_s3)
     if cyl == "CICLO DE PERFORADO":
@@ -211,12 +211,12 @@ def gen_hardinge(data: list) -> list:
     """
 
     xin, cyl, sde = data["Xin"], data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = -1
     mod_s3 = 1 if xin > 0 else -1
 
     if sde == "$2":
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif sde == "$3":
         lines = drilling_cuts_s3(data, mod_s3)
     elif cyl == "CICLO DE PERFORADO":
@@ -240,11 +240,11 @@ def gen_mazak(data: list) -> list:
     """
 
     cyl, sde = data["Cyl"], data["Sde"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     mod_s1 = -1
 
     if sde in {"$2", "$3"}:
-        lines = [blank_space, blank_space]
+        lines = [iu_space, iu_space]
     elif cyl == "CICLO DE PERFORADO":
         lines = drilling_cycle_s1m(data, mod_s1)
     elif cyl == "CORTES INDIVIDUALES":
@@ -285,7 +285,7 @@ def drilling_cycle_s1(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
@@ -306,7 +306,7 @@ def drilling_cycle_s1(data: dict, mod: int) -> list:
         f"{blk}G83{dpt}{cut}{dwl}{fed}",
         f"{blk}G00{zin}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -341,7 +341,7 @@ def drilling_cycle_s1o(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
@@ -368,7 +368,7 @@ def drilling_cycle_s1o(data: dict, mod: int) -> list:
         dwl3,
         f"{blk}{zin}F300.",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not dwl:
         del lines2[-3:]
 
@@ -405,7 +405,7 @@ def drilling_cycle_s1r(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
@@ -433,7 +433,7 @@ def drilling_cycle_s1r(data: dict, mod: int) -> list:
         dwl3,
         f"{blk}G00{zin}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not dwl:
         del lines2[-3:]
 
@@ -470,7 +470,7 @@ def drilling_cycle_s1h(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
@@ -499,7 +499,7 @@ def drilling_cycle_s1h(data: dict, mod: int) -> list:
         dwl3,
         f"{blk}G00{zin}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if not dwl:
         del lines2[-3:]
 
@@ -536,7 +536,7 @@ def drilling_cycle_s1m(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
@@ -560,7 +560,7 @@ def drilling_cycle_s1m(data: dict, mod: int) -> list:
     lines1 = [
         f"{blk}{sys}{znd}G83{dpt}{cut}{rtr}{fed}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -595,7 +595,7 @@ def drilling_cuts_s1(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
@@ -627,7 +627,7 @@ def drilling_cuts_s1(data: dict, mod: int) -> list:
     lines1.append(dwl) if dwl else ""
     lines1.append(f"{blk}G00{zin}")
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -662,7 +662,7 @@ def drilling_cuts_s3(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = xin, dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s3(params)
@@ -694,7 +694,7 @@ def drilling_cuts_s3(data: dict, mod: int) -> list:
     lines1.append(dwl) if dwl else ""
     lines1.append(f"{blk}G00{xin}")
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -729,7 +729,7 @@ def drilling_cuts_s1o(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s1(params)
@@ -756,7 +756,7 @@ def drilling_cuts_s1o(data: dict, mod: int) -> list:
     lines1.append(dwl) if dwl else ""
     lines1.append(f"{blk}{zin}F300.")
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -791,7 +791,7 @@ def drilling_cuts_s3o(data: dict, mod: int) -> list:
     ) = data.values()
 
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     params = xin, dpt, cut, ang, dia
     point, final_depth, remanent = drilling_params_s3o(params)
@@ -818,7 +818,7 @@ def drilling_cuts_s3o(data: dict, mod: int) -> list:
     lines1.append(dwl) if dwl else ""
     lines1.append(f"{blk}{xin}F300.")
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 

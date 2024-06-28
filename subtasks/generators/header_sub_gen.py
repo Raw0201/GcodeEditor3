@@ -41,13 +41,13 @@ def gen_b12(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dsc = "" if dsc == "-" else f" {dsc}"
 
     lines1 = ["%", f"O{num}(SUB{dsc})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -63,13 +63,13 @@ def gen_a16(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dsc = "" if dsc == "-" else f" {dsc}"
 
     lines1 = ["%", f"O{num}(SUB{dsc})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -85,13 +85,13 @@ def gen_k16(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dsc = "" if dsc == "-" else f" {dsc}"
 
     lines1 = ["%", f"O{num}(SUB{dsc})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -107,13 +107,13 @@ def gen_e16(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dsc = "" if dsc == "-" else f" {dsc}"
 
     lines1 = ["%", f"O{num}(SUB{dsc})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -129,13 +129,13 @@ def gen_omni(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dsc = "" if dsc == "-" else f" {dsc}"
 
     lines1 = [f"O{num}(SUB{dsc})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -151,13 +151,13 @@ def gen_romi(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dsc = "" if dsc == "-" else f" {dsc}"
 
     lines1 = ["%", f"O{num}(SUB{dsc})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -173,13 +173,13 @@ def gen_hardinge(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dsc = "" if dsc == "-" else f" {dsc}"
 
     lines1 = ["%", f"O{num}(SUB{dsc})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -195,7 +195,7 @@ def gen_mazak(data: list) -> list:
     """
 
     prg, mnp, dsc, plt, tol, typ, dia, spc, mch, lgt = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     num = ftape(mch, prg)
     dia = fdia(dia)
@@ -205,6 +205,6 @@ def gen_mazak(data: list) -> list:
         "%",
         f"O{num}({typ} {dia}{spc})",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

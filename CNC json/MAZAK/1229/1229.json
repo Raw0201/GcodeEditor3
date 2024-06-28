@@ -1,0 +1,474 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "R470P041",
+            "Pgr": "1229",
+            "Dsc": "MAQUINAR PUNTA",
+            "Mch": "MAZAK",
+            "Dia": 0.414,
+            "Lgt": 1.853,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G57 (APARATO DIVISOR)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.156,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -0.1,
+            "Yin": 0.0,
+            "Zin": 4.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 4000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE RANURA",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.5,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.17,
+            "Fed": 0.05,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8023,
+            "Rep": 7.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "ACABADO RANURA",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.141,
+            "Yin": 0.0,
+            "Zin": -0.18,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.041,
+            "Yin": -0.088,
+            "Zin": "",
+            "Fed": 0.02,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "INCREMENTAL",
+            "Com": "IZQUIERDA",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.429,
+            "Yin": "",
+            "Zin": "",
+            "Fed": 0.002,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": 0.0,
+            "Yin": 0.176,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": 0.0,
+            "Ycn": 0.088,
+            "Zcn": "",
+            "Mov": "EN CONTRA",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.429,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.041,
+            "Yin": -0.088,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "CANCELAR",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "REFRENTADO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.1,
+            "Yin": 0.235,
+            "Zin": -0.18,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.078,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.47,
+            "Zin": "",
+            "Fed": 0.005,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.5,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 1,
+            "Sde": "$1",
+            "Dia": 0.414,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "130GRD",
+            "Sde": "$1",
+            "Xin": -0.1,
+            "Yin": 0.0,
+            "Zin": 4.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "BISELES 130GRD",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.143,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8024,
+            "Rep": 5.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 2,
+            "Sde": "$1",
+            "Dia": 0.414,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 3,
+            "Typ": "FRESA",
+            "Dia": 0.1875,
+            "Spc": "BOLA",
+            "Sde": "$1",
+            "Xin": -0.05,
+            "Yin": 0.0,
+            "Zin": 4.0,
+            "Mcd": "PARADA PROGRAMADA",
+            "Com": "GIRAR 180GRD",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "RANURA R.091",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.223,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.561,
+            "Yin": "",
+            "Zin": "",
+            "Fed": 0.003,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.081,
+            "Yin": "",
+            "Zin": 0.023,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.5,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 3,
+            "Sde": "$1",
+            "Dia": 0.414,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.414,
+            "Lgt": 1.853,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.156,
+            "Spc": "-",
+            "Xps": -0.1,
+            "Yps": 0.0,
+            "Zps": 4.0
+        }
+    ]
+]

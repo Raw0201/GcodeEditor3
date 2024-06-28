@@ -102,11 +102,11 @@ def gen_omni(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}RF"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 

@@ -42,19 +42,19 @@ def gen_b12(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde != "$1":
         return ["", ""]
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else swiss_m_codes[f"PARADA {stp}"] if stp != "" else ""
     chk = "" if chk == "" else swiss_m_codes[f"{chk} BOQUILLA"] if chk != "" else ""
     col = "" if col == "" else swiss_m_codes[f"{col} REFRIGERANTE"] if col != "" else ""
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -70,19 +70,19 @@ def gen_a16(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
         return ["", ""]
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else swiss_k_m_codes[f"PARADA {stp}"]
     chk = "" if chk == "" else swiss_k_m_codes[f"{chk} BOQUILLA {sde}"]
     col = "" if col == "" else swiss_k_m_codes[f"{col} REFRIGERANTE"]
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -98,16 +98,16 @@ def gen_k16(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else swiss_k_m_codes[f"PARADA {stp}"]
     chk = "" if chk == "" else swiss_k_m_codes[f"{chk} BOQUILLA {sde}"]
     col = "" if col == "" else swiss_k_m_codes[f"{col} REFRIGERANTE"]
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
 
@@ -123,16 +123,16 @@ def gen_e16(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else swiss_k_m_codes[f"PARADA {stp}"]
     chk = "" if chk == "" else swiss_k_m_codes[f"{chk} BOQUILLA {sde}"]
     col = "" if col == "" else swiss_k_m_codes[f"{col} REFRIGERANTE"]
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines2, lines1] if sde == "$2" else [lines1, lines2]
 
@@ -148,19 +148,19 @@ def gen_omni(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else omni_m_codes[f"PARADA {stp}"]
     chk = "" if chk == "" else omni_m_codes[f"{chk} BOQUILLA"]
     col = "" if col == "" else omni_m_codes[f"{col} REFRIGERANTE"]
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -176,19 +176,19 @@ def gen_romi(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else romi_m_codes[f"PARADA {stp}"]
     chk = "" if chk == "" else romi_m_codes[f"{chk} BOQUILLA"]
     col = "" if col == "" else romi_m_codes[f"{col} REFRIGERANTE"]
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -204,19 +204,19 @@ def gen_hardinge(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else hardinge_m_codes[f"PARADA {stp}"]
     chk = "" if chk == "" else hardinge_m_codes[f"{chk} BOQUILLA"]
     col = "" if col == "" else hardinge_m_codes[f"{col} REFRIGERANTE"]
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -232,18 +232,18 @@ def gen_mazak(data: list) -> list:
     """
 
     com, stp, chk, col, sde, pln, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
-    com = "" if com == "" else f"(- {com} -)"
+    com = "" if com == "" else com
     stp = "" if stp == "" else mazak_m_codes[f"PARADA {stp}"]
     chk = "" if chk == "" else mazak_m_codes[f"{chk} BOQUILLA"]
     col = "" if col == "" else mazak_m_codes[f"{col} REFRIGERANTE"]
 
     lines1 = [f"{blk}{stp}{chk}{col}{com}{pln}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]

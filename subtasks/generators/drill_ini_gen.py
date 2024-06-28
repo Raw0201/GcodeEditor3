@@ -72,7 +72,7 @@ def gen_k16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}G610"]
@@ -92,7 +92,7 @@ def gen_e16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}G610"]

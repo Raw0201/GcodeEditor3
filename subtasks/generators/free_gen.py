@@ -12,13 +12,13 @@ def free_gen(machine: str, data: list) -> list:
         list: Lista de líneas de tape
     """
     fre, sde = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if sde == "$1":
         lines1 = [fre]
-        lines2 = [blank_space]
+        lines2 = [iu_space]
     elif sde == "$2":
-        lines1 = [blank_space]
+        lines1 = [iu_space]
         lines2 = [fre]
     else:
         if machine == "B12":
@@ -26,6 +26,6 @@ def free_gen(machine: str, data: list) -> list:
             lines2 = [""]
         else:
             lines1 = [fre]
-            lines2 = [blank_space]
+            lines2 = [iu_space]
 
     return [lines1, lines2]

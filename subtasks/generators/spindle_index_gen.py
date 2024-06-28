@@ -56,14 +56,14 @@ def gen_a16(data: list) -> list:
     """
 
     grd, rot, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cmd = "M28S"
     # cmd = "M18C" if rot == "DETENER" else "M28S"
 
     lines1 = [f"{blk}{cmd}{grd}(- HUSILLO A {grd}GRD -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -79,13 +79,13 @@ def gen_k16(data: list) -> list:
     """
 
     grd, rot, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cmd = "M18C"
 
     lines1 = [f"{blk}{cmd}{grd}.(- HUSILLO A {grd}GRD -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -101,13 +101,13 @@ def gen_e16(data: list) -> list:
     """
 
     grd, rot, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     cmd = "M18C"
 
     lines1 = [f"{blk}{cmd}{grd}.(- HUSILLO A {grd}GRD -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -123,13 +123,13 @@ def gen_omni(data: list) -> list:
     """
 
     grd, rot, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     rot = "CCW" if rot == "NORMAL" else "CW"
 
     lines1 = [f"{blk}M00(- GIRAR {grd}GRD {rot} -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -145,7 +145,7 @@ def gen_romi(data: list) -> list:
     """
 
     grd, rot, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [
@@ -153,7 +153,7 @@ def gen_romi(data: list) -> list:
         f"{blk}C{grd}(- HUSILLO A {grd}GRD -)",
         f"{blk}M22",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -169,11 +169,11 @@ def gen_hardinge(data: list) -> list:
     """
 
     grd, rot, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}B{grd}(- HUSILLO A {grd}GRD -)"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -189,10 +189,10 @@ def gen_mazak(data: list) -> list:
     """
 
     grd, rot, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}M00(- GIRAR {grd}GRD -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]

@@ -57,16 +57,17 @@ def gen_a16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        "  ",
+        tape_space,
         f"{blk}M82",
         f"{blk}M20",
         f"{blk}G99",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -82,16 +83,17 @@ def gen_k16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-            " ",
+            tape_space,
             f"{blk}M82",
             f"{blk}M20",
             f"{blk}G99",
         ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -107,16 +109,17 @@ def gen_e16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-            " ",
+            tape_space,
             f"{blk}M82",
             f"{blk}M20",
             f"{blk}G99",
         ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -147,15 +150,16 @@ def gen_romi(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        " ",
+        tape_space,
         f"{blk}M23",
         f"{blk}C0(HUSILLO A 0 GRD)",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -171,14 +175,15 @@ def gen_hardinge(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        " ",
+        tape_space,
         f"{blk}B0(HUSILLO A 0 GRD)",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 

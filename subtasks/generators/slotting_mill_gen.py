@@ -145,9 +145,9 @@ def gen_mazak(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
 
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     lines1 = ["(- slotting_mill_gen -)"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]

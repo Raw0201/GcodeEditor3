@@ -43,7 +43,7 @@ def gen_b12(data: list) -> list:
     """
 
     zin, znd, thd, typ, pos, rgh, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xnd, zin, znd, dia, xsc, xc1, xc2, pch = thread_data(data)
@@ -62,7 +62,7 @@ def gen_b12(data: list) -> list:
         f"{blk}X{fnum3(xc2)}",
         f"{blk}X{fnum3(xnd)}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if rg1 == "":
         del lines2[-2:]
     return [lines1, lines2]
@@ -79,7 +79,7 @@ def gen_a16(data: list) -> list:
     """
 
     zin, znd, thd, typ, pos, rgh, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xnd, zin, znd, dia, xsc, xc1, xc2, pch = thread_data(data)
@@ -98,7 +98,7 @@ def gen_a16(data: list) -> list:
         f"{blk}X{fnum3(xc2)}",
         f"{blk}X{fnum3(xnd)}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if rg1 == "":
         del lines2[-2:]
     return [lines1, lines2]
@@ -115,7 +115,7 @@ def gen_k16(data: list) -> list:
     """
 
     zin, znd, thd, typ, pos, rgh, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xnd, zin, znd, dia, xsc, xc1, xc2, pch = thread_data(data)
@@ -134,7 +134,7 @@ def gen_k16(data: list) -> list:
         f"{blk}X{fnum3(xc2)}",
         f"{blk}X{fnum3(xnd)}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if rg1 == "":
         del lines2[-2:]
     return [lines1, lines2]
@@ -151,7 +151,7 @@ def gen_e16(data: list) -> list:
     """
 
     zin, znd, thd, typ, pos, rgh, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xnd, zin, znd, dia, xsc, xc1, xc2, pch = thread_data(data)
@@ -169,7 +169,7 @@ def gen_e16(data: list) -> list:
         f"{blk}X{fnum3(xc2)}",
         f"{blk}X{fnum3(xnd)}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if rg1 == "":
         del lines2[-2:]
     return [lines1, lines2]
@@ -186,7 +186,7 @@ def gen_omni(data: list) -> list:
     """
 
     zin, znd, thd, typ, pos, rgh, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     mod = 0.5 if pos == "POSITIVA" else -0.5
 
@@ -205,7 +205,7 @@ def gen_omni(data: list) -> list:
         rg2,
         f"{blk}G33X{fnum3(xnd * mod)}Z{fnum3(znd)}I{fnum3(fsh)}F{fnum3(pch)}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if rg1 == "":
         del lines2[-2:]
     return [lines1, lines2]
@@ -222,7 +222,7 @@ def gen_romi(data: list) -> list:
     """
 
     zin, znd, thd, typ, pos, rgh, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     mod = 1 if pos == "POSITIVA" else -1
 
@@ -249,7 +249,7 @@ def gen_romi(data: list) -> list:
         "G76P020000Q00200R.002",
         f"{blk}G76X{xnd}Z{znd}R0P{hgt}Q{fsh}F{pch}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if rg1 == "":
         del lines2[-2:]
     return [lines1, lines2]
@@ -266,7 +266,7 @@ def gen_hardinge(data: list) -> list:
     """
 
     zin, znd, thd, typ, pos, rgh, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
     mod = 1 if pos == "POSITIVA" else -1
 
@@ -293,7 +293,7 @@ def gen_hardinge(data: list) -> list:
         "G76P020000Q00200R.002",
         f"{blk}G76X{xnd}Z{znd}R0P{hgt}Q{fsh}F{pch}",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     if rg1 == "":
         del lines2[-2:]
     return [lines1, lines2]

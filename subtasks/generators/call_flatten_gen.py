@@ -148,7 +148,7 @@ def gen_mazak(data: list) -> list:
     """
     sub, dpt, cut, dia, cqt, rqt, csp, rsp, xsp, ysp, xdm, ydm, xcm, ycm, blk = data.values()
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     rep = math.ceil(dpt / cut)
     zin = (rep * cut) + 0.005
@@ -164,6 +164,6 @@ def gen_mazak(data: list) -> list:
             f"{blk}M98P{sub}{rep}",
             f"{blk}G90G00Z{zsc}",
         ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

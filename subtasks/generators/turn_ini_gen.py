@@ -71,7 +71,7 @@ def gen_k16(data: list) -> list:
     """
 
     trn, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}G630($1-$2 SIMULTANEOS)"]
@@ -91,7 +91,7 @@ def gen_e16(data: list) -> list:
     """
 
     trn, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}G630($1-$2 SIMULTANEOS)"]

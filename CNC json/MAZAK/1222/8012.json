@@ -1,0 +1,169 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": "8012",
+            "Mnp": "1222",
+            "Dsc": "FRESA .125",
+            "Plt": [],
+            "Tol": 4,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "ESP 60GRD",
+            "Mch": "MAZAK",
+            "Lgt": 0.0
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "ACABADO EXTERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.1664,
+            "Yin": "",
+            "Zin": -0.15,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.1229,
+            "Yin": 0.0694,
+            "Zin": "",
+            "Fed": 0.01,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "IZQUIERDA",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.0915,
+            "Yin": 0.3413,
+            "Zin": "",
+            "Fed": 0.002,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": 0.4043,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": 0.27,
+            "Yin": 0.0,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": 0.135,
+            "Ycn": 0.0,
+            "Zcn": "",
+            "Mov": "A FAVOR",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.4043,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.0915,
+            "Yin": -0.3413,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.1229,
+            "Yin": -0.0694,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "CANCELAR",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.1664,
+            "Yin": "",
+            "Zin": 0.15,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0,
+            "Lgt": 0,
+            "Chk": 0,
+            "Cof": "",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

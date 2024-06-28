@@ -283,8 +283,8 @@ def data_widget_load(window: QMainWindow, data_list: list, columns: int):
         )
 
         values_lenght = len(data_list[1])
-        blank_spaces = columns - 1
-        window.data_widget.setColumnCount((values_lenght * columns) + blank_spaces)
+        iu_spaces = columns - 1
+        window.data_widget.setColumnCount((values_lenght * columns) + iu_spaces)
 
         headers = []
         for _ in range(columns):

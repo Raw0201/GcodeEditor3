@@ -2224,12 +2224,12 @@ PlotWidget {
       <rect>
        <x>15</x>
        <y>10</y>
-       <width>74</width>
+       <width>75</width>
        <height>26</height>
       </rect>
      </property>
      <property name="text">
-      <string>Comentario</string>
+      <string>Código libre</string>
      </property>
      <property name="buddy">
       <cstring>lbl_com</cstring>
@@ -2481,7 +2481,7 @@ PlotWidget {
       <rect>
        <x>15</x>
        <y>260</y>
-       <width>103</width>
+       <width>95</width>
        <height>26</height>
       </rect>
      </property>

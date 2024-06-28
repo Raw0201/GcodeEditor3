@@ -1,0 +1,166 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "66-627",
+            "Pgr": "1239",
+            "Dsc": "CARAS CU",
+            "Mch": "MAZAK",
+            "Dia": 0.365,
+            "Lgt": 4.385,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G57 (APARATO DIVISOR)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.375,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -0.25,
+            "Yin": 0.0,
+            "Zin": 4.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CARA POS.",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.2,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado caras",
+        {
+            "Wdt": 0.026,
+            "Lgt": 1.125,
+            "Ang": 9.0,
+            "Mat": 0.15,
+            "Fed": 0.01,
+            "Cut": 0.015,
+            "Dyr": "ALTERNADOS",
+            "Pos": "POSITIVA",
+            "Tcm": 0.0,
+            "Lcm": 0.0,
+            "Dia": 0.375,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.3,
+            "Zin": "",
+            "Fed": 0.01,
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "CARA NEG.",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado caras",
+        {
+            "Wdt": 0.026,
+            "Lgt": 1.125,
+            "Ang": 9.0,
+            "Mat": 0.15,
+            "Fed": 0.01,
+            "Cut": 0.015,
+            "Dyr": "ALTERNADOS",
+            "Pos": "NEGATIVA",
+            "Tcm": 0.0,
+            "Lcm": 0.0,
+            "Dia": 0.375,
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 1,
+            "Sde": "$1",
+            "Dia": 0.365,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.365,
+            "Lgt": 4.385,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.375,
+            "Spc": "-",
+            "Xps": -0.25,
+            "Yps": 0.0,
+            "Zps": 4.0
+        }
+    ]
+]

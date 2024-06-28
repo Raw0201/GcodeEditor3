@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'miscoiDhSW.ui'
+## Form generated from reading UI file 'miscqIkQJq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.1
 ##
@@ -2224,7 +2224,7 @@ class Ui_frm_misc(object):
         self.lbl_com = QLabel(self.frame)
         self.lbl_com.setObjectName(u"lbl_com")
         self.lbl_com.setEnabled(True)
-        self.lbl_com.setGeometry(QRect(15, 10, 74, 26))
+        self.lbl_com.setGeometry(QRect(15, 10, 75, 26))
         self.lbl_chk = QLabel(self.frame)
         self.lbl_chk.setObjectName(u"lbl_chk")
         self.lbl_chk.setEnabled(True)
@@ -2276,7 +2276,7 @@ class Ui_frm_misc(object):
         self.lbl_pln = QLabel(self.frame)
         self.lbl_pln.setObjectName(u"lbl_pln")
         self.lbl_pln.setEnabled(True)
-        self.lbl_pln.setGeometry(QRect(15, 260, 103, 26))
+        self.lbl_pln.setGeometry(QRect(15, 260, 95, 26))
         self.tbx_com.raise_()
         self.lbl_com.raise_()
         self.cbx_chk.raise_()
@@ -2332,7 +2332,7 @@ class Ui_frm_misc(object):
         self.tbx_com.setStatusTip("")
 #endif // QT_CONFIG(statustip)
         self.tbx_com.setPlaceholderText("")
-        self.lbl_com.setText(QCoreApplication.translate("frm_misc", u"Comentario", None))
+        self.lbl_com.setText(QCoreApplication.translate("frm_misc", u"C\u00f3digo libre", None))
         self.lbl_chk.setText(QCoreApplication.translate("frm_misc", u"Boquilla", None))
 #if QT_CONFIG(tooltip)
         self.cbx_chk.setToolTip(QCoreApplication.translate("frm_misc", u"Seleccione la boquilla y tarea a ejecutar", None))

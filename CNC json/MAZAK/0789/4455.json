@@ -1,0 +1,209 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 4455,
+            "Mnp": 4454,
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 4,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Mch": "MAZAK",
+            "Lgt": 0.0
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.125,
+            "Zin": -0.025,
+            "Fed": 0.001,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": 0.125,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": 0.577,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": 0.3785,
+            "Yin": 0.4179,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": 0.42,
+            "Ycn": 0.0,
+            "Zcn": "",
+            "Mov": "A FAVOR",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": 0.19,
+            "Yin": -0.2713,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": 0.0275,
+            "Ycn": -0.1829,
+            "Zcn": "",
+            "Mov": "A FAVOR",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": 0.2371,
+            "Yin": -0.2723,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": 0.454,
+            "Ycn": 0.1559,
+            "Zcn": "",
+            "Mov": "EN CONTRA",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": 0.2242,
+            "Yin": -0.1133,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": 0.0794,
+            "Ycn": -0.1213,
+            "Zcn": "",
+            "Mov": "A FAVOR",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.0159,
+            "Yin": -0.2862,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": -0.2082,
+            "Yin": -0.2349,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": -0.2227,
+            "Ycn": -0.0124,
+            "Zcn": "",
+            "Mov": "A FAVOR",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.5894,
+            "Yin": -0.0386,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado radial",
+        {
+            "Xin": -0.2481,
+            "Yin": 0.2216,
+            "Zin": "",
+            "Fed": "",
+            "Xcn": -0.0251,
+            "Ycn": 0.2216,
+            "Zcn": "",
+            "Mov": "A FAVOR",
+            "Sys": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0.0,
+            "Lgt": 0.0,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

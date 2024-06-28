@@ -1,0 +1,93 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8015,
+            "Mnp": "1224",
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 2,
+            "Typ": "FRESA",
+            "Dia": 0.1875,
+            "Spc": "-",
+            "Mch": "MAZAK",
+            "Lgt": 1.257
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESB. EXTERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": -0.319,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.03,
+            "Fed": 0.005,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8016,
+            "Rep": 30.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.48,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 1.25,
+            "Lgt": 1.257,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

@@ -1,0 +1,88 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8007,
+            "Mnp": "1222",
+            "Dsc": "FRESA .250",
+            "Plt": [],
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Mch": "MAZAK",
+            "Lgt": 0.0
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE ESQUINAS",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.07,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.03,
+            "Fed": 0.005,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8008,
+            "Rep": 2.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8008,
+            "Rep": 13.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0,
+            "Lgt": 0,
+            "Chk": 0,
+            "Cof": "",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

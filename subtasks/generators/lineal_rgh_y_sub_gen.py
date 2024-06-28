@@ -148,7 +148,7 @@ def gen_mazak(data: list) -> list:
 
     mtx, cut, blk = data.values()
     blk = "/" if blk else ""
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     yin = fnum4(mtx[0][2])
     ynd = fnum4(mtx[0][3])
@@ -162,6 +162,6 @@ def gen_mazak(data: list) -> list:
         f"{blk}Y-{fnum4(yin)}F.015",
     ]
     
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

@@ -57,17 +57,18 @@ def gen_a16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        "  ",
+        tape_space,
         f"{blk}G00Z0M05",
         f"{blk}M28S0",
         f"{blk}G98",
         f"{blk}M80S4500",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -83,18 +84,19 @@ def gen_k16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        "  ",
+        tape_space,
         f"{blk}G00Z0M05",
         f"{blk}G04U.5",
         f"{blk}M18C0.",
         f"{blk}G98",
         f"{blk}M80S6000",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -110,18 +112,19 @@ def gen_e16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        "  ",
+        tape_space,
         f"{blk}G00Z0M05",
         f"{blk}G04U.5",
         f"{blk}M18C0.",
         f"{blk}G98",
         f"{blk}M80S3=6000",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -152,16 +155,17 @@ def gen_romi(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        "  ",
+        tape_space,
         f"{blk}G98M05",
         f"{blk}M19(HUSILLO A 0 GRD)",
         f"{blk}M22",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -177,15 +181,16 @@ def gen_hardinge(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [
-        "  ",
+        tape_space,
         f"{blk}G98M05",
         f"{blk}B0(HUSILLO A 0 GRD)",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 

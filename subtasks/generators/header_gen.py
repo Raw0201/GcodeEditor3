@@ -41,7 +41,7 @@ def gen_b12(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     num = ftape(mch, prg)
@@ -56,7 +56,7 @@ def gen_b12(data: list) -> list:
         "G99M03S7000",
         f"G00{xin}Z-.02M52",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -72,7 +72,7 @@ def gen_a16(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     num = ftape(mch, prg)
@@ -88,7 +88,7 @@ def gen_a16(data: list) -> list:
         "G99M03S7000",
         f"G00{xin}Z-.02M52",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -104,7 +104,7 @@ def gen_k16(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     num = ftape(mch, prg)
@@ -123,14 +123,14 @@ def gen_k16(data: list) -> list:
         "G600",
     ]
     lines2 = [
-        blank_space,
-        " ",
+        iu_space,
+        iu_space,
         "$2",
         "G50Z0",
         "M89",
-        blank_space,
-        blank_space,
-        blank_space,
+        iu_space,
+        iu_space,
+        iu_space,
         "G600",
     ]
     return [lines1, lines2]
@@ -147,7 +147,7 @@ def gen_e16(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     num = ftape(mch, prg)
@@ -166,14 +166,14 @@ def gen_e16(data: list) -> list:
         "G600",
     ]
     lines2 = [
-        blank_space,
-        " ",
+        iu_space,
+        iu_space,
         "$2",
         "G50Z0",
         "M89",
-        blank_space,
-        blank_space,
-        blank_space,
+        iu_space,
+        iu_space,
+        iu_space,
         "G600",
     ]
     return [lines1, lines2]
@@ -190,11 +190,11 @@ def gen_omni(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     lines1 = [f"G90G94F300({prg}  {prt})", f"({mch} - {dsc} - {version})"]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -210,7 +210,7 @@ def gen_romi(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     num = ftape(mch, prg)
@@ -221,7 +221,7 @@ def gen_romi(data: list) -> list:
         f"({mch} - {dsc} - {version})",
         "G20G40G90G95",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -237,7 +237,7 @@ def gen_hardinge(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     num = ftape(mch, prg)
@@ -248,7 +248,7 @@ def gen_hardinge(data: list) -> list:
         f"({mch} - {dsc} - {version})",
         "G65P9150H1.5",
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -264,7 +264,7 @@ def gen_mazak(data: list) -> list:
     """
 
     prt, prg, dsc, mch, dia, lgt, chk, cof, wrk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     version = fversion()
 
     num = ftape(mch, prg)
@@ -276,6 +276,6 @@ def gen_mazak(data: list) -> list:
         "G17G20G40G49G80G90G95",
         wrk,
     ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

@@ -259,7 +259,7 @@ def face_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
     
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -294,7 +294,7 @@ def face_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}{ldn}{fnum3(lin + lcm)}{cfd}"
         lines1.append(crl)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -315,7 +315,7 @@ def face_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -348,7 +348,7 @@ def face_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}"
         lines1.append(crl) if cyl != cuts - 1 else ""
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -369,7 +369,7 @@ def face_mill_out(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -402,7 +402,7 @@ def face_mill_out(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(crl) if cyl != cuts - 1 else ""
         lnd += lds * lmd
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -423,7 +423,7 @@ def face_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -458,7 +458,7 @@ def face_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}{ldn}{fnum3(lin + lcm)}{cfd}"
         lines1.append(crl)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -479,7 +479,7 @@ def face_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -512,7 +512,7 @@ def face_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         crl = f"{blk}{tdn}{fnum3(tin * tmd + tcm)}"
         lines1.append(crl) if cyl != cuts - 1 else ""
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -533,7 +533,7 @@ def face_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -566,7 +566,7 @@ def face_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(crl) if cyl != cuts - 1 else ""
         lnd += lds * lmd
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -587,7 +587,7 @@ def face_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -632,7 +632,7 @@ def face_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         
         lines1.append(crl)
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -653,7 +653,7 @@ def face_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -691,7 +691,7 @@ def face_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         tps += tds
         lines1.append(crl) if cyl != cuts - 1 else ""
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1]
 
     return [lines1, lines2]
@@ -712,7 +712,7 @@ def face_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     """
 
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     ang = math.radians(ang)
@@ -750,7 +750,7 @@ def face_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lines1.append(crl) if cyl != cuts - 1 else ""
         lnd += lds * lmd
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
     del lines2[-1] 
 
     return [lines1, lines2]

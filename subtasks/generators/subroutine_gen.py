@@ -13,7 +13,7 @@ def subroutine_gen(machine: str, data: list) -> list:
     """
 
     sub, rep, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     blk = "/" if blk else ""
     rep = f"L{int(rep)}" if rep > 0 else ""
@@ -21,5 +21,5 @@ def subroutine_gen(machine: str, data: list) -> list:
     com2 = f"G50W{fnum3(com * -1)}" if com  != 0 else ""
 
     lines1 = [com1, f"{blk}M98P{sub}{rep}", com2]
-    lines2 = [blank_space for _ in lines1] if com != 0 else [blank_space]
+    lines2 = [iu_space for _ in lines1] if com != 0 else [iu_space]
     return [lines1, lines2]

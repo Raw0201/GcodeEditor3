@@ -1,0 +1,49 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8025,
+            "Mnp": "1",
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.187,
+            "Spc": "-",
+            "Mch": "MAZAK",
+            "Lgt": 1.0
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESCRIPCION",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 1.0,
+            "Lgt": 1.0,
+            "Chk": 1.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]

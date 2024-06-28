@@ -41,7 +41,7 @@ def gen_b12(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if mta:
         zin = "Z0" if cof == "DERECHA" else "Z.315"
@@ -57,7 +57,7 @@ def gen_b12(data: list) -> list:
             "M99",
             "%",
         ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -73,7 +73,8 @@ def gen_a16(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
 
     if mta:
         zin = "Z0" if cof == "DERECHA" else "Z.315"
@@ -82,7 +83,7 @@ def gen_a16(data: list) -> list:
             "M08",
             "/M109Q8999",
             "M09",
-            "  ",
+            tape_space,
             f"G00X-.1{zin}T00",
             "M56",
             "M02",
@@ -94,7 +95,7 @@ def gen_a16(data: list) -> list:
             "M99",
             "%",
         ]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -110,7 +111,8 @@ def gen_k16(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
 
     if mta:
         zin = "Z0" if cof == "DERECHA" else "Z.44"
@@ -124,22 +126,24 @@ def gen_k16(data: list) -> list:
             "M08",
             "/M98P8999",
             "M09",
-            "  ",
+            tape_space,
             f"G00X-.1{zin}T00",
-            "  ",
+            tape_space,
             "G999",
             "N999",
             "M56",
             "M02",
             "M99",
-            "  ",
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
+            tape_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
         ]
         lines2 = [
+            tape_space,
             "$0",
             "D",
             f"#016={bar_dia}",
@@ -164,7 +168,7 @@ def gen_k16(data: list) -> list:
             "M99",
             "%",
         ]
-        lines2 = [blank_space for _ in lines1]
+        lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -180,7 +184,8 @@ def gen_e16(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
+    tape_space = fspace_tape()
 
     if mta:
         zin = "Z0" if cof == "DERECHA" else "Z.44"
@@ -194,24 +199,26 @@ def gen_e16(data: list) -> list:
             "M08",
             "/M98P8999",
             "M09",
-            "  ",
+            tape_space,
             f"G00X-.1{zin}T00",
-            "  ",
+            tape_space,
             "G999",
             "N999",
             "M56",
             "M02",
             "M99",
-            "  ",
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
-            blank_space,
+            tape_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
+            iu_space,
         ]
         lines2 = [
+            tape_space,
             "$0",
             "A2-KE-1-16-7-P-M",
             f"#814={bar_dia}",
@@ -238,7 +245,7 @@ def gen_e16(data: list) -> list:
             "M99",
             "%",
         ]
-        lines2 = [blank_space for _ in lines1]
+        lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -254,7 +261,7 @@ def gen_omni(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if mta:
         tol = f"T{tol}"
@@ -267,7 +274,7 @@ def gen_omni(data: list) -> list:
     else:
         lines1 = ["M99"]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -283,7 +290,7 @@ def gen_romi(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if mta:
         tol = f"0{tol}" if tol < 10 else f"{tol}"
@@ -306,7 +313,7 @@ def gen_romi(data: list) -> list:
             "%",
         ]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -322,7 +329,7 @@ def gen_hardinge(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if mta:
         tol = f"0{tol}" if tol < 10 else f"{tol}"
@@ -345,7 +352,7 @@ def gen_hardinge(data: list) -> list:
             "%",
         ]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
 
@@ -361,7 +368,7 @@ def gen_mazak(data: list) -> list:
     """
 
     mta, bar, lgt, chk, cof, tol, typ, dia, spc, xps, yps, zps = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     if mta:
 
@@ -380,6 +387,6 @@ def gen_mazak(data: list) -> list:
             "%",
         ]
 
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

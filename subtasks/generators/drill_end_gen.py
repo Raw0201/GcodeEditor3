@@ -72,11 +72,11 @@ def gen_k16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}M141", f"{blk}G630"]
-    lines2 = [" ", f"{blk}G630U0"]
+    lines2 = [tape_space, f"{blk}G630U0"]
 
     return [lines1, lines2]
 
@@ -92,11 +92,11 @@ def gen_e16(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    tape_space = fspace_tape()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}M141", f"{blk}G630"]
-    lines2 = [" ", f"{blk}G630U0"]
+    lines2 = [tape_space, f"{blk}G630U0"]
 
     return [lines1, lines2]
 
@@ -156,10 +156,10 @@ def gen_mazak(data: list) -> list:
     """
 
     blk = data["Blk"]
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     lines1 = [f"{blk}G80G91G00Z.1"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]

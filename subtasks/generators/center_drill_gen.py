@@ -42,11 +42,11 @@ def gen_b12(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde != "$1":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     dpt = "" if dpt == "" else f"Z{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
@@ -56,7 +56,7 @@ def gen_b12(data: list) -> list:
     apx = "" if (xin == "" and zin == "") else f"{blk}G00{xin}{zin}"
 
     lines1 = [apx, f"{blk}G01{dpt}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not apx:
         del lines2[-1]
@@ -77,11 +77,11 @@ def gen_a16(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     dpt = "" if dpt == "" else f"{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
@@ -98,7 +98,7 @@ def gen_a16(data: list) -> list:
     )
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not apx:
         del lines2[-1]
@@ -119,7 +119,7 @@ def gen_k16(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     dpt = "" if dpt == "" else f"{fnum3(dpt)}"
@@ -137,7 +137,7 @@ def gen_k16(data: list) -> list:
     )
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not apx:
         del lines2[-1]
@@ -158,7 +158,7 @@ def gen_e16(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     dpt = "" if dpt == "" else f"{fnum3(dpt)}"
@@ -176,7 +176,7 @@ def gen_e16(data: list) -> list:
     )
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not apx:
         del lines2[-1]
@@ -197,11 +197,11 @@ def gen_omni(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     dpt = "" if dpt == "" else f"{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
@@ -213,7 +213,7 @@ def gen_omni(data: list) -> list:
     apx = "" if xin == "" and zin == "" else f"{blk}{xin}{zin}"
 
     lines1 = [apx, f"{blk}{axs}{dpt}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not apx:
         del lines2[-1]
@@ -234,11 +234,11 @@ def gen_romi(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     dpt = "" if dpt == "" else f"{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
@@ -250,7 +250,7 @@ def gen_romi(data: list) -> list:
     apx = "" if xin == "" and zin == "" else f"{blk}G00{xin}{zin}"
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not apx:
         del lines2[-1]
@@ -271,11 +271,11 @@ def gen_hardinge(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     dpt = "" if dpt == "" else f"{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
@@ -287,7 +287,7 @@ def gen_hardinge(data: list) -> list:
     apx = "" if xin == "" and zin == "" else f"{blk}G00{xin}{zin}"
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not apx:
         del lines2[-1]
@@ -308,11 +308,11 @@ def gen_mazak(data: list) -> list:
     """
 
     dpt, fed, xin, yin, zin, rtr, dwl, sde, sys, znd, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     if sde == "$2":
-        return [[blank_space], [blank_space]]
+        return [[iu_space], [iu_space]]
 
     dpt = "" if dpt == "" else f"Z{fnum3(dpt)}"
     fed = "" if fed == "" else f"F{ffed(fed)}"
@@ -326,7 +326,7 @@ def gen_mazak(data: list) -> list:
     znd = mill_g_codes[znd]
 
     lines1 = [f"{blk}{sys}{znd}G81{dpt}{rtr}{fed}", dwl]
-    lines2 = [blank_space for _ in lines1]
+    lines2 = [iu_space for _ in lines1]
 
     if not dwl:
         del lines2[-1]

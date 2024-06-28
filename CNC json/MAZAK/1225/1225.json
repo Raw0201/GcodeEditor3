@@ -1,0 +1,149 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "C470P142 PALA PART 20MM",
+            "Pgr": "1225",
+            "Dsc": "FRESADO CANTO",
+            "Mch": "MAZAK",
+            "Dia": 1.25,
+            "Lgt": 1.257,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G55 (PRENSA PRECISION)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.3125,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.5,
+            "Yin": 0.0,
+            "Zin": 0.5,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE CANTO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.18,
+            "Yin": 0.0,
+            "Zin": 0.05,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.0,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8017,
+            "Rep": 18.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8017,
+            "Rep": 85.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 1,
+            "Sde": "$1",
+            "Dia": 1.25,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": 6.0,
+            "Zin": 10.0,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 1.25,
+            "Lgt": 1.257,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.3125,
+            "Spc": "-",
+            "Xps": 0.5,
+            "Yps": 0.0,
+            "Zps": 0.5
+        }
+    ]
+]

@@ -152,8 +152,8 @@ def fversion() -> str:
     return date.today().strftime("V%m.%d.%y")
 
 
-def fspace() -> str:
-    """Formatea un espacio en blanco
+def fspace_ui() -> str:
+    """Formatea un espacio en blanco en la interfaz gráfica
 
     Returns:
         str: Espacio en blanco
@@ -161,6 +161,14 @@ def fspace() -> str:
 
     return "  "
 
+def fspace_tape() -> str:
+    """Formatea un espacio en blanco en la interfaz gráfica
+
+    Returns:
+        str: Espacio en blanco
+    """
+
+    return " "
 
 def fcom(tool: int, compensations: list) -> float:
     """Formatea la compensación de la herramienta

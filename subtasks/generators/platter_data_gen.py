@@ -146,10 +146,10 @@ def gen_mazak(data: list) -> list:
         list: Lista de líneas de tape generadas
     """
     cqt, csp, rqt, rsp, xsp, ysp, xdm, ydm, xcm, ycm, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
 
     lines1 = [f"(DIST CENTROS: X{fnum3(csp)} Y{fnum3(rsp)})"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 

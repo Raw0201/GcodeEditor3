@@ -57,7 +57,7 @@ def gen_a16(data: list) -> list:
     """
 
     xin, yin, zin, fed, rep, mov, sys, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -69,7 +69,7 @@ def gen_a16(data: list) -> list:
     com = "" if com == "" else swiss_g_codes[f"COMPENSACION {com}"]
 
     lines1 = [f"{blk}{com}{mov}{xin}{yin}{zin}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -85,7 +85,7 @@ def gen_k16(data: list) -> list:
     """
 
     xin, yin, zin, fed, rep, mov, sys, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -97,7 +97,7 @@ def gen_k16(data: list) -> list:
     com = "" if com == "" else swiss_g_codes[f"COMPENSACION {com}"]
 
     lines1 = [f"{blk}{com}{mov}{xin}{yin}{zin}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -113,7 +113,7 @@ def gen_e16(data: list) -> list:
     """
 
     xin, yin, zin, fed, rep, mov, sys, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -125,7 +125,7 @@ def gen_e16(data: list) -> list:
     com = "" if com == "" else swiss_g_codes[f"COMPENSACION {com}"]
 
     lines1 = [f"{blk}{com}{mov}{xin}{yin}{zin}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -141,7 +141,7 @@ def gen_omni(data: list) -> list:
     """
 
     xin, yin, zin, fed, rep, mov, sys, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = yin if yin != "" else xin
@@ -154,7 +154,7 @@ def gen_omni(data: list) -> list:
     com = "" if com == "" else lathe_g_codes[f"COMPENSACION {com}"]
 
     lines1 = [f"{blk}{com}{mov}{xin}{zin}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -170,7 +170,7 @@ def gen_romi(data: list) -> list:
     """
 
     xin, yin, zin, fed, rep, mov, sys, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = yin if yin != "" else xin
@@ -183,7 +183,7 @@ def gen_romi(data: list) -> list:
     com = "" if com == "" else lathe_g_codes[f"COMPENSACION {com}"]
 
     lines1 = [f"{blk}{com}{mov}{xin}{zin}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -199,7 +199,7 @@ def gen_hardinge(data: list) -> list:
     """
 
     xin, yin, zin, fed, rep, mov, sys, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = yin if yin != "" else xin
@@ -212,7 +212,7 @@ def gen_hardinge(data: list) -> list:
     com = "" if com == "" else lathe_g_codes[f"COMPENSACION {com}"]
 
     lines1 = [f"{blk}{com}{mov}{xin}{zin}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
 
@@ -228,7 +228,7 @@ def gen_mazak(data: list) -> list:
     """
 
     xin, yin, zin, fed, rep, mov, sys, com, blk = data.values()
-    blank_space = fspace()
+    iu_space = fspace_ui()
     blk = "/" if blk else ""
 
     xin = "" if xin == "" else f"X{fnum4(xin)}"
@@ -242,6 +242,6 @@ def gen_mazak(data: list) -> list:
     rep = "" if rep < 1 else f"L{int(rep)}"
 
     lines1 = [f"{blk}{sys}{com}{mov}{xin}{yin}{zin}{rep}{fed}"]
-    lines2 = [blank_space]
+    lines2 = [iu_space]
 
     return [lines1, lines2]
