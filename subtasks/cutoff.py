@@ -76,7 +76,7 @@ class Cutoff(Subtask, Ui_frm_cutoff):
         """
 
         data1 = (self.task, data)
-        data2 = prefab_space(data["Sde"])
+        data2 = prefab_space("$1")
 
         self.data_pack = (
             [data1]

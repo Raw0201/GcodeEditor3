@@ -152,7 +152,18 @@ def widget_clicked(window: QMainWindow, widget: str):
     """
 
     window.current_widget = widget
+    line = window.current_selection
+    
+    try:
+        data_list = window.config_list[line[0]][1]
+    except:
+        data_list = window.config_list[0][0]
 
+    try:
+        window.current_side = data_list["Sde"]
+    except:
+        window.current_side = "$1"
+    
     if widget == "conf":
         config_selected(window)
     else:

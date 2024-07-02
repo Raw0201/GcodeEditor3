@@ -1,0 +1,247 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 4456,
+            "Mnp": "0789",
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 5,
+            "Typ": "FRESA",
+            "Dia": 0.125,
+            "Spc": "-",
+            "Mch": "MAZAK",
+            "Lgt": 0.0
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "ACABADO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.3805,
+            "Yin": -0.442,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.025,
+            "Fed": 0.01,
+            "Rep": "",
+            "Mov": "CORTE",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -1.3358,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": true
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -1.3358,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": true
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -1.3358,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": true
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": 1.5099,
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": true
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 1.3358,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": true
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 1.3358,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": true
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 1.3358,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": true
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 4457,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": true
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0.0,
+            "Lgt": 0.0,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]
