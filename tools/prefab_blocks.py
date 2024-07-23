@@ -16,7 +16,7 @@ def prefab_space(side) -> list:
     return [
         " ",
         {
-            "Fre": "  ",
+            "Fre": " ",
             "Sde": side,
         },
     ]

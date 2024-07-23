@@ -172,6 +172,7 @@ def gen_mazak(data: list) -> list:
             yrb += yds
             lines1.append(f"/X{fnum3(xnd + xin)}")
     lines1.append(f"/G00Y-{fnum3(yrb)}")
+    yru += yds
     lines1.append(f"G00Y-{fnum3(yru)}")
 
     lines2 = [iu_space for _ in lines1]

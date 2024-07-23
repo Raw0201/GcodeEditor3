@@ -295,7 +295,7 @@ def gen_hardinge(data: list) -> list:
 
     tol, typ, dia, spc, sde, xin, yin, zin, mcd, com, blk = data.values()
     iu_space = fspace_ui()
-    blk = "/" if blk else ""
+    blk = "/" if blk else ""    
 
     if sde == "$2":
         return [[iu_space], [iu_space]]

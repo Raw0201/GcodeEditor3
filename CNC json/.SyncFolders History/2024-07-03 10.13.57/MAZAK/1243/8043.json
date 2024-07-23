@@ -1,0 +1,77 @@
+[
+    [
+        "Inicio de subrutina",
+        {
+            "Pgr": 8043,
+            "Mnp": "1243",
+            "Dsc": "-",
+            "Plt": [],
+            "Tol": 1,
+            "Typ": "SPOT",
+            "Dia": 0.25,
+            "Spc": "90 GRD",
+            "Mch": "MAZAK",
+            "Lgt": 36.0
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "AGUJEROS CENTRO POSTES",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -9.542,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -9.622,
+            "Yin": "",
+            "Zin": "",
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "INCREMENTAL",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": false,
+            "Bar": 0.75,
+            "Lgt": 36.0,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": null,
+            "Typ": null,
+            "Dia": null,
+            "Spc": null,
+            "Xps": null,
+            "Yps": null,
+            "Zps": null
+        }
+    ]
+]
