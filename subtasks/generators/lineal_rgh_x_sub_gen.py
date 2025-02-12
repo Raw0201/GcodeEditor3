@@ -160,7 +160,7 @@ def gen_mazak(data: list) -> list:
         f"/X{fnum4(xnd)}F.015",
         f"{blk}X{fnum4(xin)}F.015",
     ]
-    
+
     lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

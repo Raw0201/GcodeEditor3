@@ -105,7 +105,7 @@ class Drill(Subtask, Ui_frm_drill):
             tol = 32
         else:
             tol = 17
-        
+
         data1 = (self.task, data)
         data2 = prefab_space(data["Sde"])
         data3 = prefab_drill_tool_call(tol, 0, 0, -0.05, data["Sde"])

@@ -106,9 +106,7 @@ class Thread(Subtask, Ui_frm_thread):
         )
 
         self.data_pack = (
-            [data1]
-            if self.modification
-            else [data2, data3, data4, data1, data5]
+            [data1] if self.modification else [data2, data3, data4, data1, data5]
         )
         store_config_data(
             self.window,

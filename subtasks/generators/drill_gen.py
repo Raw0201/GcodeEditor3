@@ -547,7 +547,8 @@ def drilling_cycle_s1m(data: dict, mod: int) -> list:
         if sys == "ABSOLUTO"
         else f"Z{fnum3((final_depth + zin) * mod)}"
     )
-    cut = f"Q{int(cut * 10000)}"
+    # cut = f"Q{int(cut * 10000)}"
+    cut = f"Q{fnum3(cut)}"
     fed = f"F{ffed(fed)}"
     rtr = f"R{fnum3(rtr)}"
     xin = f"X{fnum3(xin)}"
@@ -688,9 +689,7 @@ def drilling_cuts_s3(data: dict, mod: int) -> list:
         lines1.append(f"{blk}G01X{fnum3(current_depth * mod)}")
         lines1.append(f"{blk}G00{fct}")
         lines1.append(f"{blk}X{fnum3((current_depth + 0.04) * mod)}")
-    lines1.append(
-        f"{blk}G01X{fnum3(final_depth * 2 * mod)}"
-    ) if remanent else ""
+    lines1.append(f"{blk}G01X{fnum3(final_depth * 2 * mod)}") if remanent else ""
     lines1.append(dwl) if dwl else ""
     lines1.append(f"{blk}G00{xin}")
 

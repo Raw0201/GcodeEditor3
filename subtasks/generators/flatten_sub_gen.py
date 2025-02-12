@@ -2,6 +2,7 @@ from tools.formatting import *
 from tools.compensations import *
 import math
 
+
 def flatten_sub_gen(machine: str, data: list) -> list:
     """Genera las líneas de tape
 
@@ -179,6 +180,7 @@ def gen_mazak(data: list) -> list:
     del lines2[-1]
 
     return [lines1, lines2]
+
 
 def flatten_gen(data: list) -> list:
     """Efectúa los cálculos para refrentado de platina

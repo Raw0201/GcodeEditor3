@@ -153,7 +153,7 @@ def widget_clicked(window: QMainWindow, widget: str):
 
     window.current_widget = widget
     line = window.current_selection
-    
+
     try:
         data_list = window.config_list[line[0]][1]
     except:
@@ -163,7 +163,7 @@ def widget_clicked(window: QMainWindow, widget: str):
         window.current_side = data_list["Sde"]
     except:
         window.current_side = "$1"
-    
+
     if widget == "conf":
         config_selected(window)
     else:
@@ -285,7 +285,6 @@ def data_widget_load(window: QMainWindow, data_list: list, columns: int):
     """
 
     try:
-
         divided_lenght = int(len(data_list) / columns)
         values_lines = len(data_list[1:])
 

@@ -161,6 +161,7 @@ def fspace_ui() -> str:
 
     return "  "
 
+
 def fspace_tape() -> str:
     """Formatea un espacio en blanco en la interfaz gráfica
 
@@ -169,6 +170,7 @@ def fspace_tape() -> str:
     """
 
     return " "
+
 
 def fcom(tool: int, compensations: list) -> float:
     """Formatea la compensación de la herramienta

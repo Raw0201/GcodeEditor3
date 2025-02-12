@@ -92,12 +92,13 @@ class End(QMainWindow):
         """
 
         current_index = 0
-       
+
         try:
             while True:
                 if self.config_list[current_index][0] == "    Llamar herramienta":
                     break
-                else: current_index += 1
+                else:
+                    current_index += 1
 
             tool_data = self.config_list[current_index][1]
 

@@ -8,7 +8,7 @@ def prefab_space(side) -> list:
 
     Args:
         side (str): Lado del programa
-    
+
     Returns:
         list: Bloque prefabricado
     """

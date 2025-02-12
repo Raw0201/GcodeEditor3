@@ -153,6 +153,7 @@ def gen_mazak(data: list) -> list:
 
     return [lines1, lines2]
 
+
 def matrix_gen(data: list) -> list:
     """Genera cuadrícula de piezas de platina
 
@@ -183,15 +184,29 @@ def matrix_gen(data: list) -> list:
     lsx = msx + ((pcx + xsp) / 2)  # Lineal start X
     lsy = msy - ((pcy + ysp) / 2)  # Lineal start Y
 
-    lin_prm = [rqt, cqt, csp, rsp, xsp, ysp, lsx, lsy, pcx, pcy, xdm, ydm] # Lineal parameters
-    sqr_prm = [rqt, cqt, csp, rsp, ssx, ssy] # Square parameters
+    lin_prm = [
+        rqt,
+        cqt,
+        csp,
+        rsp,
+        xsp,
+        ysp,
+        lsx,
+        lsy,
+        pcx,
+        pcy,
+        xdm,
+        ydm,
+    ]  # Lineal parameters
+    sqr_prm = [rqt, cqt, csp, rsp, ssx, ssy]  # Square parameters
 
-    lin_x = lineal_x_gen(lin_prm) # Lineal matrix X
-    lin_y = lineal_y_gen(lin_prm) # Lineal matrix Y
-    sqr_xy = square_xy_gen(sqr_prm) # Square matrix XY
-    sqr_yx = square_yx_gen(sqr_prm) # Square matrix YX
+    lin_x = lineal_x_gen(lin_prm)  # Lineal matrix X
+    lin_y = lineal_y_gen(lin_prm)  # Lineal matrix Y
+    sqr_xy = square_xy_gen(sqr_prm)  # Square matrix XY
+    sqr_yx = square_yx_gen(sqr_prm)  # Square matrix YX
 
     return [lin_x, lin_y, sqr_xy, sqr_yx]
+
 
 def lineal_x_gen(lin_prm: list) -> list:
     """Genera lista de puntos de líneas en eje X

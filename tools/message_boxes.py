@@ -132,6 +132,7 @@ def file_open_error(self) -> QMessageBox:
         "No se puede cargar el programa seleccionado",
     )
 
+
 def machine_error_information(self) -> QMessageBox:
     """Mensaje de error en selección de máquina
 
@@ -144,6 +145,7 @@ def machine_error_information(self) -> QMessageBox:
         "Error en selección de máquina",
         "Seleccione un tipo de máquina para mostrar los comandos",
     )
+
 
 def low_feed_information(self) -> QMessageBox:
     """Mensaje de advertencia en avance de corte

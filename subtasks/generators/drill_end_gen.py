@@ -145,6 +145,7 @@ def gen_hardinge(data: list) -> list:
 
     return [lines1, lines2]
 
+
 def gen_mazak(data: list) -> list:
     """Genera los códigos para fresadora Mazak
 

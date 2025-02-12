@@ -106,7 +106,7 @@ def gen_k16(data: list) -> list:
 
     if spd == 0 and rot != "DETENER":
         return [[f"{blk}G98"], [iu_space]]
-    
+
     num = sde[-1]
     spd = f"S{num}={spd}" if rot in ("NORMAL", "REVERSA") else ""
     rot = f"{rot} {sde}"

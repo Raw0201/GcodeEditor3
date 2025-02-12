@@ -119,7 +119,7 @@ def gen_k16(data: list) -> list:
         bar_dia = fparam(bar)
         mch_lgt = fparam(lgt + 0.2)
         rem_mat = fparam(lgt - chk) if chk > 0 else fparam(0)
-        bck_typ = fparam(141) if chk > 0 else fparam(143)
+        bck_typ = fparam(14.1) if chk > 0 else fparam(14.3)
 
         lines1 = [
             "M08",
@@ -192,7 +192,7 @@ def gen_e16(data: list) -> list:
         bar_dia = fparam(bar)
         mch_lgt = fparam(lgt + 0.2)
         rem_mat = fparam(lgt - chk) if chk > 0 else fparam(0)
-        bck_typ = fparam(421) if chk > 0 else fparam(422)
+        bck_typ = fparam(42.1) if chk > 0 else fparam(42.2)
 
         lines1 = [
             "M08",
@@ -371,7 +371,6 @@ def gen_mazak(data: list) -> list:
     iu_space = fspace_ui()
 
     if mta:
-
         tol = f"T0{tol}" if tol < 10 else f"T{tol}"
         dia = "" if dia == 0 else f" {fdia(dia)}"
         spc = "" if spc == "-" else f" {spc}"

@@ -157,7 +157,7 @@ def gen_omni(data: list) -> list:
     iu_space = fspace_ui()
     blk = "/" if blk else ""
 
-    cut = f"U{fnum3(cut)}"
+    cut = f"I{fnum3(cut)}"
     ovx = f"U{fnum3(ovr)}"
     fed = f"F{ffed(fed)}"
 

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindowChfMoq.ui'
+## Form generated from reading UI file 'MainWindowexJsur.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.1
+## Created by: Qt User Interface Compiler version 6.7.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -28,13 +28,13 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1190, 1294)
-        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Minimum)
+        sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         icon = QIcon()
-        icon.addFile(u":/icons/gear.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/icons/gear.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"/* ---------------------------------------------------------------------------\n"
 "\n"
@@ -2382,6 +2382,8 @@ class Ui_MainWindow(object):
         self.actionThreadTable.setObjectName(u"actionThreadTable")
         self.actionMillTable = QAction(MainWindow)
         self.actionMillTable.setObjectName(u"actionMillTable")
+        self.actionCondense_tapes = QAction(MainWindow)
+        self.actionCondense_tapes.setObjectName(u"actionCondense_tapes")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
@@ -2392,7 +2394,7 @@ class Ui_MainWindow(object):
         __qtablewidgetitem = QTableWidgetItem()
         self.tape1_widget.setHorizontalHeaderItem(0, __qtablewidgetitem)
         self.tape1_widget.setObjectName(u"tape1_widget")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy1.setHorizontalStretch(3)
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.tape1_widget.sizePolicy().hasHeightForWidth())
@@ -2405,9 +2407,9 @@ class Ui_MainWindow(object):
 "  selection-background-color: #1464A0;\n"
 "  selection-color: #F0F0F0;\n"
 "}")
-        self.tape1_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.tape1_widget.setSelectionMode(QAbstractItemView.ContiguousSelection)
-        self.tape1_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.tape1_widget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.tape1_widget.setSelectionMode(QAbstractItemView.SelectionMode.ContiguousSelection)
+        self.tape1_widget.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.tape1_widget.setColumnCount(1)
         self.tape1_widget.horizontalHeader().setStretchLastSection(True)
 
@@ -2429,9 +2431,9 @@ class Ui_MainWindow(object):
 "  selection-background-color: #1464A0;\n"
 "  selection-color: #F0F0F0;\n"
 "}")
-        self.tape2_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.tape2_widget.setSelectionMode(QAbstractItemView.ContiguousSelection)
-        self.tape2_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.tape2_widget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.tape2_widget.setSelectionMode(QAbstractItemView.SelectionMode.ContiguousSelection)
+        self.tape2_widget.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.tape2_widget.setColumnCount(1)
         self.tape2_widget.horizontalHeader().setStretchLastSection(True)
 
@@ -2443,7 +2445,7 @@ class Ui_MainWindow(object):
         __qtablewidgetitem2 = QTableWidgetItem()
         self.config_widget.setHorizontalHeaderItem(0, __qtablewidgetitem2)
         self.config_widget.setObjectName(u"config_widget")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy2.setHorizontalStretch(1)
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.config_widget.sizePolicy().hasHeightForWidth())
@@ -2456,9 +2458,9 @@ class Ui_MainWindow(object):
 "  selection-background-color: #1464A0;\n"
 "  selection-color: #F0F0F0;\n"
 "}")
-        self.config_widget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.config_widget.setSelectionMode(QAbstractItemView.ContiguousSelection)
-        self.config_widget.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.config_widget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.config_widget.setSelectionMode(QAbstractItemView.SelectionMode.ContiguousSelection)
+        self.config_widget.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.config_widget.setColumnCount(1)
         self.config_widget.horizontalHeader().setStretchLastSection(True)
 
@@ -2508,7 +2510,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
         self.functions_dock = QDockWidget(MainWindow)
         self.functions_dock.setObjectName(u"functions_dock")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.functions_dock.sizePolicy().hasHeightForWidth())
@@ -2522,7 +2524,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.tabWidget_principal = QTabWidget(self.dockWidgetContents)
         self.tabWidget_principal.setObjectName(u"tabWidget_principal")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.tabWidget_principal.sizePolicy().hasHeightForWidth())
@@ -2534,7 +2536,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.setObjectName(u"gridLayout_4")
         self.groupBox_machine = QGroupBox(self.tabWidget_principal_functions)
         self.groupBox_machine.setObjectName(u"groupBox_machine")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         sizePolicy5.setHorizontalStretch(0)
         sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.groupBox_machine.sizePolicy().hasHeightForWidth())
@@ -2677,7 +2679,7 @@ class Ui_MainWindow(object):
 
         self.tabWidget_functions = QTabWidget(self.dockWidgetContents)
         self.tabWidget_functions.setObjectName(u"tabWidget_functions")
-        sizePolicy6 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Expanding)
+        sizePolicy6 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
         sizePolicy6.setHorizontalStretch(0)
         sizePolicy6.setVerticalStretch(0)
         sizePolicy6.setHeightForWidth(self.tabWidget_functions.sizePolicy().hasHeightForWidth())
@@ -2738,7 +2740,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addWidget(self.groupBox_turning)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_2.addItem(self.verticalSpacer)
 
@@ -2783,7 +2785,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_9.addWidget(self.groupBox_milling, 0, 0, 1, 1)
 
-        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.gridLayout_9.addItem(self.verticalSpacer_8, 1, 0, 1, 1)
 
@@ -2822,7 +2824,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.groupBox_mill_cycles)
 
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer_3)
 
@@ -2871,7 +2873,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.groupBox_drilling)
 
-        self.verticalSpacer_2 = QSpacerItem(20, 369, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 369, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_4.addItem(self.verticalSpacer_2)
 
@@ -2930,7 +2932,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.groupBox_platter)
 
-        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer_4)
 
@@ -2939,7 +2941,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.addWidget(self.tabWidget_functions)
 
         self.functions_dock.setWidget(self.dockWidgetContents)
-        MainWindow.addDockWidget(Qt.LeftDockWidgetArea, self.functions_dock)
+        MainWindow.addDockWidget(Qt.DockWidgetArea.LeftDockWidgetArea, self.functions_dock)
         QWidget.setTabOrder(self.tabWidget_principal, self.btn_header)
         QWidget.setTabOrder(self.btn_header, self.btn_free)
         QWidget.setTabOrder(self.btn_free, self.btn_comment)
@@ -3514,6 +3516,10 @@ class Ui_MainWindow(object):
         self.actionDrillTable.setText(QCoreApplication.translate("MainWindow", u"Tabla Brocas", None))
         self.actionThreadTable.setText(QCoreApplication.translate("MainWindow", u"Tabla Roscas", None))
         self.actionMillTable.setText(QCoreApplication.translate("MainWindow", u"Tabla Fresas", None))
+        self.actionCondense_tapes.setText(QCoreApplication.translate("MainWindow", u"Condensar tapes", None))
+#if QT_CONFIG(shortcut)
+        self.actionCondense_tapes.setShortcut(QCoreApplication.translate("MainWindow", u"Ctrl+U", None))
+#endif // QT_CONFIG(shortcut)
         ___qtablewidgetitem = self.tape1_widget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"1 - Programa principal", None));
         ___qtablewidgetitem1 = self.tape2_widget.horizontalHeaderItem(0)

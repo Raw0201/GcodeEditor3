@@ -98,7 +98,7 @@ class Flatten_sub(QMainWindow):
         Args:
             data (dict): Diccionario de datos de configuración
         """
-        
+
         pass
 
     def processor(self, window: QMainWindow, data: dict):

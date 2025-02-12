@@ -14,6 +14,7 @@ def all_empty(data: dict) -> bool:
     if empties == len(data) - 1:
         return True
 
+
 def all_empty_sde(data: dict) -> bool:
     """Verifica si todos los valores en un diccionario están vacíos (sin Sde)
 

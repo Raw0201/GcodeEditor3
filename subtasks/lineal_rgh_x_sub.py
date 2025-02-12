@@ -83,7 +83,7 @@ class Lineal_rgh_x_sub(QMainWindow):
         """
 
         data["Mtx"] = self.lineal_matrix_x
-        
+
         return lineal_rgh_x_sub_gen(machine, data)
 
     def modifier(self, data: dict):

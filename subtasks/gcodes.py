@@ -25,8 +25,8 @@ class Gcodes(QMainWindow, Ui_frm_data_window):
             "E16": kswiss_g_codes,
             "OMNITURN": omni_g_codes,
             "ROMI": romi_g_codes,
-            "HARDINGE":  hardinge_g_codes,
-            "MAZAK": mill_g_codes
+            "HARDINGE": hardinge_g_codes,
+            "MAZAK": mill_g_codes,
         }
 
         data = code_lists_dict[machine]

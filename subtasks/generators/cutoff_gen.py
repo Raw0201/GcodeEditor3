@@ -47,24 +47,24 @@ def gen_b12(data: list) -> list:
     blk = "/" if blk else ""
 
     com = fnum3(0.375) if cof == "IZQUIERDA" else fnum3(0.06)
-    xin = f"X{fnum3(dia + .01)}"
-    zin = F"Z{fnum3(lgt - cfr - .005)}"
+    xin = f"X{fnum3(dia + 0.01)}"
+    zin = f"Z{fnum3(lgt - cfr - 0.005)}"
     xnd = f"X{fnum3(dia - (cfr * 2))}"
     znd = f"Z{fnum3(lgt)}"
 
     lines1 = [
-            f"{blk}T1111(CUCHILLA TRONZAR)",
-            f"{blk}M32",
-            f"{blk}G50W-{com}",
-            f"{blk}G00{zin}",
-            f"{blk}{xin}",
-            f"{blk}G01{xnd}{znd}F.002",
-            f"{blk}X0F.001",
-            f"{blk}X-.1F.005",
-            f"{blk}M33",
-            f"{blk}M7",
-            f"{blk}G50W{com}",
-        ]
+        f"{blk}T1111(CUCHILLA TRONZAR)",
+        f"{blk}M32",
+        f"{blk}G50W-{com}",
+        f"{blk}G00{zin}",
+        f"{blk}{xin}",
+        f"{blk}G01{xnd}{znd}F.002",
+        f"{blk}X0F.001",
+        f"{blk}X-.1F.005",
+        f"{blk}M33",
+        f"{blk}M7",
+        f"{blk}G50W{com}",
+    ]
     lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
@@ -85,24 +85,24 @@ def gen_a16(data: list) -> list:
     blk = "/" if blk else ""
 
     com = fnum3(0.375) if cof == "IZQUIERDA" else fnum3(0.06)
-    xin = f"X{fnum3(dia + .01)}"
-    zin = F"Z{fnum3(lgt - cfr - .005)}"
+    xin = f"X{fnum3(dia + 0.01)}"
+    zin = f"Z{fnum3(lgt - cfr - 0.005)}"
     xnd = f"X{fnum3(dia - (cfr * 2))}"
     znd = f"Z{fnum3(lgt)}"
 
     lines1 = [
-            f"{blk}T1111(CUCHILLA TRONZAR)",
-            f"{blk}M32",
-            f"{blk}G50W-{com}",
-            f"{blk}G00{zin}",
-            f"{blk}{xin}",
-            f"{blk}G01{xnd}{znd}F.002",
-            f"{blk}X0F.001",
-            f"{blk}X-.1F.005",
-            f"{blk}M33",
-            f"{blk}M7",
-            f"{blk}G50W{com}",
-        ]
+        f"{blk}T1111(CUCHILLA TRONZAR)",
+        f"{blk}M32",
+        f"{blk}G50W-{com}",
+        f"{blk}G00{zin}",
+        f"{blk}{xin}",
+        f"{blk}G01{xnd}{znd}F.002",
+        f"{blk}X0F.001",
+        f"{blk}X-.1F.005",
+        f"{blk}M33",
+        f"{blk}M7",
+        f"{blk}G50W{com}",
+    ]
     lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
@@ -228,36 +228,36 @@ def cutoff_k16s1_basket(data: list) -> list:
     blk = "/" if blk else ""
 
     com = fnum3(0.500) if cof == "IZQUIERDA" else fnum3(0.06)
-    xin = f"{fnum3(dia + .01)}"
-    zin = F"{fnum3(lgt - cfr - .005)}"
+    xin = f"{fnum3(dia + 0.01)}"
+    zin = f"{fnum3(lgt - cfr - 0.005)}"
     xnd = f"{fnum3(dia - (cfr * 2))}"
     znd = f"{fnum3(lgt)}"
 
     return [
-            f"{blk}G650",
-            tape_space,
-            f"{blk}T0100(CUCHILLA TRONZAR)",
-            f"{blk}G50W-{com}", 
-            f"{blk}G00Z{zin}T01",
-            f"{blk}X{xin}",
-            f"{blk}G01X{xnd}Z{znd}F.002",
-            f"{blk}X0F.001",
-            f"{blk}X-.1F.005",
-            f"{blk}M07",
-            f"{blk}G50W{com}",
-            tape_space,
-            f"{blk}!2L1",
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space
-        ]
+        f"{blk}G650",
+        tape_space,
+        f"{blk}T0100(CUCHILLA TRONZAR)",
+        f"{blk}G50W-{com}",
+        f"{blk}G00Z{zin}T01",
+        f"{blk}X{xin}",
+        f"{blk}G01X{xnd}Z{znd}F.002",
+        f"{blk}X0F.001",
+        f"{blk}X-.1F.005",
+        f"{blk}M07",
+        f"{blk}G50W{com}",
+        tape_space,
+        f"{blk}!2L1",
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+    ]
 
 
 def cutoff_k16s2_basket(data: list) -> list:
@@ -327,38 +327,38 @@ def cutoff_k16s1_spindle(data: list) -> list:
     com = fnum3(com)
 
     return [
-            f"{blk}T0100(CUCHILLA TRONZAR)",
-            f"{blk}G00Z{zsc}T01",
-            tape_space,
-            f"{blk}!2L1",
-            tape_space,
-            f"{blk}S1=3000M03",
-            f"{blk}S2=3000M24",
-            tape_space,
-            f"{blk}G814",
-            f"{blk}G650M1",
-            tape_space,
-            f"{blk}!2L2",
-            tape_space,
-            f"{blk}G50W-{com}",
-            f"{blk}G00Z{zin}",
-            f"{blk}X{xin}",
-            f"{blk}G01X{xnd}Z{znd}F.002",
-            f"{blk}X0F.001",
-            f"{blk}X-.1F.005",
-            tape_space,
-            f"{blk}M7",
-            f"{blk}G50W{com}",
-            tape_space,
-            f"{blk}G813",
-            f"{blk}G600",
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-        ]
+        f"{blk}T0100(CUCHILLA TRONZAR)",
+        f"{blk}G00Z{zsc}T01",
+        tape_space,
+        f"{blk}!2L1",
+        tape_space,
+        f"{blk}S1=3000M03",
+        f"{blk}S2=3000M24",
+        tape_space,
+        f"{blk}G814",
+        f"{blk}G650M1",
+        tape_space,
+        f"{blk}!2L2",
+        tape_space,
+        f"{blk}G50W-{com}",
+        f"{blk}G00Z{zin}",
+        f"{blk}X{xin}",
+        f"{blk}G01X{xnd}Z{znd}F.002",
+        f"{blk}X0F.001",
+        f"{blk}X-.1F.005",
+        tape_space,
+        f"{blk}M7",
+        f"{blk}G50W{com}",
+        tape_space,
+        f"{blk}G813",
+        f"{blk}G600",
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+    ]
 
 
 def cutoff_k16s2_spindle(data: list) -> list:
@@ -428,26 +428,26 @@ def cutoff_e16s1_basket(data: list) -> list:
     blk = "/" if blk else ""
 
     com = fnum3(0.500) if cof == "IZQUIERDA" else fnum3(0.06)
-    xin = f"{fnum3(dia + .01)}"
-    zin = F"{fnum3(lgt - cfr - .005)}"
+    xin = f"{fnum3(dia + 0.01)}"
+    zin = f"{fnum3(lgt - cfr - 0.005)}"
     xnd = f"{fnum3(dia - (cfr * 2))}"
     znd = f"{fnum3(lgt)}"
 
     return [
-            f"{blk}T0100(TRONZADO)",
-            f"{blk}M320",
-            f"{blk}G50W-{com}",
-            f"{blk}G00Z{zin}T01",
-            f"{blk}X{xin}",
-            f"{blk}G01X{xnd}Z{znd}F.002",
-            f"{blk}X0F.001",
-            f"{blk}X-.1F.005",
-            f"{blk}M07",
-            f"{blk}G50W{com}",
-            tape_space,
-            f"{blk}!2L1",
-            f"{blk}G600",
-        ]
+        f"{blk}T0100(TRONZADO)",
+        f"{blk}M320",
+        f"{blk}G50W-{com}",
+        f"{blk}G00Z{zin}T01",
+        f"{blk}X{xin}",
+        f"{blk}G01X{xnd}Z{znd}F.002",
+        f"{blk}X0F.001",
+        f"{blk}X-.1F.005",
+        f"{blk}M07",
+        f"{blk}G50W{com}",
+        tape_space,
+        f"{blk}!2L1",
+        f"{blk}G600",
+    ]
 
 
 def cutoff_e16s2_basket(data: list) -> list:
@@ -507,38 +507,38 @@ def cutoff_e16s1_spindle(data: list) -> list:
     com = fnum3(com)
 
     return [
-            f"{blk}T0100(CUCHILLA TRONZAR)",
-            f"{blk}G00Z{zsc}T01",
-            tape_space,
-            f"{blk}!2L1",
-            tape_space,
-            f"{blk}S1=3000M03",
-            f"{blk}S2=3000M24",
-            tape_space,
-            f"{blk}G814",
-            f"{blk}G650M1",
-            tape_space,
-            f"{blk}!2L2",
-            tape_space,
-            f"{blk}G50W-{com}",
-            f"{blk}G00Z{zin}",
-            f"{blk}X{xin}",
-            f"{blk}G01X{xnd}Z{znd}F.002",
-            f"{blk}X0F.001",
-            f"{blk}X-.1F.005",
-            tape_space,
-            f"{blk}M7",
-            f"{blk}G50W{com}",
-            tape_space,
-            f"{blk}G813",
-            f"{blk}G600",
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-            iu_space,
-        ]
+        f"{blk}T0100(CUCHILLA TRONZAR)",
+        f"{blk}G00Z{zsc}T01",
+        tape_space,
+        f"{blk}!2L1",
+        tape_space,
+        f"{blk}S1=3000M03",
+        f"{blk}S2=3000M24",
+        tape_space,
+        f"{blk}G814",
+        f"{blk}G650M1",
+        tape_space,
+        f"{blk}!2L2",
+        tape_space,
+        f"{blk}G50W-{com}",
+        f"{blk}G00Z{zin}",
+        f"{blk}X{xin}",
+        f"{blk}G01X{xnd}Z{znd}F.002",
+        f"{blk}X0F.001",
+        f"{blk}X-.1F.005",
+        tape_space,
+        f"{blk}M7",
+        f"{blk}G50W{com}",
+        tape_space,
+        f"{blk}G813",
+        f"{blk}G600",
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+        iu_space,
+    ]
 
 
 def cutoff_e16s2_spindle(data: list) -> list:

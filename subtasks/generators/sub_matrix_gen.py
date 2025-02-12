@@ -152,20 +152,25 @@ def gen_mazak(data: list) -> list:
     znd = fnum3(zin)
 
     lines1 = []
+    ubk_len = len(mtx) + ubk
+
     for pts, point in enumerate(mtx):
-        zsc = fnum3(zin + 0.05) if pts == 0 or sec == "SÍ" else fnum3(zin)
+        zsc = fnum3(zin)
         xpn, ypn = fnum4(point[0]), fnum4(point[1])
         pcn = int(cnt + pts)
-        if pts >= ubk or blk:
-            blk = "/"
+
+        if ubk >= 0:
+            if pts >= ubk or blk:
+                blk = "/"
+            else:
+                blk = ""
         else:
-            blk = ""
+            if pts < ubk_len:
+                blk = "/"
+            else:
+                blk = ""
+
         lines1.append(f"{blk}G90G00X{xpn}Y{ypn}Z{zsc}({pcn})")
-        (
-            lines1.append(f"{blk}G01Z{znd}F.02")
-            if sec == "SÍ" and pts > 0 or pts == 0
-            else ""
-        )
         lines1.append(f"{blk}M98P{sub}{rep}")
         lines1.append(f"{blk}G90G00Z{zsc}") if sec == "SÍ" else ""
 

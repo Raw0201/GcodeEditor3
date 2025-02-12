@@ -43,7 +43,7 @@ def load_main_buttons(window: QMainWindow):
         window.btn_mill_end,
         window.btn_lineal_mill,
         window.btn_radial_mill,
-        window.btn_sub_matrix
+        window.btn_sub_matrix,
     )
 
     window.milling_cycle_buttons_list = (

@@ -257,7 +257,7 @@ def face_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     Returns:
         list: Lista de líneas de tape
     """
-    
+
     wdt, lgt, ang, mat, fed, cut, dyr, pos, tcm, lcm, dia, blk = data.values()
     iu_space = fspace_ui()
     blk = "/" if blk else ""
@@ -276,7 +276,7 @@ def face_mill_alt(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     ]
 
     cyls = int(cuts / 2)
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
 
     for cyl in range(cyls):
@@ -332,7 +332,7 @@ def face_mill_inn(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     ]
 
     cyls = cuts
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
 
     for cyl in range(cyls):
@@ -380,7 +380,7 @@ def face_mill_out(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     tin, tnd, tds, lsc, lin, lnd, lds = face_milling_params(params)
 
     cyls = cuts
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
     lnd += lds * lmd
 
@@ -440,7 +440,7 @@ def face_mill_alto(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     ]
 
     cyls = int(cuts / 2)
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
 
     for cyl in range(cyls):
@@ -496,7 +496,7 @@ def face_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     ]
 
     cyls = cuts
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
 
     for cyl in range(cyls):
@@ -544,7 +544,7 @@ def face_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     tin, tnd, tds, lsc, lin, lnd, lds = face_milling_params(params)
 
     cyls = cuts
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
     lnd += lds * lmd
 
@@ -600,11 +600,11 @@ def face_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     tst = tin - (tds)
     lines1 = [
         f"{blk}G90G00{ldn}{fnum3(lsc + lcm)}{tdn}{fnum3(tst * tmd + tcm)}",
-        f"{blk}G91G01{ldn}{fnum3((lsc - lin)*-1)}F{ffed(fed)}",
+        f"{blk}G91G01{ldn}{fnum3((lsc - lin) * -1)}F{ffed(fed)}",
     ]
 
     cyls = int(cuts / 2)
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
     tps = tnd - tst
 
@@ -629,7 +629,7 @@ def face_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
         crl = f"{blk}{ldn}{fnum3(lps)}{tdn}{fnum3(tps * tmd * -1)}{cfd}"
         tps += tds
-        
+
         lines1.append(crl)
 
     lines2 = [iu_space for _ in lines1]
@@ -666,11 +666,11 @@ def face_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     tst = tin - (tds)
     lines1 = [
         f"{blk}G90G00{ldn}{fnum3(lsc + lcm)}{tdn}{fnum3(tst * tmd + tcm)}",
-        f"{blk}G91G01{ldn}{fnum3((lsc - lin)*-1)}F{ffed(fed)}",
+        f"{blk}G91G01{ldn}{fnum3((lsc - lin) * -1)}F{ffed(fed)}",
     ]
 
     cyls = cuts
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
     tps = tnd - tst
 
@@ -682,7 +682,7 @@ def face_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lnd += lds * lmd
         lps = lnd - lin
         crl = f"{blk}{ldn}{fnum3(lps)}{tdn}{fnum3(tps * tmd)}{cfd}"
-        
+
         lines1.append(crl)
 
         crl = f"{blk}G00{ldn}{fnum3(lps * -1)}"
@@ -723,7 +723,7 @@ def face_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     tin, tnd, tds, lsc, lin, lnd, lds = face_milling_params(params)
 
     cyls = cuts
-    lnd -= (lds * cuts)
+    lnd -= lds * cuts
     lnd *= lmd
     lnd += lds * lmd
     lps = (lsc - lnd) * -1
@@ -751,7 +751,7 @@ def face_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
         lnd += lds * lmd
 
     lines2 = [iu_space for _ in lines1]
-    del lines2[-1] 
+    del lines2[-1]
 
     return [lines1, lines2]
 
@@ -768,13 +768,13 @@ def face_milling_params(params: list) -> list:
 
     lgt, tmd, lmd, wdt, ang, dia, cuts, cut = params
 
-    tds = (cut / math.cos(ang))
+    tds = cut / math.cos(ang)
     lds = cut / math.sin(ang)
-    tin = (((dia / 2) * math.tan((1.5708 - ang) / 2)) + (wdt / 2))
-    lnd = (lgt - ((dia / 2) * math.sin(ang)))
-    tnd = tin + (((lnd + (dia / 2)) * math.tan(ang)))
+    tin = ((dia / 2) * math.tan((1.5708 - ang) / 2)) + (wdt / 2)
+    lnd = lgt - ((dia / 2) * math.sin(ang))
+    tnd = tin + ((lnd + (dia / 2)) * math.tan(ang))
     tin = tin + (tds * cuts)
-    lsc = (((dia / 2) + 0.025) * lmd * -1)
-    lin = ((dia / 2) * lmd * -1)
+    lsc = ((dia / 2) + 0.025) * lmd * -1
+    lin = (dia / 2) * lmd * -1
 
     return tin, tnd, tds, lsc, lin, lnd, lds

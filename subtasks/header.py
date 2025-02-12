@@ -143,10 +143,7 @@ class Header(Subtask, Ui_frm_header):
 
         window.save_required = True
 
-        if (
-            window.current_folder == ""
-            or window.current_machine != data["Mch"]
-        ):
+        if window.current_folder == "" or window.current_machine != data["Mch"]:
             window.current_machine = data["Mch"]
             update_file_dir(window)
 
@@ -208,4 +205,3 @@ class Header(Subtask, Ui_frm_header):
 
         end_enabled = not window.main_tape_active
         window.btn_end.setEnabled(end_enabled)
- 

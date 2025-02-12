@@ -1,6 +1,7 @@
 import contextlib
 import os
 import json
+import copy
 
 from PySide6.QtWidgets import QMainWindow, QFileDialog
 from PySide6.QtCore import QEvent
@@ -171,14 +172,14 @@ def make_tape(window: QMainWindow) -> list:
             if data == tape_space:
                 tape.append("")
             else:
-                tape.append(data)   
+                tape.append(data)
     for line in window.tape2_list:
         data = line[1]
         if data != iu_space:
             if data == tape_space:
                 tape.append("")
             else:
-                tape.append(data)  
+                tape.append(data)
     return tape
 
 
@@ -249,7 +250,13 @@ def duplicate_lines(window: QMainWindow):
         duplicate_header_information(window)
         return
 
-    duplicated_lines = [window.config_list[index] for index in index_list]
+    # duplicated_lines = [window.config_list[index] for index in index_list]
+    duplicated_lines = []
+
+    for index in index_list:
+        line = copy.deepcopy(window.config_list[index])
+        duplicated_lines.append(line)
+
     insertion_index = index_list[-1] + 1
     for line in duplicated_lines:
         window.config_list.insert(insertion_index, line)
@@ -336,6 +343,7 @@ def param_mod(window: QMainWindow, param: str, mod: float):
 
     update_data(window)
 
+
 def gcode_mod(window: QMainWindow, param: str):
     """Modifica un código G en las líneas seleccionadas
 
@@ -347,7 +355,6 @@ def gcode_mod(window: QMainWindow, param: str):
     index_list = window.current_selection
     for index in index_list:
         with contextlib.suppress(KeyError):
-            
             modded = window.config_list[index][1][param]
 
             if modded == "RAPIDO":
@@ -523,7 +530,8 @@ def load_subroutine_data(window: QMainWindow, index: int):
     while current_index > 0:
         if window.config_list[current_index][0] == "    Llamar herramienta":
             break
-        else: current_index -= 1 
+        else:
+            current_index -= 1
 
     tool_data = window.config_list[current_index][1]
     window.subroutine_tool = tool_data["Tol"]
@@ -536,7 +544,8 @@ def load_subroutine_data(window: QMainWindow, index: int):
     while current_index > 0:
         if window.config_list[current_index][0] == "        Comentario":
             break
-        else: current_index -= 1
+        else:
+            current_index -= 1
 
     comment_data = window.config_list[current_index][1]
     window.subroutine_comment = comment_data["Com"]
@@ -573,7 +582,7 @@ def load_subroutine(window: QMainWindow, file: str):
     create_new_tape(window)
     window.config_list = json.load(file)
     description = window.config_list[0][1]["Dsc"]
-    window.current_part_length = window.config_list[0][1]['Lgt']
+    window.current_part_length = window.config_list[0][1]["Lgt"]
     window.config_list[0] = prefab_sub_header(window, description)
     window.save_required = False
     update_after_subroutine(window)

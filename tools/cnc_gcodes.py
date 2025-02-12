@@ -311,7 +311,7 @@ romi_g_codes = [
     [
         "G77XnZnRnFn",
         "G77 = Ciclo de torneado paralelo o cónico\n\nX = Diámetro de la primera pasada\nZ = Posición final eje Z\nR = Conicidad incremental en eje X\nF = Avance de corte",
-    ],    
+    ],
     [
         "G78XnZnRnFn",
         "G78 = Ciclo de roscado semiautomático\n\nX = Diámetro del núcleo de la rosca\nZ = Posición final eje Z\nR = Conicidad incremental eje X\nF = Paso de la rosca",
@@ -319,7 +319,7 @@ romi_g_codes = [
     [
         "G79XnZnRnFn",
         "G79 = Ciclo de refrentado paralelo o cónico\n\nX = Posición final eje X\nZ = Posición final eje Z\nR = Conicidad incremental en eje X\nF = Avance de corte",
-    ],  
+    ],
     [
         "G80",
         "G80 = Cancela ciclo de perforado o roscado",
@@ -558,7 +558,7 @@ omni_g_codes = [
     ],
     [
         "G75InUnFnPn",
-        "G74 = Ciclo de desbaste en caja\n\nI = Profundidad por corte\nU = Sobrematerial para acabado\nF = Avance de corte\nP = Subrutina (opcional)",
+        "G75 = Ciclo de desbaste al contorno\n\nI = Profundidad por corte\nU = Sobrematerial para acabado\nF = Avance de corte\nP = Subrutina (opcional)",
     ],
     [
         "G76",

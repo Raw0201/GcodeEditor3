@@ -562,7 +562,7 @@ def flat_mill_altm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     tin, lsc, lin, lnd = flat_milling_params(params)
 
     tin = tin - (cut * tmd)
-    lin -= (lgt * lmd)
+    lin -= lgt * lmd
     lnd = lin * -1
 
     lines1 = [
@@ -613,7 +613,7 @@ def flat_mill_innm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     tin, lsc, lin, lnd = flat_milling_params(params)
 
     tin = tin - (cut * tmd)
-    lin -= (lgt * lmd)
+    lin -= lgt * lmd
     lnd = lin * -1
 
     lines1 = [
@@ -664,7 +664,7 @@ def flat_mill_outm(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
 
     fct = cut * tmd
     tin = tin - (cut * tmd)
-    lin -= (lgt * lmd)
+    lin -= lgt * lmd
     lnd = lin * -1
 
     lines1 = [

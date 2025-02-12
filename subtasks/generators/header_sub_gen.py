@@ -198,7 +198,7 @@ def gen_mazak(data: list) -> list:
     iu_space = fspace_ui()
 
     num = ftape(mch, prg)
-    dia = fdia(dia)
+    dia = fnum4(dia)
     spc = "" if spc == "-" else f" {spc}"
 
     lines1 = [

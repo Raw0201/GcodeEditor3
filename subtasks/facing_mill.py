@@ -28,7 +28,6 @@ class Facing_mill(Subtask, Ui_frm_facing_mill):
         self.cbx_dir.addItems(directions_list)
         self.cbx_dir.setCurrentText("ALTERNADOS")
 
-
     def collector(self):
         """Recolecta los datos de la sub tarea ingresados por el usuario"""
 

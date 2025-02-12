@@ -91,11 +91,7 @@ def gen_a16(data: list) -> list:
     axs = "X" if sde == "$3" else "Z"
 
     dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
-    apx = (
-        ""
-        if (xin == "" and yin == "" and zin == "")
-        else f"{blk}G00{xin}{yin}{zin}"
-    )
+    apx = "" if (xin == "" and yin == "" and zin == "") else f"{blk}G00{xin}{yin}{zin}"
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
     lines2 = [iu_space for _ in lines1]
@@ -130,11 +126,7 @@ def gen_k16(data: list) -> list:
     axs = "X" if sde == "$3" else "Z"
 
     dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
-    apx = (
-        ""
-        if (xin == "" and yin == "" and zin == "")
-        else f"{blk}G00{xin}{yin}{zin}"
-    )
+    apx = "" if (xin == "" and yin == "" and zin == "") else f"{blk}G00{xin}{yin}{zin}"
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
     lines2 = [iu_space for _ in lines1]
@@ -169,11 +161,7 @@ def gen_e16(data: list) -> list:
     axs = "X" if sde == "$3" else "Z"
 
     dwl = "" if dwl == 0 else f"{blk}G04U{ffed(dwl)}"
-    apx = (
-        ""
-        if (xin == "" and yin == "" and zin == "")
-        else f"{blk}G00{xin}{yin}{zin}"
-    )
+    apx = "" if (xin == "" and yin == "" and zin == "") else f"{blk}G00{xin}{yin}{zin}"
 
     lines1 = [apx, f"{blk}G01{axs}{dpt}{fed}", dwl]
     lines2 = [iu_space for _ in lines1]

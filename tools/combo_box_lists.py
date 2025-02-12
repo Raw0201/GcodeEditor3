@@ -146,7 +146,4 @@ plate_directions_list = (
     "X-Y",
     "Y-X",
 )
-axis_list = (
-    "COLUMNAS",
-    "FILAS"
-)
+axis_list = ("COLUMNAS", "FILAS")

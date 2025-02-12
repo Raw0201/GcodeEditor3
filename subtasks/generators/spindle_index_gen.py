@@ -150,7 +150,7 @@ def gen_romi(data: list) -> list:
 
     lines1 = [
         f"{blk}M23",
-        f"{blk}C{grd}(- HUSILLO A {grd}GRD -)",
+        f"{blk}G0C{grd}(- HUSILLO A {grd}GRD -)",
         f"{blk}M22",
     ]
     lines2 = [iu_space for _ in lines1]

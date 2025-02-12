@@ -66,8 +66,12 @@ class Radial_mill(Subtask, Ui_frm_radial_mill):
             required_data_error(self)
             return
         self.converter(data)
-        
-        if data["Fed"] != "" and float(data["Fed"]) < 1 and self.window.current_machine == "OMNITURN":
+
+        if (
+            data["Fed"] != ""
+            and float(data["Fed"]) < 1
+            and self.window.current_machine == "OMNITURN"
+        ):
             low_feed_information(self)
 
     def converter(self, data: dict):

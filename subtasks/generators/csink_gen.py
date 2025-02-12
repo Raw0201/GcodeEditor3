@@ -374,7 +374,7 @@ def csink_s3(data: list, mod: str) -> list:
     fed = f"F{ffed(fed)}"
     dwl = f"G04F{ffed(dwl)}" if dwl > 0 else ""
 
-    xds = f"X{fnum3(xin - ((point - lgt - .02) * 2 * mod))}"
+    xds = f"X{fnum3(xin - ((point - lgt - 0.02) * 2 * mod))}"
     xnd = f"X{fnum3(xin - (point * 2 * mod))}"
     xin = f"X{fnum3(xin + (0.04 * mod))}"
     yin = f"Y{fnum3(yin)}"
@@ -476,7 +476,7 @@ def csink_s3o(data: list, mod: str) -> list:
     fed = f"F{ffed(fed)}"
     dwl = f"G04F{ffed(dwl)}" if dwl > 0 else ""
 
-    xds = f"X{fnum3(xin - ((point - lgt - .02) * 2 * mod))}"
+    xds = f"X{fnum3(xin - ((point - lgt - 0.02) * 2 * mod))}"
     xnd = f"X{fnum3(xin - (point * 2 * mod))}"
     xin = f"X{fnum3(xin + (0.04 * mod))}"
     yin = f"Y{fnum3(yin)}"

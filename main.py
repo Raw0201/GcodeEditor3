@@ -32,7 +32,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         load_main_buttons(self)
         load_main_title(self)
 
-        # ? Botones y acciones de la pantalla principal
+        # ? Botones y acciones de la pantalla principal2
         # ? ----------------------------------------------------------------- *
 
         load_default_buttons_status(self)

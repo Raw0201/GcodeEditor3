@@ -88,11 +88,11 @@ def gen_k16(data: list) -> list:
     blk = "/" if blk else ""
 
     lines1 = [
-            tape_space,
-            f"{blk}M82",
-            f"{blk}M20",
-            f"{blk}G99",
-        ]
+        tape_space,
+        f"{blk}M82",
+        f"{blk}M20",
+        f"{blk}G99",
+    ]
     lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]
@@ -114,11 +114,11 @@ def gen_e16(data: list) -> list:
     blk = "/" if blk else ""
 
     lines1 = [
-            tape_space,
-            f"{blk}M82",
-            f"{blk}M20",
-            f"{blk}G99",
-        ]
+        tape_space,
+        f"{blk}M82",
+        f"{blk}M20",
+        f"{blk}G99",
+    ]
     lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

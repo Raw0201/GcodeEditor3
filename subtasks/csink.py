@@ -106,9 +106,7 @@ class Csink(Subtask, Ui_frm_csink):
 
         data1 = (self.task, data)
         data2 = prefab_space(data["Sde"])
-        data3 = prefab_csink_tool_call(
-            tol, data["Ang"], 0, 0, -0.05, data["Sde"]
-        )
+        data3 = prefab_csink_tool_call(tol, data["Ang"], 0, 0, -0.05, data["Sde"])
         data4 = prefab_comment(
             "CSINK",
             data["Sde"],

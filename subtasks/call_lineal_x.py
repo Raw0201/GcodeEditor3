@@ -59,7 +59,7 @@ class Call_lineal_x(Subtask, Ui_frm_call_lineal):
         self.converter(data)
         tools.main_window.subroutine_prep(self.window)
         collect_data(self.window, "Lineal_rgh_x_sub")
-        collect_data(self.window, "End"),
+        (collect_data(self.window, "End"),)
 
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
@@ -139,7 +139,7 @@ class Call_lineal_x(Subtask, Ui_frm_call_lineal):
             window (QMainWindow): Ventana principal
             data (dict): Diccionario de datos de configuración
         """
-        
+
         window.save_required = True
         window.current_cut_dpt = data["Cut"]
         window.current_side = "$1"

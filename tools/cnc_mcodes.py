@@ -1,12 +1,6 @@
-swiss_m_codes = [
-    ["Cód", "Descripción"],
-    ["M00", "Parada programada"]
-]
+swiss_m_codes = [["Cód", "Descripción"], ["M00", "Parada programada"]]
 
-kswiss_m_codes = [
-    ["Cód", "Descripción"],
-    ["M00", "Parada programada"]
-]
+kswiss_m_codes = [["Cód", "Descripción"], ["M00", "Parada programada"]]
 
 romi_m_codes = [
     ["Cód", "Descripción"],
@@ -57,7 +51,7 @@ hardinge_m_codes = [
     ["M08", "Bomba de refrigerante"],
     ["M09", "Detiene bomba de refrigerante"],
     ["M13", "Giro de husillo en sentido horario con refrigerante"],
-    ["M14", "Giro de husillo en sentido antihorario con refrigerante"],    
+    ["M14", "Giro de husillo en sentido antihorario con refrigerante"],
     ["M17", "Activa refrigerante husillo"],
     ["M18", "Desactiva refrigerante husillo"],
     ["M21", "Abre boquilla"],
@@ -79,10 +73,7 @@ hardinge_m_codes = [
     ["M99", "Retorno a inicio de programa sin finalizar"],
 ]
 
-omni_m_codes = [
-    ["Cód", "Descripción"],
-    ["M00", "Parada programada"]
-]
+omni_m_codes = [["Cód", "Descripción"], ["M00", "Parada programada"]]
 
 mill_m_codes = [
     ["Cód", "Descripción"],
@@ -99,7 +90,7 @@ mill_m_codes = [
     ["M10", "Sujeción de herramienta en husillo"],
     ["M11", "Desactiva sujeción de herramienta en husillo"],
     ["M15", "Cerrar cobertor de magazine"],
-    ["M16", "Abrir cobertor de magazine"],   
+    ["M16", "Abrir cobertor de magazine"],
     ["M19", "Activa orientación de husillo"],
     ["M23", "Activa detección de errores"],
     ["M24", "Desactiva detección de errores"],
@@ -145,5 +136,3 @@ mill_m_codes = [
     ["130", "Activa bomba de refrigerante Niagara"],
     ["132", "Bomba de aire através del husillo"],
 ]
-
-

@@ -1,6 +1,7 @@
 from tools.formatting import *
 from tools.compensations import *
 
+
 def tool_close_gen(machine: str, data: list) -> list:
     """Genera las líneas de tape
 
@@ -44,10 +45,10 @@ def gen_b12(data: list) -> list:
     iu_space = fspace_ui()
     blk = "/" if blk else ""
 
-    if sde != "$3":
+    if sde != "$1":
         return ["", ""]
 
-    xin = f"X{fnum3(dia + .02)}"
+    xin = f"X{fnum3(dia + 0.02)}"
     sft = fcom(tol, swiss_compensations)
     sft = f"{blk}G50W{fnum3(sft)}" if sft else ""
 
@@ -79,7 +80,7 @@ def gen_a16(data: list) -> list:
     if sde == "$2":
         return [[iu_space], [iu_space]]
 
-    xin = f"X{fnum3(dia + .02)}"
+    xin = f"X{fnum3(dia + 0.02)}"
     sft = fcom(tol, swiss_compensations)
     sft = f"{blk}G50W{fnum3(sft)}" if sft else ""
 
@@ -110,7 +111,7 @@ def gen_k16(data: list) -> list:
     blk = "/" if blk else ""
 
     blk = "/" if blk else ""
-    xin = f"X{fnum3(dia + .02)}"
+    xin = f"X{fnum3(dia + 0.02)}"
     sft = fcom(tol, kswiss_compensations)
     sft = f"{blk}G50W{fnum3(sft)}" if sft else ""
 
@@ -141,7 +142,7 @@ def gen_e16(data: list) -> list:
     blk = "/" if blk else ""
 
     blk = "/" if blk else ""
-    xin = f"X{fnum3(dia + .02)}"
+    xin = f"X{fnum3(dia + 0.02)}"
     sft = fcom(tol, kswiss_compensations)
     sft = f"{blk}G50W{fnum3(sft)}" if sft else ""
 

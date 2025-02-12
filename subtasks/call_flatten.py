@@ -64,7 +64,7 @@ class Call_flatten(Subtask, Ui_frm_call_flatten):
         self.converter(data)
         tools.main_window.subroutine_prep(self.window)
         collect_data(self.window, "Flatten_sub")
-        collect_data(self.window, "End"),
+        (collect_data(self.window, "End"),)
 
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
@@ -112,7 +112,7 @@ class Call_flatten(Subtask, Ui_frm_call_flatten):
         Returns:
             list: Lista de líneas de tape
         """
-        
+
         data["Dia"] = self.current_tool_diameter
         return call_flatten_gen(machine, data)
 
@@ -124,7 +124,9 @@ class Call_flatten(Subtask, Ui_frm_call_flatten):
         """
 
         self.modification = True
-        sub, dpt, cut, dia, cqt, rqt, csp, rsp, xsp, ysp, xdm, ydm, xcm, ycm, blk = data.values()
+        sub, dpt, cut, dia, cqt, rqt, csp, rsp, xsp, ysp, xdm, ydm, xcm, ycm, blk = (
+            data.values()
+        )
 
         self.tbx_sub.setText(str(sub))
         self.tbx_sub.setSelection(0, 100)

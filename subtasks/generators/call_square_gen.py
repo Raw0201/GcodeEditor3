@@ -151,7 +151,7 @@ def gen_mazak(data: list) -> list:
     rep = 0 if cut == 0 else math.ceil(dpt / cut)
     zps = dpt if cut == 0 else (dpt - (rep * cut)) * -1
 
-    if zps == -.0:
+    if zps == -0.0:
         zps = cut
         rep += 1
 

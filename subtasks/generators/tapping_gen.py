@@ -284,9 +284,7 @@ def tapping_cycle_s1m(data: list, mod: str) -> list:
 
     zin = zin - (0.03 * mod)
     dpt = (
-        f"Z{fnum3(dpt * mod)}"
-        if sys == "ABSOLUTO"
-        else f"Z{fnum3((dpt + zin) * mod)}"
+        f"Z{fnum3(dpt * mod)}" if sys == "ABSOLUTO" else f"Z{fnum3((dpt + zin) * mod)}"
     )
     pch = f"F{ffed(thread_table[thd][2])}"
 

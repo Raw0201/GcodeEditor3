@@ -25,6 +25,7 @@ def load_default_data_lists(window: QMainWindow):
     window.tape2_list = []
     window.current_selection = []
     window.platter_data = []
+    window.graph_list = []
 
 
 def load_default_variables(window: QMainWindow):
@@ -106,7 +107,8 @@ def load_default_subroutine_data(window: QMainWindow):
     window.subroutine_folder = ""
     window.platter_data = []
     window.current_cut_dpt = 0
-    
+
+
 def load_default_plate_data(window: QMainWindow):
     """Carga los valores por defecto de datos de la platina
 

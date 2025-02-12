@@ -146,7 +146,9 @@ def gen_mazak(data: list) -> list:
     Returns:
         list: Lista de líneas de tape generadas
     """
-    sub, dpt, cut, dia, cqt, rqt, csp, rsp, xsp, ysp, xdm, ydm, xcm, ycm, blk = data.values()
+    sub, dpt, cut, dia, cqt, rqt, csp, rsp, xsp, ysp, xdm, ydm, xcm, ycm, blk = (
+        data.values()
+    )
     blk = "/" if blk else ""
     iu_space = fspace_ui()
 
@@ -159,11 +161,11 @@ def gen_mazak(data: list) -> list:
     rep = f"L{rep}" if rep > 1 else ""
 
     lines1 = [
-            f"{blk}G90G00X{xin}Y-{yin}Z{zsc}",
-            f"{blk}G01Z{zin}F.02",
-            f"{blk}M98P{sub}{rep}",
-            f"{blk}G90G00Z{zsc}",
-        ]
+        f"{blk}G90G00X{xin}Y-{yin}Z{zsc}",
+        f"{blk}G01Z{zin}F.02",
+        f"{blk}M98P{sub}{rep}",
+        f"{blk}G90G00Z{zsc}",
+    ]
     lines2 = [iu_space for _ in lines1]
 
     return [lines1, lines2]

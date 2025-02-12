@@ -52,7 +52,11 @@ class Call_square(Subtask, Ui_frm_call_square):
         if wsh == "G54 (PLATO 30 PIEZAS)":
             data["Mtx"] = PLATE_XY if data["Dyr"] == "X-Y" else PLATE_YX
         else:
-            data["Mtx"] = self.window.square_matrix_xy if data["Dyr"] == "X-Y" else self.window.square_matrix_yx
+            data["Mtx"] = (
+                self.window.square_matrix_xy
+                if data["Dyr"] == "X-Y"
+                else self.window.square_matrix_yx
+            )
 
         self.validator(data)
 
@@ -68,7 +72,7 @@ class Call_square(Subtask, Ui_frm_call_square):
             return
         self.converter(data)
         tools.main_window.subroutine_prep(self.window)
-        collect_data(self.window, "End"),
+        (collect_data(self.window, "End"),)
 
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
@@ -117,12 +121,14 @@ class Call_square(Subtask, Ui_frm_call_square):
         Returns:
             list: Lista de líneas de tape
         """
-        
+
         wsh = self.current_work_offset
         if wsh == "G54 (PLATO 30 PIEZAS)":
             data["Mtx"] = PLATE_XY if data["Dyr"] == "X-Y" else PLATE_YX
         else:
-            data["Mtx"] = self.square_matrix_xy if data["Dyr"] == "X-Y" else self.square_matrix_yx
+            data["Mtx"] = (
+                self.square_matrix_xy if data["Dyr"] == "X-Y" else self.square_matrix_yx
+            )
 
         return call_square_gen(machine, data)
 

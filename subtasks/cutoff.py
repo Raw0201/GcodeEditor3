@@ -78,11 +78,7 @@ class Cutoff(Subtask, Ui_frm_cutoff):
         data1 = (self.task, data)
         data2 = prefab_space("$1")
 
-        self.data_pack = (
-            [data1]
-            if self.modification
-            else [data2, data1]
-        )
+        self.data_pack = [data1] if self.modification else [data2, data1]
         store_config_data(
             self.window,
             self.data_pack,

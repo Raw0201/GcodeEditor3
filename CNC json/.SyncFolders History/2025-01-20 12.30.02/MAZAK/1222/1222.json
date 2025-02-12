@@ -1,0 +1,968 @@
+[
+    [
+        "Inicio de programa",
+        {
+            "Prt": "TROQUEL 49280",
+            "Pgr": "1222",
+            "Dsc": "TROQUEL SWABS",
+            "Mch": "MAZAK",
+            "Dia": 0.0,
+            "Lgt": 0.0,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Wrk": "G55 (PRENSA PRECISION)"
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": 0.15,
+            "Yin": 0.13,
+            "Zin": 1.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 2000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE POSTERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.15,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8004,
+            "Rep": 14.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE DERECHO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": 0.12,
+            "Yin": -1.4,
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.15,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8005,
+            "Rep": 19.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE IZQUIERDO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -7.486,
+            "Yin": -1.4,
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": -0.15,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "",
+            "Sys": "",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8006,
+            "Rep": 19.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE INFERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.589,
+            "Yin": -1.3,
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8007,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": "",
+            "Yin": "",
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE SUPERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Fresado lineal",
+        {
+            "Xin": -0.589,
+            "Yin": -0.25,
+            "Zin": 0.1,
+            "Fed": "",
+            "Rep": "",
+            "Mov": "RAPIDO",
+            "Sys": "ABSOLUTO",
+            "Com": "",
+            "Blk": false
+        }
+    ],
+    [
+        "        -> Subrutina",
+        {
+            "Sub": 8007,
+            "Rep": 0.0,
+            "Com": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 1,
+            "Sde": "$1",
+            "Dia": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "FRESA",
+            "Dia": 0.125,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -0.81,
+            "Yin": -1.35,
+            "Zin": 1.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE EXTERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        L\u00ednea subrutinas",
+        {
+            "Sub": 8009,
+            "Qty": 14,
+            "Spc": -0.442,
+            "Axs": "COLUMNAS",
+            "Xin": -0.81,
+            "Yin": -1.35,
+            "Zin": 0.0,
+            "Rep": 15,
+            "Ubk": 1,
+            "Cnt": 1,
+            "Sec": "NO",
+            "Mtx": [
+                [
+                    -0.81,
+                    -1.35
+                ],
+                [
+                    -1.252,
+                    -1.35
+                ],
+                [
+                    -1.694,
+                    -1.35
+                ],
+                [
+                    -2.136,
+                    -1.35
+                ],
+                [
+                    -2.5780000000000003,
+                    -1.35
+                ],
+                [
+                    -3.0200000000000005,
+                    -1.35
+                ],
+                [
+                    -3.4620000000000006,
+                    -1.35
+                ],
+                [
+                    -3.904000000000001,
+                    -1.35
+                ],
+                [
+                    -4.346000000000001,
+                    -1.35
+                ],
+                [
+                    -4.788000000000001,
+                    -1.35
+                ],
+                [
+                    -5.230000000000001,
+                    -1.35
+                ],
+                [
+                    -5.6720000000000015,
+                    -1.35
+                ],
+                [
+                    -6.114000000000002,
+                    -1.35
+                ],
+                [
+                    -6.556000000000002,
+                    -1.35
+                ]
+            ],
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 2,
+            "Sde": "$1",
+            "Dia": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 3,
+            "Typ": "FRESA",
+            "Dia": 0.078,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -0.81,
+            "Yin": -1.32,
+            "Zin": 1.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "DESBASTE INTERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        L\u00ednea subrutinas",
+        {
+            "Sub": 8010,
+            "Qty": 14,
+            "Spc": -0.442,
+            "Axs": "COLUMNAS",
+            "Xin": -0.81,
+            "Yin": -1.32,
+            "Zin": 0.0,
+            "Rep": 30,
+            "Ubk": 1,
+            "Cnt": 1,
+            "Sec": "NO",
+            "Mtx": [
+                [
+                    -0.81,
+                    -1.32
+                ],
+                [
+                    -1.252,
+                    -1.32
+                ],
+                [
+                    -1.694,
+                    -1.32
+                ],
+                [
+                    -2.136,
+                    -1.32
+                ],
+                [
+                    -2.5780000000000003,
+                    -1.32
+                ],
+                [
+                    -3.0200000000000005,
+                    -1.32
+                ],
+                [
+                    -3.4620000000000006,
+                    -1.32
+                ],
+                [
+                    -3.904000000000001,
+                    -1.32
+                ],
+                [
+                    -4.346000000000001,
+                    -1.32
+                ],
+                [
+                    -4.788000000000001,
+                    -1.32
+                ],
+                [
+                    -5.230000000000001,
+                    -1.32
+                ],
+                [
+                    -5.6720000000000015,
+                    -1.32
+                ],
+                [
+                    -6.114000000000002,
+                    -1.32
+                ],
+                [
+                    -6.556000000000002,
+                    -1.32
+                ]
+            ],
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 3,
+            "Sde": "$1",
+            "Dia": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 3,
+            "Typ": "FRESA",
+            "Dia": 0.078,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -0.81,
+            "Yin": -1.3614,
+            "Zin": 1.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 4000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "ACABADO INTERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        L\u00ednea subrutinas",
+        {
+            "Sub": 8011,
+            "Qty": 14,
+            "Spc": -0.442,
+            "Axs": "COLUMNAS",
+            "Xin": -0.81,
+            "Yin": -1.361,
+            "Zin": 0.0,
+            "Rep": 1,
+            "Ubk": 1,
+            "Cnt": 1,
+            "Sec": "NO",
+            "Mtx": [
+                [
+                    -0.81,
+                    -1.361
+                ],
+                [
+                    -1.252,
+                    -1.361
+                ],
+                [
+                    -1.694,
+                    -1.361
+                ],
+                [
+                    -2.136,
+                    -1.361
+                ],
+                [
+                    -2.5780000000000003,
+                    -1.361
+                ],
+                [
+                    -3.0200000000000005,
+                    -1.361
+                ],
+                [
+                    -3.4620000000000006,
+                    -1.361
+                ],
+                [
+                    -3.904000000000001,
+                    -1.361
+                ],
+                [
+                    -4.346000000000001,
+                    -1.361
+                ],
+                [
+                    -4.788000000000001,
+                    -1.361
+                ],
+                [
+                    -5.230000000000001,
+                    -1.361
+                ],
+                [
+                    -5.6720000000000015,
+                    -1.361
+                ],
+                [
+                    -6.114000000000002,
+                    -1.361
+                ],
+                [
+                    -6.556000000000002,
+                    -1.361
+                ]
+            ],
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 3,
+            "Sde": "$1",
+            "Dia": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 2,
+            "Typ": "FRESA",
+            "Dia": 0.125,
+            "Spc": "-",
+            "Sde": "$1",
+            "Xin": -0.81,
+            "Yin": -1.43,
+            "Zin": 1.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "ACABADO EXTERIOR",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        L\u00ednea subrutinas",
+        {
+            "Sub": 8012,
+            "Qty": 14,
+            "Spc": -0.442,
+            "Axs": "COLUMNAS",
+            "Xin": -0.81,
+            "Yin": -1.43,
+            "Zin": 0.0,
+            "Rep": 1,
+            "Ubk": 1,
+            "Cnt": 1,
+            "Sec": "NO",
+            "Mtx": [
+                [
+                    -0.81,
+                    -1.43
+                ],
+                [
+                    -1.252,
+                    -1.43
+                ],
+                [
+                    -1.694,
+                    -1.43
+                ],
+                [
+                    -2.136,
+                    -1.43
+                ],
+                [
+                    -2.5780000000000003,
+                    -1.43
+                ],
+                [
+                    -3.0200000000000005,
+                    -1.43
+                ],
+                [
+                    -3.4620000000000006,
+                    -1.43
+                ],
+                [
+                    -3.904000000000001,
+                    -1.43
+                ],
+                [
+                    -4.346000000000001,
+                    -1.43
+                ],
+                [
+                    -4.788000000000001,
+                    -1.43
+                ],
+                [
+                    -5.230000000000001,
+                    -1.43
+                ],
+                [
+                    -5.6720000000000015,
+                    -1.43
+                ],
+                [
+                    -6.114000000000002,
+                    -1.43
+                ],
+                [
+                    -6.556000000000002,
+                    -1.43
+                ]
+            ],
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 2,
+            "Sde": "$1",
+            "Dia": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "    Llamar herramienta",
+        {
+            "Tol": 4,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "ESP 60GRD",
+            "Sde": "$1",
+            "Xin": -0.81,
+            "Yin": -1.33,
+            "Zin": 1.0,
+            "Mcd": "NO",
+            "Com": "-",
+            "Blk": false
+        }
+    ],
+    [
+        "        Giro del husillo",
+        {
+            "Spd": 3000,
+            "Rot": "NORMAL",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        Comentario",
+        {
+            "Com": "AFILADO",
+            "Sde": "$1",
+            "Blk": false
+        }
+    ],
+    [
+        "        L\u00ednea subrutinas",
+        {
+            "Sub": 8013,
+            "Qty": 14,
+            "Spc": -0.442,
+            "Axs": "COLUMNAS",
+            "Xin": -0.81,
+            "Yin": -1.33,
+            "Zin": -0.017,
+            "Rep": 10,
+            "Ubk": 1,
+            "Cnt": 1,
+            "Sec": "NO",
+            "Mtx": [
+                [
+                    -0.81,
+                    -1.33
+                ],
+                [
+                    -1.252,
+                    -1.33
+                ],
+                [
+                    -1.694,
+                    -1.33
+                ],
+                [
+                    -2.136,
+                    -1.33
+                ],
+                [
+                    -2.5780000000000003,
+                    -1.33
+                ],
+                [
+                    -3.0200000000000005,
+                    -1.33
+                ],
+                [
+                    -3.4620000000000006,
+                    -1.33
+                ],
+                [
+                    -3.904000000000001,
+                    -1.33
+                ],
+                [
+                    -4.346000000000001,
+                    -1.33
+                ],
+                [
+                    -4.788000000000001,
+                    -1.33
+                ],
+                [
+                    -5.230000000000001,
+                    -1.33
+                ],
+                [
+                    -5.6720000000000015,
+                    -1.33
+                ],
+                [
+                    -6.114000000000002,
+                    -1.33
+                ],
+                [
+                    -6.556000000000002,
+                    -1.33
+                ]
+            ],
+            "Blk": false
+        }
+    ],
+    [
+        "    Cerrar herramienta",
+        {
+            "Tol": 4,
+            "Sde": "$1",
+            "Dia": 0.0,
+            "Blk": false
+        }
+    ],
+    [
+        " ",
+        {
+            "Fre": " ",
+            "Sde": "$1"
+        }
+    ],
+    [
+        "Fin de programa",
+        {
+            "Mta": true,
+            "Bar": 0.0,
+            "Lgt": 0.0,
+            "Chk": 0.0,
+            "Cof": "DERECHA",
+            "Tol": 1,
+            "Typ": "FRESA",
+            "Dia": 0.25,
+            "Spc": "-",
+            "Xps": 0.15,
+            "Yps": 0.13,
+            "Zps": 1.0
+        }
+    ]
+]

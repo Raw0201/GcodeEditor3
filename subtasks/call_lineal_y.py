@@ -59,7 +59,7 @@ class Call_lineal_y(Subtask, Ui_frm_call_lineal):
         self.converter(data)
         tools.main_window.subroutine_prep(self.window)
         collect_data(self.window, "Lineal_rgh_y_sub")
-        collect_data(self.window, "End"),
+        (collect_data(self.window, "End"),)
 
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado

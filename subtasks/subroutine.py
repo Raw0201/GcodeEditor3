@@ -52,7 +52,7 @@ class Subroutine(Subtask, Ui_frm_subroutine):
             return
         self.converter(data)
 
-        # tools.main_window.subroutine_prep(self.window)    
+        # tools.main_window.subroutine_prep(self.window)
 
     def converter(self, data: dict):
         """Formatea los datos del diccionario recopilado
