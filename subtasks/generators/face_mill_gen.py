@@ -500,7 +500,7 @@ def face_mill_inno(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     lnd *= lmd
 
     for cyl in range(cyls):
-        tin -= tds * tmd
+        tin -= tds
         tcr = "" if cyl == 0 else f"{blk}{tdn}{fnum3(tin * tmd + tcm)}F{ffed(fed)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)
@@ -554,7 +554,7 @@ def face_mill_outo(data: list, tmd: int, lmd: int, tdn: str, ldn: str) -> list:
     ]
 
     for cyl in range(cyls):
-        tin -= tds * tmd
+        tin -= tds
         tcr = "" if cyl == 0 else f"{blk}{ldn}{fnum3(lnd + lcm)}F{ffed(fed)}"
         cfd = f"F{ffed(fed * 0.5)}" if cyl + 1 == cyls else ""
         lines1.append(tcr)

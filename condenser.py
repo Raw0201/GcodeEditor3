@@ -1,3 +1,5 @@
+# pip install customtkinter
+
 import os
 import pyperclip
 import webbrowser
@@ -174,7 +176,12 @@ class Condenser:
         """
 
         loop_index = line.find(self.loops_code)
-        return 1 if loop_index < 0 else int(line[loop_index + 1 :])
+
+        loop = line[loop_index + 1 :].isdigit()
+        if loop:
+            return 1 if loop_index < 0 else int(line[loop_index + 1 :])
+
+        return 1
 
     def file_not_found_error_message(self, tape_name, directory):
         """Mensaje de error por archivo no encontrado
@@ -256,7 +263,9 @@ class Condenser:
                     for _ in range(loopsL1):
                         self.condenser_L1(blockL1, tapeL1)
             else:
-                self.plot_lines.append(line0L0)
+                loopsL1 = self.find_loops_quantity(line0L0)
+                for _ in range (loopsL1):
+                    self.plot_lines.append(line0L0)
 
         self.plot_lines_to_window(self.plot_lines, self.complete_textbox, "")
         self.plot_lines_to_window(self.plot_lines, self.unblocked_textbox, "/")
@@ -272,6 +281,7 @@ class Condenser:
         fileL1 = ""
         subLinesL1 = []
         file_linesL1 = []
+        self.omit_chars.append("O")
 
         if subrutineL1 in self.subrutine_paths:
             subrutine_pathL1 = self.subrutine_paths[subrutineL1]
@@ -303,11 +313,16 @@ class Condenser:
                     self.plot_lines.append(subLineL1)
                 subLineL1 = []
 
+                if blockL1 != "/":
+                    blockL1 = "/" if line1L1[0] == "/" else ""
+
                 tapeL2 = self.find_subrutine_number(line1L1)
                 loopsL2 = self.find_loops_quantity(line1L1)
                 self.condenser_L2(blockL1, tapeL2, loopsL2)
             else:
-                self.plot_lines.append(f"{blockL1}{line1L1}")
+                loopsL2 = self.find_loops_quantity(line1L1)
+                for _ in range (loopsL2):
+                    self.plot_lines.append(f"{blockL1}{line1L1}")
 
     def condenser_L2(self, blockL2, subrutineL2, loopsL2):
         """Procesador de subrutinas en nivel 2

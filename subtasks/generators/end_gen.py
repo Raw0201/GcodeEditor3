@@ -372,7 +372,7 @@ def gen_mazak(data: list) -> list:
 
     if mta:
         tol = f"T0{tol}" if tol < 10 else f"T{tol}"
-        dia = "" if dia == 0 else f" {fdia(dia)}"
+        dia = "" if dia == 0 else f" {fnum4(dia)}"
         spc = "" if spc == "-" else f" {spc}"
 
         lines1 = [

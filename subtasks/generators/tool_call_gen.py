@@ -54,7 +54,7 @@ def gen_b12(data: list) -> list:
 
     sft = fcom(tol, swiss_compensations)
     sft = f"{blk}G50W-{fnum3(sft)}" if sft else ""
-    tol = f"T0{tol}" if tol < 10 else f"T{tol}"
+    tol = f"T0{tol}0{tol}" if tol < 10 else f"T{tol}{tol}"
     dia = "" if dia == 0 else f" {fdia(dia)}"
     spc = "" if spc == "-" else f" {spc}"
     zin = f"Z{fnum3(zin)}"
@@ -63,10 +63,10 @@ def gen_b12(data: list) -> list:
     mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
 
     lines1 = [
-        f"{blk}{tol}00({typ}{dia}{spc})",
+        f"{blk}{tol}({typ}{dia}{spc})",
         mcd,
         sft,
-        f"{blk}G00{zin}{tol}",
+        f"{blk}G00{zin}",
     ]
     lines2 = [iu_space for _ in lines1]
     if not sft:
@@ -99,7 +99,7 @@ def gen_a16(data: list) -> list:
 
     sft = fcom(tol, swiss_compensations)
     sft = f"{blk}G50W-{fnum3(sft)}" if sft else ""
-    tol = f"T0{tol}" if tol < 10 else f"T{tol}"
+    tol = f"T0{tol}0{tol}" if tol < 10 else f"T{tol}{tol}"
     dia = "" if dia == 0 else f" {fdia(dia)}"
     spc = "" if spc == "-" else f" {spc}"
     zin = f"Z{fnum3(zin)}"
@@ -109,10 +109,10 @@ def gen_a16(data: list) -> list:
     mcd = "" if mcd in {"NO", "M140"} else f"{blk}{mcd}{com}"
 
     lines1 = [
-        f"{blk}{tol}00({typ}{dia}{spc})",
+        f"{blk}{tol}({typ}{dia}{spc})",
         mcd,
         sft,
-        f"{blk}G00{zin}{tol}",
+        f"{blk}G00{zin}",
     ]
     lines2 = [iu_space for _ in lines1]
     if not sft:
