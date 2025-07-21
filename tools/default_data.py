@@ -101,6 +101,8 @@ def load_default_subroutine_data(window: QMainWindow):
     window.last_subroutine_number = 3999
     window.subroutine_tool = 0
     window.subroutine_tool_diameter = 0
+    window.subroutine_tool_type = ""
+    window.subroutine_tool_specification = ""
     window.current_main_program = ""
     window.subroutine_comment = ""
     window.subroutine_machine = ""

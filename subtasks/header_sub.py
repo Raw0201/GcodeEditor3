@@ -52,7 +52,7 @@ class Header_sub(Subtask, Ui_frm_header_sub):
             data (dict): Diccionario de datos recopilados
         """
 
-        if any_empty(data):
+        if all_empty(data):
             required_data_error(self)
             return
         self.converter(data)

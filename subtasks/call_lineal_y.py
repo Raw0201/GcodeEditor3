@@ -141,6 +141,7 @@ class Call_lineal_y(Subtask, Ui_frm_call_lineal):
         """
 
         window.save_required = True
+        window.current_cut_dpt = data["Cut"]
         window.current_side = "$1"
         window.last_subroutine_number = data["Sub"]
 

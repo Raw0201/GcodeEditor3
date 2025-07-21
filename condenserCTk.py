@@ -1,8 +1,8 @@
 import os
 import pyperclip  # pip install pyperclip
 import webbrowser  # pip install webbrowser
-import tkinter as tk
 import customtkinter  # pip install customtkinter
+import tkinter as tk
 
 from pathlib import Path
 from tkinter import filedialog as fd

@@ -151,30 +151,30 @@ def gen_mazak(data: list) -> list:
     fed, xin, xnd, cut, res, cts, yin, cys, yct, yru, yrb = gen
     iu_space = fspace_ui()
 
-    lines1 = [f"G91G01Z-{fnum3(cut)}F.002"]
+    lines1 = [f"G91G01Z-{fnum4(cut)}F.002"]
     for cyc in range(int(cys)):
         if cyc < yct:
             fed = fed if cyc == 0 else ""
             lines1.append(yin)
-            lines1.append(f"X-{fnum3(xin)}{fed}")
-            lines1.append(f"/X-{fnum3(xnd)}")
+            lines1.append(f"X-{fnum4(xin)}{fed}")
+            lines1.append(f"/X-{fnum4(xnd)}")
             yds = res / cts
             yru += yds
-            yin = f"Y{fnum3(yds)}"
-            lines1.append(f"Y{fnum3(yds)}")
-            lines1.append(f"/X{fnum3(xnd)}")
-            lines1.append(f"X{fnum3(xin)}")
+            yin = f"Y{fnum4(yds)}"
+            lines1.append(f"Y{fnum4(yds)}")
+            lines1.append(f"/X{fnum4(xnd)}")
+            lines1.append(f"X{fnum4(xin)}")
         else:
             yds = res / cts
-            lines1.append(f"/Y{fnum3(yds)}")
+            lines1.append(f"/Y{fnum4(yds)}")
             yrb += yds
-            lines1.append(f"/X-{fnum3(xin + xnd)}")
-            lines1.append(f"/Y{fnum3(yds)}")
+            lines1.append(f"/X-{fnum4(xin + xnd)}")
+            lines1.append(f"/Y{fnum4(yds)}")
             yrb += yds
-            lines1.append(f"/X{fnum3(xnd + xin)}")
-    lines1.append(f"/G00Y-{fnum3(yrb)}")
-    yru += yds
-    lines1.append(f"G00Y-{fnum3(yru)}")
+            lines1.append(f"/X{fnum4(xnd + xin)}")
+    lines1.append(f"/G00Y-{fnum4(yrb)}")
+    # yru += yds
+    lines1.append(f"G00Y-{fnum4(yru)}")
 
     lines2 = [iu_space for _ in lines1]
     del lines2[-1]
